@@ -3,7 +3,7 @@
 
 **AI-Enabled Full-Stack Engineer & Platform Builder**
 
-oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | [github.com/cyteger](https://github.com/cyteger) | Accra, Ghana (GMT+0, full US Central overlap)
+oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | [github.com/cyteger](https://github.com/cyteger) | Accra, Ghana (GMT+0)
 
 ---
 
@@ -16,7 +16,7 @@ Full-stack engineer with 6 years shipping production web and mobile applications
 ## Core Competencies
 
 - Fullstack JavaScript / TypeScript (React, Next.js, Node.js)
-- AI-Assisted Development (Claude Code, Cursor, agentic workflows)
+- AI-Assisted Development (Claude Code, GitHub Copilot, agentic workflows)
 - Component Architecture & Metaframeworks
 - State Management Patterns (Hooks, Convex, Redux-style)
 - CI/CD Pipelines & GitOps (FluxCD, GitHub Actions, ArgoCD)
