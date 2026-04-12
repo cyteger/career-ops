@@ -1,0 +1,568 @@
+# Portal Scanner Configuration
+# Customized for: Oswald Gyabaah — Senior DevOps / Platform / Cloud / Infra Engineer
+#
+# Strategy (3 levels):
+#   1. Playwright → careers_url of each company (real-time, reliable)
+#   2. Greenhouse API → structured JSON (fast, Greenhouse-only)
+#   3. WebSearch with site: filters (broad discovery, may be stale)
+
+title_filter:
+  positive:
+    # -- DevOps / Platform / Infra --
+    - "DevOps"
+    - "Platform Engineer"
+    - "Infrastructure Engineer"
+    - "Cloud Engineer"
+    - "Cloud Operations"
+    - "Site Reliability"
+    - "SRE"
+    - "Systems Engineer"
+    - "Production Engineer"
+    - "Reliability Engineer"
+    # -- Kubernetes / Container specific --
+    - "Kubernetes"
+    - "Container"
+    # -- Architecture --
+    - "Solutions Architect"
+    - "Cloud Architect"
+    - "Infrastructure Architect"
+    - "Enterprise Architect"
+    - "Software Architect"
+    - "Systems Architect"
+    # -- QA / Quality Engineering --
+    - "QA Lead"
+    - "QA Manager"
+    - "QA Engineer"
+    - "SDET"
+    - "Quality Assurance"
+    - "Quality Engineering"
+    - "Test Lead"
+    - "Test Manager"
+    # -- Related engineering --
+    - "Fullstack"
+    - "Full-Stack"
+    - "Full Stack"
+    - "Backend Engineer"
+    - "Software Engineer"
+    - "Build Engineer"
+    - "Release Engineer"
+    - "Deployment Engineer"
+    # -- Ops / Automation --
+    - "Automation Engineer"
+    - "GitOps"
+    - "CI/CD"
+    - "IaC"
+  negative:
+    - "Junior"
+    - "Intern"
+    - "iOS"
+    - "Android"
+    - "Frontend"
+    - "React"
+    - "PHP"
+    - "Ruby"
+    - "Embedded"
+    - "Firmware"
+    - "FPGA"
+    - "ASIC"
+    - "Blockchain"
+    - "Web3"
+    - "Crypto"
+    - "Salesforce Admin"
+    - "SAP "
+    - "Oracle EBS"
+    - "Mainframe"
+    - "COBOL"
+    - "Data Analyst"
+    - "Data Scientist"
+    - "Machine Learning"
+    - "ML Engineer"
+    - "Game"
+  seniority_boost:
+    - "Senior"
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Head"
+    - "Manager"
+
+# -- Search queries --
+search_queries:
+
+  # -- DevOps / Platform on Ashby --
+  - name: Ashby — DevOps & Platform
+    query: 'site:jobs.ashbyhq.com "DevOps Engineer" OR "Platform Engineer" OR "Infrastructure Engineer" remote'
+    enabled: true
+
+  - name: Ashby — SRE & Cloud
+    query: 'site:jobs.ashbyhq.com "Site Reliability" OR "SRE" OR "Cloud Engineer" OR "Cloud Operations" remote'
+    enabled: true
+
+  - name: Ashby — Solutions Architect
+    query: 'site:jobs.ashbyhq.com "Solutions Architect" OR "Cloud Architect" OR "Infrastructure Architect" remote'
+    enabled: true
+
+  # -- DevOps / Platform on Greenhouse --
+  - name: Greenhouse — DevOps & Platform
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "DevOps" OR "Platform Engineer" OR "Infrastructure Engineer" remote'
+    enabled: true
+
+  - name: Greenhouse — SRE & Cloud
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "SRE" OR "Site Reliability" OR "Cloud Engineer" remote'
+    enabled: true
+
+  - name: Greenhouse — Solutions Architect
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Solutions Architect" OR "Cloud Architect" remote'
+    enabled: true
+
+  # -- DevOps / Platform on Lever --
+  - name: Lever — DevOps & Infra
+    query: 'site:jobs.lever.co "DevOps" OR "Platform Engineer" OR "Infrastructure" OR "SRE" remote'
+    enabled: true
+
+  # -- Wellfound (startups) --
+  - name: Wellfound — DevOps & Infra
+    query: 'site:wellfound.com "DevOps Engineer" OR "Platform Engineer" OR "Infrastructure" remote senior'
+    enabled: true
+
+  # -- Workable --
+  - name: Workable — DevOps & Cloud
+    query: 'site:apply.workable.com "DevOps" OR "Platform Engineer" OR "Cloud Engineer" OR "SRE" remote'
+    enabled: true
+
+  # -- Remote-first job boards --
+  - name: Remotive — DevOps & Infra
+    query: 'site:remotive.com "DevOps" OR "Platform Engineer" OR "SRE" OR "Infrastructure Engineer" OR "Cloud Engineer" remote'
+    enabled: true
+
+  - name: WeWorkRemotely — DevOps & Infra
+    query: 'site:weworkremotely.com "DevOps" OR "Platform" OR "SRE" OR "Infrastructure" OR "Cloud Engineer"'
+    enabled: true
+
+  - name: RemoteOK — DevOps & Infra
+    query: 'site:remoteok.com "DevOps" OR "Platform Engineer" OR "SRE" OR "Cloud" OR "Kubernetes"'
+    enabled: true
+
+  - name: Himalayas — DevOps & Cloud
+    query: 'site:himalayas.app "DevOps" OR "Platform Engineer" OR "SRE" OR "Infrastructure" OR "Cloud Engineer" remote'
+    enabled: true
+
+  # -- YC / Startup-focused --
+  - name: YC Jobs — DevOps & Infra
+    query: 'site:workatastartup.com "DevOps" OR "Platform Engineer" OR "Infrastructure" OR "SRE" remote'
+    enabled: true
+
+  - name: YC Jobs — Cloud & Kubernetes
+    query: 'site:workatastartup.com "Cloud Engineer" OR "Kubernetes" OR "Cloud Architect" remote'
+    enabled: true
+
+  # -- Kubernetes-specific --
+  - name: All portals — Kubernetes Engineer
+    query: '"Kubernetes Engineer" OR "K8s" "engineer" remote site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co'
+    enabled: true
+
+  # -- Africa-friendly & global remote --
+  - name: Remote Africa — DevOps & Infra
+    query: '"DevOps Engineer" OR "Platform Engineer" OR "Cloud Engineer" remote Africa OR Ghana OR "globally distributed"'
+    enabled: true
+
+  - name: Turing — DevOps remote
+    query: 'site:turing.com "DevOps" OR "Cloud Engineer" OR "Infrastructure" OR "Platform Engineer" remote'
+    enabled: true
+
+  - name: Andela — Engineering
+    query: 'site:andela.com OR "andela" "DevOps" OR "Platform" OR "Cloud" OR "Infrastructure" engineer'
+    enabled: true
+
+  # -- QA Lead / QA Engineering --
+  - name: Ashby — QA Lead & Manager
+    query: 'site:jobs.ashbyhq.com "QA Lead" OR "QA Manager" OR "QA Engineering Manager" OR "Quality Engineering" remote'
+    enabled: true
+
+  - name: Greenhouse — QA Lead & Manager
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "QA Lead" OR "QA Manager" OR "Quality Engineering" remote'
+    enabled: true
+
+  - name: All portals — Senior QA
+    query: '"QA Lead" OR "QA Manager" OR "Quality Engineering Manager" OR "SDET Lead" remote site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co'
+    enabled: true
+
+  # -- Enterprise / Software Architect --
+  - name: Ashby — Enterprise & Software Architect
+    query: 'site:jobs.ashbyhq.com "Enterprise Architect" OR "Software Architect" OR "Systems Architect" remote'
+    enabled: true
+
+  - name: Greenhouse — Enterprise & Software Architect
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Enterprise Architect" OR "Software Architect" remote'
+    enabled: true
+
+  # -- Backend Software Engineer --
+  - name: Ashby — Senior Backend Engineer
+    query: 'site:jobs.ashbyhq.com "Senior Backend Engineer" OR "Senior Software Engineer" Python OR Go OR Node remote'
+    enabled: true
+
+  - name: Greenhouse — Senior Backend Engineer
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Senior Backend Engineer" OR "Senior Software Engineer" Python OR Go remote'
+    enabled: true
+
+  # -- HN Who's Hiring --
+  - name: HN Who's Hiring — DevOps & Infra
+    query: 'site:news.ycombinator.com "DevOps" OR "Platform Engineer" OR "SRE" OR "Infrastructure" remote'
+    enabled: true
+
+# -- Tracked companies --
+tracked_companies:
+
+  # ===== Cloud Infrastructure & DevTools =====
+
+  - name: HashiCorp
+    careers_url: https://job-boards.greenhouse.io/hashicorp
+    api: https://boards-api.greenhouse.io/v1/boards/hashicorp/jobs
+    notes: "Terraform, Vault, Consul, Nomad. Remote-first. Core DevOps tooling company."
+    enabled: true
+
+  - name: Datadog
+    careers_url: https://careers.datadoghq.com
+    scan_method: websearch
+    scan_query: 'site:careers.datadoghq.com "DevOps" OR "SRE" OR "Infrastructure" OR "Platform" OR "Cloud" remote'
+    notes: "Observability platform. NYC/Paris/Remote. Hires DevOps/SRE/Infra."
+    enabled: true
+
+  - name: Grafana Labs
+    careers_url: https://grafana.com/about/careers
+    scan_method: websearch
+    scan_query: 'site:grafana.com/about/careers "DevOps" OR "SRE" OR "Platform" OR "Cloud" OR "Infrastructure"'
+    notes: "Grafana, Loki, Tempo, Mimir. Remote-first. Observability."
+    enabled: true
+
+  - name: GitLab
+    careers_url: https://about.gitlab.com/jobs
+    scan_method: websearch
+    scan_query: 'site:about.gitlab.com/jobs "DevOps" OR "Infrastructure" OR "SRE" OR "Platform" OR "Cloud"'
+    notes: "All-remote company. CI/CD platform. Strong Africa-friendly remote hiring."
+    enabled: true
+
+  - name: Elastic
+    careers_url: https://jobs.elastic.co
+    scan_method: websearch
+    scan_query: 'site:jobs.elastic.co "DevOps" OR "SRE" OR "Infrastructure" OR "Cloud" OR "Platform"'
+    notes: "Elasticsearch, Kibana, ELK Stack. Distributed company."
+    enabled: true
+
+  - name: Cloudflare
+    careers_url: https://job-boards.greenhouse.io/cloudflare
+    api: https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs
+    notes: "Edge computing, CDN, DNS, Workers. Large SRE/infra org."
+    enabled: true
+
+  - name: MongoDB
+    careers_url: https://www.mongodb.com/careers
+    scan_method: websearch
+    scan_query: 'site:mongodb.com/careers "DevOps" OR "Cloud" OR "SRE" OR "Platform" OR "Infrastructure" remote'
+    notes: "Database platform. Atlas cloud. Remote-friendly."
+    enabled: true
+
+  - name: DigitalOcean
+    careers_url: https://job-boards.greenhouse.io/digitalocean
+    api: https://boards-api.greenhouse.io/v1/boards/digitalocean/jobs
+    notes: "Cloud provider. Remote-first. Developer cloud platform."
+    enabled: true
+
+  - name: Fly.io
+    careers_url: https://fly.io/jobs
+    scan_method: websearch
+    scan_query: 'site:fly.io/jobs'
+    notes: "Edge compute platform. Small team, deep infra work."
+    enabled: true
+
+  - name: Render
+    careers_url: https://render.com/careers
+    scan_method: websearch
+    scan_query: 'site:render.com/careers'
+    notes: "Cloud PaaS. Infrastructure engineering roles."
+    enabled: true
+
+  - name: Railway
+    careers_url: https://railway.com/careers
+    scan_method: websearch
+    scan_query: 'site:railway.com/careers OR site:railway.app/careers'
+    notes: "Developer cloud platform. K8s-based PaaS."
+    enabled: true
+
+  - name: Pulumi
+    careers_url: https://www.pulumi.com/careers
+    scan_method: websearch
+    scan_query: 'site:pulumi.com/careers'
+    notes: "IaC platform (Terraform alternative). Remote-friendly."
+    enabled: true
+
+  - name: Teleport
+    careers_url: https://goteleport.com/careers
+    scan_method: websearch
+    scan_query: 'site:goteleport.com/careers "DevOps" OR "SRE" OR "Infrastructure" OR "Platform"'
+    notes: "Infrastructure access platform. Remote-first."
+    enabled: true
+
+  - name: Tailscale
+    careers_url: https://tailscale.com/jobs
+    scan_method: websearch
+    scan_query: 'site:tailscale.com/jobs'
+    notes: "WireGuard-based mesh VPN. Remote-first. Small but deep infra."
+    enabled: true
+
+  - name: Snyk
+    careers_url: https://job-boards.greenhouse.io/snyk
+    api: https://boards-api.greenhouse.io/v1/boards/snyk/jobs
+    notes: "Developer security platform. London/Boston/Remote."
+    enabled: true
+
+  - name: Sentry
+    careers_url: https://job-boards.greenhouse.io/sentry
+    api: https://boards-api.greenhouse.io/v1/boards/sentry/jobs
+    notes: "Application monitoring. SF/Vienna/Remote."
+    enabled: true
+
+  - name: Confluent
+    careers_url: https://job-boards.greenhouse.io/confluent
+    api: https://boards-api.greenhouse.io/v1/boards/confluent/jobs
+    notes: "Kafka platform. Remote-friendly. Streaming infrastructure."
+    enabled: true
+
+  # ===== Kubernetes / Container Ecosystem =====
+
+  - name: Red Hat
+    careers_url: https://www.redhat.com/en/jobs
+    scan_method: websearch
+    scan_query: 'site:redhat.com/en/jobs "DevOps" OR "Kubernetes" OR "OpenShift" OR "Platform" OR "Cloud" remote'
+    notes: "OpenShift, RHEL, Ansible. Major K8s employer. Remote-friendly."
+    enabled: true
+
+  - name: SUSE
+    careers_url: https://www.suse.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:suse.com/company/careers "Kubernetes" OR "Rancher" OR "DevOps" OR "SRE" OR "Cloud" remote'
+    notes: "Rancher, K3s, SUSE Linux. Remote-first."
+    enabled: true
+
+  - name: Canonical
+    careers_url: https://canonical.com/careers
+    scan_method: websearch
+    scan_query: 'site:canonical.com/careers "DevOps" OR "Kubernetes" OR "Cloud" OR "Infrastructure" OR "SRE"'
+    notes: "Ubuntu, MicroK8s, Juju. Remote-first. Africa-friendly."
+    enabled: true
+
+  - name: Isovalent (Cisco)
+    careers_url: https://job-boards.greenhouse.io/isovalent
+    api: https://boards-api.greenhouse.io/v1/boards/isovalent/jobs
+    notes: "Cilium / eBPF. K8s networking. Now part of Cisco."
+    enabled: true
+
+  # ===== GPU Cloud / AI Infra (they hire DevOps/SRE) =====
+
+  - name: CoreWeave
+    careers_url: https://job-boards.greenhouse.io/coreweave
+    api: https://boards-api.greenhouse.io/v1/boards/coreweave/jobs
+    notes: "GPU cloud provider. Massive K8s infrastructure. Heavy SRE/DevOps hiring."
+    enabled: true
+
+  - name: RunPod
+    careers_url: https://job-boards.greenhouse.io/runpod
+    api: https://boards-api.greenhouse.io/v1/boards/runpod/jobs
+    notes: "GPU cloud for AI. Infrastructure roles."
+    enabled: true
+
+  - name: Lambda
+    careers_url: https://lambdalabs.com/careers
+    scan_method: websearch
+    scan_query: 'site:lambdalabs.com/careers "DevOps" OR "Infrastructure" OR "SRE" OR "Cloud" OR "Platform"'
+    notes: "GPU cloud and deep learning workstations."
+    enabled: true
+
+  - name: Together AI
+    careers_url: https://jobs.ashbyhq.com/togetherai
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/togetherai'
+    notes: "AI inference infrastructure. K8s/GPU infra roles."
+    enabled: true
+
+  # ===== Tech Companies with Strong DevOps/Infra Orgs =====
+
+  - name: Anthropic
+    careers_url: https://job-boards.greenhouse.io/anthropic
+    api: https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
+    notes: "AI lab. Large infra/platform engineering org."
+    enabled: true
+
+  - name: Vercel
+    careers_url: https://job-boards.greenhouse.io/vercel
+    api: https://boards-api.greenhouse.io/v1/boards/vercel/jobs
+    notes: "Edge compute platform. Infrastructure roles."
+    enabled: true
+
+  - name: Supabase
+    careers_url: https://jobs.ashbyhq.com/supabase
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/supabase'
+    notes: "Open-source Firebase alternative. Remote-first. Postgres infra."
+    enabled: true
+
+  - name: PlanetScale
+    careers_url: https://job-boards.greenhouse.io/planetscale
+    api: https://boards-api.greenhouse.io/v1/boards/planetscale/jobs
+    notes: "Serverless MySQL platform. Deep database infra."
+    enabled: true
+
+  - name: Temporal
+    careers_url: https://job-boards.greenhouse.io/temporal
+    api: https://boards-api.greenhouse.io/v1/boards/temporal/jobs
+    notes: "Workflow orchestration. Distributed systems infra."
+    enabled: true
+
+  - name: n8n
+    careers_url: https://jobs.ashbyhq.com/n8n
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/n8n'
+    notes: "Berlin + remote EU/US. Workflow automation. K8s-based."
+    enabled: true
+
+  - name: Retool
+    careers_url: https://retool.com/careers
+    scan_method: websearch
+    scan_query: 'site:retool.com/careers "Infrastructure" OR "Platform" OR "SRE" OR "DevOps"'
+    notes: "Internal tools platform. Infrastructure roles."
+    enabled: true
+
+  # ===== European Tech (Remote-friendly) =====
+
+  - name: Aiven
+    careers_url: https://aiven.io/careers
+    scan_method: websearch
+    scan_query: 'site:aiven.io/careers "DevOps" OR "SRE" OR "Platform" OR "Cloud" OR "Infrastructure"'
+    notes: "Helsinki FI. Managed open-source data infra (Kafka, Postgres, etc). Remote EU."
+    enabled: true
+
+  - name: Scaleway
+    careers_url: https://careers.scaleway.com
+    scan_method: websearch
+    scan_query: 'site:careers.scaleway.com "DevOps" OR "SRE" OR "Cloud" OR "Infrastructure"'
+    notes: "Paris FR. European cloud provider. K8s Kapsule."
+    enabled: true
+
+  - name: Hetzner
+    careers_url: https://www.hetzner.com/unternehmen/karriere
+    scan_method: websearch
+    scan_query: 'site:hetzner.com "DevOps" OR "Cloud" OR "Infrastructure" OR "Systems"'
+    notes: "Nuremberg DE. Popular EU cloud/bare-metal provider."
+    enabled: true
+
+  - name: Celonis
+    careers_url: https://job-boards.greenhouse.io/celonis
+    api: https://boards-api.greenhouse.io/v1/boards/celonis/jobs
+    notes: "Munich/NYC. Process intelligence. Platform/infra engineering."
+    enabled: true
+
+  - name: N26
+    careers_url: https://job-boards.greenhouse.io/n26
+    api: https://boards-api.greenhouse.io/v1/boards/n26/jobs
+    notes: "Berlin. Mobile bank. SRE/Platform/DevOps roles."
+    enabled: true
+
+  - name: Trade Republic
+    careers_url: https://job-boards.greenhouse.io/traderepublicbank
+    api: https://boards-api.greenhouse.io/v1/boards/traderepublicbank/jobs
+    notes: "Berlin. Neobroker. Platform & infra roles."
+    enabled: true
+
+  - name: Contentful
+    careers_url: https://job-boards.greenhouse.io/contentful
+    api: https://boards-api.greenhouse.io/v1/boards/contentful/jobs
+    notes: "Berlin/Denver. Headless CMS. Platform engineering."
+    enabled: true
+
+  - name: DeepL
+    careers_url: https://jobs.ashbyhq.com/DeepL
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/DeepL "DevOps" OR "Platform" OR "Infrastructure" OR "SRE" OR "Cloud"'
+    notes: "Cologne DE. Translation AI. 60+ roles, EU/DACH heavy."
+    enabled: true
+
+  - name: Spotify
+    careers_url: https://jobs.lever.co/spotify
+    notes: "Stockholm/NYC/London. Large platform engineering org."
+    enabled: true
+
+  # ===== Consulting / Nearshore (Ghana-friendly) =====
+
+  - name: Bitovi
+    careers_url: https://bitovi.applytojob.com/apply/
+    scan_method: websearch
+    scan_query: 'site:bitovi.applytojob.com OR "bitovi" careers "engineer" OR "architect" OR "developer" remote'
+    notes: "Remote consulting firm (~80 people). JazzHR ATS. Has Ghana-specific 'Nearshore' roles. Explicitly hires from Ghana. Check frequently."
+    enabled: true
+
+  # ===== Africa-Based & Africa-Friendly Companies =====
+
+  - name: Ecobank
+    careers_url: https://fa-emqf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1004/jobs?lastSelectedFacet=LOCATIONS&selectedLocationsFacet=300000000337242
+    scan_method: websearch
+    scan_query: 'site:fa-emqf-saasfaprod1.fa.ocs.oraclecloud.com "DevOps" OR "Cloud" OR "Infrastructure" OR "IT" OR "Systems" OR "Engineer"'
+    notes: "Pan-African bank. Ghana-filtered careers page (Oracle HCM). Check frequently for IT/infra roles."
+    enabled: true
+
+  - name: DevOps Africa Limited
+    careers_url: https://www.devopsafricalimited.com/careers
+    scan_method: websearch
+    scan_query: 'site:devopsafricalimited.com "DevOps" OR "Cloud" OR "Infrastructure" OR "Platform" OR "Engineer"'
+    notes: "Connects African DevOps talent with global companies. Check frequently."
+    enabled: true
+
+  - name: Andela
+    careers_url: https://www.andela.com/careers
+    scan_method: websearch
+    scan_query: 'site:andela.com "DevOps" OR "Platform" OR "Cloud" OR "Infrastructure" OR "SRE" remote'
+    notes: "Africa-focused talent marketplace. Remote. Strong Africa hiring."
+    enabled: true
+
+  - name: Paystack
+    careers_url: https://paystack.com/careers
+    scan_method: websearch
+    scan_query: 'site:paystack.com/careers "DevOps" OR "Infrastructure" OR "Platform" OR "SRE"'
+    notes: "Lagos/Remote. Payments infrastructure (Stripe of Africa). Now part of Stripe."
+    enabled: true
+
+  - name: Flutterwave
+    careers_url: https://flutterwave.com/us/careers
+    scan_method: websearch
+    scan_query: 'site:flutterwave.com "DevOps" OR "Infrastructure" OR "Cloud" OR "Platform"'
+    notes: "Lagos/SF. Payments infrastructure. Africa fintech."
+    enabled: true
+
+  - name: Interswitch
+    careers_url: https://www.interswitchgroup.com/careers
+    scan_method: websearch
+    scan_query: 'site:interswitchgroup.com "DevOps" OR "Infrastructure" OR "Cloud" OR "Platform"'
+    notes: "Lagos. Africa digital payments infrastructure."
+    enabled: true
+
+  # ===== US Big Tech (Remote/Relocation) =====
+
+  - name: Twilio
+    careers_url: https://www.twilio.com/en-us/company/jobs
+    scan_method: websearch
+    scan_query: 'site:twilio.com/company/jobs "DevOps" OR "SRE" OR "Infrastructure" OR "Platform" OR "Cloud" remote'
+    notes: "Comms infrastructure. Remote-friendly."
+    enabled: true
+
+  - name: Stripe
+    careers_url: https://stripe.com/jobs
+    scan_method: websearch
+    scan_query: 'site:stripe.com/jobs "Infrastructure" OR "SRE" OR "Platform" OR "DevOps" remote'
+    notes: "Payments infrastructure. Remote-friendly. Owns Paystack."
+    enabled: true
+
+  - name: Salesforce
+    careers_url: https://careers.salesforce.com
+    scan_method: websearch
+    scan_query: 'site:careers.salesforce.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Cloud Engineer" remote'
+    notes: "Enterprise cloud. Large infra org."
+    enabled: true

@@ -1,39 +1,37 @@
-# Personal data (user fills these)
-data/applications.md
-data/pipeline.md
-data/scan-history.tsv
-reports/*.md
-!reports/.gitkeep
-output/*
-!output/.gitkeep
+# ============================================================
+# PERSONAL BRANCH .gitignore
+# ------------------------------------------------------------
+# This branch intentionally TRACKS user data (CVs, reports,
+# profile, applications tracker, etc.) so it can be backed up
+# to the personal fork at github.com/cyteger/career-ops.
+#
+# DO NOT MERGE THIS BRANCH INTO `main`. `main` is the upstream
+# mirror and must stay clean. Contributions branch off
+# `upstream/main`, not `personal`.
+# ============================================================
+
+# Runtime state (never useful to keep in git)
 batch/logs/*
 !batch/logs/.gitkeep
 batch/batch-state.tsv
 batch/batch-input.tsv
-batch/tracker-additions/**/*.tsv
-!batch/tracker-additions/.gitkeep
-jds/*
-!jds/.gitkeep
-
-# User config and customization (never auto-updated)
-config/profile.yml
-portals.yml
-modes/_profile.md
+batch/batch-run.log
 .update-dismissed
 .update-lock
+.playwright-mcp/
 
-# Generated
+# Generated / build artifacts
 .resolved-prompt-*
 node_modules/
 bun.lock
+career-dashboard
+package-lock.json
 
 # OS
 .DS_Store
 *.mov
 *.mp4
 
-# Claude Code local
+# Claude Code — local-only, not for backup
 .claude/settings.local.json
 .claude/memory/
-career-dashboard
-package-lock.json

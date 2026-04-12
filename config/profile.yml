@@ -1,0 +1,83 @@
+# Career-Ops Profile Configuration
+# This is the single source of truth for Oswald's personal data across all modes.
+
+candidate:
+  full_name: "Oswald Gyabaah"
+  email: "oswald.gyabaah@gmail.com"
+  phone: "+233 55 413 4307"
+  location: "Accra, Ghana"
+  linkedin: "linkedin.com/in/ogyabaah"
+  portfolio_url: null
+  github: "github.com/cyteger"
+  twitter: null 
+
+target_roles:
+  primary:
+    - "Senior DevOps Engineer"
+    - "Senior Platform Engineer"
+    - "Senior Cloud Engineer"
+    - "Senior Infrastructure Engineer"
+  secondary:
+    - "Solutions Architect"
+    - "Site Reliability Engineer (SRE)"
+    - "QA Engineering Lead / QA Manager"
+    - "Enterprise / Software Architect"
+  archetypes:
+    - name: "DevOps / Platform Engineer"
+      level: "Senior"
+      fit: "primary"
+    - name: "Cloud / Infrastructure Engineer"
+      level: "Senior"
+      fit: "primary"
+    - name: "Site Reliability Engineer (SRE)"
+      level: "Mid-Senior"
+      fit: "primary"
+    - name: "Solutions Architect"
+      level: "Mid-Senior"
+      fit: "secondary"
+    - name: "QA Lead / QA Engineering Manager"
+      level: "Senior"
+      fit: "secondary"
+    - name: "Enterprise / Software Architect"
+      level: "Mid-Senior"
+      fit: "secondary"
+    - name: "Backend Software Engineer"
+      level: "Senior"
+      fit: "adjacent"
+
+narrative:
+  headline: "DevOps/Platform Engineer who builds AI-augmented infrastructure — from on-prem K8s clusters to production agent systems"
+  exit_story: "Founding CTO of MyHealthCop — took the platform from zero to launch on AWS/GCP with full DR. Then built GTBank Ghana's first DevOps team from scratch: 800+ pods, 3M+ daily requests, 99.97% uptime. Now building AI agents for infrastructure automation and QA."
+  superpowers:
+    - "Multi-cloud infrastructure (AWS + GCP + on-prem K8s + VMware TKG) — not just one provider"
+    - "Building AI agents for ops automation (QA bots, sysadmin agents on production Linux servers)"
+    - "Zero-to-one platform builds (MyHealthCop, Virk Cloud, GTBank DevOps team — full stack from infra to deployment)"
+    - "Enterprise Kubernetes at scale (800+ pods, 1.5M+ daily banking transactions, 99.97% uptime)"
+
+  proof_points:
+    - name: "GTBank Ghana — DevOps Team"
+      url: "https://gtbank.com.gh"
+      hero_metric: "Built the bank's first DevOps team from scratch. CI/CD automation cut deployment time ~90%, release velocity ~5x. HA K8s clusters handling 3M+ daily requests at 99.97% uptime."
+    - name: "GTBank Ghana — Finacle Services"
+      url: "https://gtbank.com.gh"
+      hero_metric: "Managing 800+ production pods on TKG sustaining 1.5M+ daily banking transactions. Led QA for core banking migration: 10,000+ test cases across 13 modules."
+    - name: "MyHealthCop Platform"
+      url: "https://myhealthcop.com"
+      hero_metric: "Founding CTO. Architected full platform on AWS (EKS/ECS), built DR on GCP. 1M+ daily background jobs. Reduced peak latency 90% through DB optimization."
+    - name: "Virk Cloud"
+      url: "https://virk.cloud"
+      hero_metric: "Production-grade K8s PaaS for startups — instant cluster deployment with built-in observability, on bare-metal VPS with RKE2, FluxCD, Terraform."
+
+compensation:
+  target_range: "$70K-160K"
+  currency: "USD"
+  minimum: "$50K"
+  location_flexibility: "Remote preferred (US/EU companies). Open to relocation with visa sponsorship. On-site in Ghana also possible."
+  notes: "Targeting international remote roles paying for output. Africa-adjusted rates from some companies are acceptable if above $50K. Ghana-based roles typically don't disclose salary."
+
+location:
+  country: "Ghana"
+  city: "Accra"
+  timezone: "GMT/UTC+0"
+  visa_status: "Sponsorship needed for relocation; remote work from Ghana needs no sponsorship"
+  onsite_availability: "Open to relocation if sponsored. In Ghana, open to any work arrangement."
