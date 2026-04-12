@@ -4,13 +4,13 @@
 
 oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | [github.com/cyteger](https://github.com/cyteger) | Accra, Ghana
 
---
+---
 
 ## Professional Summary
 
-Full-stack engineer with 6 years building, shipping, and scaling production systems end-to-end - from React/Next.js frontends to Python/Node backends to Kubernetes infrastructure. Led a 12-person cross-functional team as founding CTO (MyHealthCop), founded GTBank Ghana's DevOps practice from scratch, and now builds AI agents for infrastructure automation and QA. Equally strong in Python and JavaScript/TypeScript. Ships across web (React, Next.js), mobile (Flutter, iOS + Android), backend (Django, FastAPI, Node.js), and infrastructure (Kubernetes, Terraform, multi-cloud). Currently building AI-powered SaaS products using RAG, tool-use, and multi-agent orchestration patterns.
+Full-stack engineer with 6 years building, shipping, and scaling production systems end-to-end across React/Next.js frontends, Python/Node backends, and Kubernetes infrastructure. Led a 12-person cross-functional team as founding CTO (MyHealthCop), founded GTBank Ghana's DevOps practice from scratch, and now builds AI agents for infrastructure automation and QA. Equally strong in Python and JavaScript/TypeScript. Ships across web (React, Next.js), mobile (Flutter, iOS + Android), backend (Django, FastAPI, Node.js), and infrastructure (Kubernetes, Terraform, multi-cloud). Currently building AI-powered SaaS products using RAG, tool-use, and multi-agent orchestration patterns.
 
---
+---
 
 ## Technical Skills
 
@@ -32,15 +32,15 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 - **Tools:** Git, GitHub, Azure DevOps, Notion, Jira, Linear, Plane, MinIO (self-hosted object storage)
 - **Deployment Platforms:** Vercel, Virk Cloud (self-built PaaS), Firebase Hosting, self-hosted K8s on-prem
 
---
+---
 
 ## Professional Certifications
 
-- AI Engineering Specialization (ByteByteAI) - Agents, RAG, LLM applications
+- AI Engineering Specialization (ByteByteAI): Agents, RAG, LLM applications
 - Certified Oracle DevOps Professional
 - Certified Oracle Cloud Solutions Architect Associate
 
---
+---
 
 ## Professional Experience
 
@@ -49,7 +49,7 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 
 - Manage the Finacle Services team running the on-prem core banking system on Tanzu Kubernetes Grid (TKG), overseeing 800+ production pods and the full cluster lifecycle: deployments, patching, and incident response, sustaining 1.5M+ daily banking transactions
 - Led end-to-end QA for the bank's migration from Basis to Finacle: planned and executed 10,000+ test cases across 13 core banking modules and 33 internal applications, coordinating integration, UAT, and peripheral device validation
-- Built the observability stack with dashboards tracking CPU/memory trends, transaction volumes, response times, and categorized exceptions - enabling threshold-based alerting and proactive scaling
+- Built the observability stack with dashboards tracking CPU/memory trends, transaction volumes, response times, and categorized exceptions, which enable threshold-based alerting and proactive scaling
 - Lead L2 support operations, correlating transactional and application logs across interfaces and core banking microservices via the Elastic Stack, driving root-cause analysis and cross-functional remediation
 - Architected multi-system integration between Finacle core banking and third-party applications: transaction portals, internal tools, and peripheral services
 - Designed and deployed a bank-wide second factor verification service (OTP): Next.js frontend + Django API backend with SMS/email gateway integrations, logging to Elasticsearch via Filebeat, securing core banking logins for 600+ internal users
@@ -58,10 +58,10 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 ### DevOps Engineering Lead
 **Guaranty Trust Bank Ghana LTD** | Apr 2024 - May 2025 | Accra, Ghana
 
-- Founded the bank's DevOps team of 4 engineers, leading junior engineers to establish modern delivery practices - introducing Kubernetes, containerized deployments, disciplined version control, and automated release workflows
+- Founded the bank's DevOps team of 4 engineers and led junior engineers to establish modern delivery practices, introducing Kubernetes, containerized deployments, disciplined version control, and automated release workflows
 - Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for consistent repeatable deployments; integrated Veracode and Trivy scanning for automated security analysis
 - Architected high-availability Kubernetes clusters across multiple on-prem environments running internal applications handling 3M+ daily requests with 99.97% uptime SLA; implemented auto-scaling and self-healing mechanisms
-- Automated 95% of infrastructure configuration management using Ansible, Python, and Bash scripts - transforming multi-day manual processes into reproducible, version-controlled deployments in minutes
+- Automated 95% of infrastructure configuration management using Ansible, Python, and Bash scripts, turning multi-day manual processes into reproducible, version-controlled deployments in minutes
 - Implemented stateless, version-controlled cluster deployments with FluxCD, Helm, and Azure DevOps for consistency, idempotency, and rapid disaster recovery cluster rebuilds
 - Introduced unified observability stack (Prometheus, Grafana, Elastic Stack, Sentry) for centralized logging, tracing, and real-time alerting to accelerate RCA and improve mean time to resolution
 - Managed multi-cloud infrastructure across Azure and AWS: resource provisioning, private VPC links to on-prem systems, deployments, access control, cost optimization, and reliable operation of GTExpress and GTWorld
@@ -70,7 +70,7 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 **MYHEALTHCOP LTD** | Jan 2021 - Mar 2024
 
 - Founded the technical organization and recruited/managed a 12-person cross-functional team: 2 frontend (React), 3 backend (including self), 2 mobile (Flutter), 2 product managers, 2 designers, 1 QA engineer
-- Architected the full myhealthcop.com platform end-to-end: requirements gathering, system design, database modeling, API architecture - delivering three distinct applications: patient-facing web portal (React), Flutter mobile app (iOS + Android, published to App Store and Play Store), and admin management dashboard (React)
+- Architected the full myhealthcop.com platform end-to-end, covering requirements gathering, system design, database modeling, and API architecture. Delivered three distinct applications: a patient-facing web portal (React), a Flutter mobile app (iOS + Android, published to App Store and Play Store), and an admin management dashboard (React)
 - Designed secure, cost-efficient AWS infrastructure orchestrating containerized microservices using EKS and ECS with autoscaling, load balancing, and seamless inter-service communication
 - Built a high-throughput background processing system handling 1M+ daily jobs (payments, messaging, notifications) using SQS/SNS with SMS, email, and payment provider integrations including failover and provider fallback
 - Reduced peak latency by 90% through database query tuning, caching layers (Redis), and indexing across PostgreSQL
@@ -78,42 +78,32 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 - Designed and implemented disaster recovery: parallel GCP production environment mirroring AWS using GKE, Cloud SQL, and Cloud Storage with secure VPCs, IAM policies, and dual-environment CI/CD for rapid failover
 - Managed full project lifecycle: requirements gathering, sprint planning, stakeholder management, risk assessment, budgeting, and delivery across Agile/Scrum methodology
 
---
+---
 
 ## Projects
 
-### Palsar — AI Web Monitoring SaaS
+### Digital-Recon: Transaction Reconciliation Engine
 **Founder** | 2025 - Present
 
-- Built an AI-powered web monitoring platform using Claude API that watches websites and alerts users on relevant changes in plain English
-- Multiple monitoring modes: fixed URL tracking, AI-discovered URLs, dynamic search-based monitoring with natural language relevance filtering
-- Multi-channel notifications with configurable alert rules
-- **Stack:** Next.js 14, React, TypeScript, Convex (real-time backend), Anthropic Claude API, Vercel
+- Built a real-time transaction reconciliation engine for financial institutions that detects discrepancies across multiple data sources (PostgreSQL, REST APIs, Elasticsearch, Kafka topics) and flags mismatches for operator review
+- **Frontend:** React + TypeScript triage dashboard where operators view flagged transactions, drill into source records across banking systems, and resolve mismatches with a full audit trail
+- **Backend:** Python service layer exposing ingestion, reconciliation-rule, and resolution APIs with role-based access control
+- **Real-time processing:** Celery workers run scheduled and on-demand reconciliation jobs, including windowed scans, per-source reprocessing, and alert generation
+- **Event streaming:** Kafka consumers ingest transaction events from upstream banking systems; producers emit reconciliation outcomes to downstream topics for alerting and analytics
+- **Data layer:** PostgreSQL stores reconciliation state and resolution history; Elasticsearch indexes high-volume transaction records and logs for fast lookups and aggregations
+- Fully containerized with Docker for reproducible local development and deployments
+- **Stack:** React, TypeScript, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker
 
-### Root-ID — AI Agent Identity & Messaging Platform
-**Founder** | 2025 - Present
-
-- Designed an identity, discovery, and async messaging platform for AI agents across organizations - agent registry with cryptographic verification and message inbox without requiring live API connections
-- Planning open-core release for the developer community
-- **Stack:** Next.js (React 19), TypeScript, Convex (real-time), Playwright E2E tests, Vercel
-
-### Digital-Recon — Transaction Reconciliation Engine
-**Founder** | 2025 - Present
-
-- Built a real-time transaction reconciliation engine for financial institutions that detects discrepancies across multiple data sources (databases, APIs, Elasticsearch, Kafka)
-- Web dashboard for triage and resolution of transaction mismatches across disparate banking systems
-- **Stack:** React, TypeScript, Python, Docker, PostgreSQL, Kafka, Elasticsearch
-
-### Virk Cloud — virk.cloud
+### Virk Cloud (virk.cloud)
 **Founder & CTO** | Aug 2025
 
-- Architected a production-grade Kubernetes PaaS (comparable to Vercel) enabling startups to deploy clusters instantly without operational overhead - fixed billing, built-in observability, real-time log streaming, and alerts
-- Built the full management console in Next.js: authentication, cluster management, real-time monitoring dashboards, billing, state management - deployed on the platform itself
+- Architected a production-grade Kubernetes PaaS (comparable to Vercel) that enables startups to deploy clusters instantly without operational overhead, with fixed billing, built-in observability, real-time log streaming, and alerts
+- Built the full management console in Next.js with authentication, cluster management, real-time monitoring dashboards, billing, and state management, deployed on the platform itself
 - Manage full infrastructure on virtual private servers: cluster deployment (RKE2), hardware/storage provisioning, network/traffic management, DNS maintenance
 - Automated all deployments using FluxCD and Terraform for reproducible, version-controlled operations
 - **Stack:** Next.js, TypeScript, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana
 
-### Vistara — Property Tenant Assessment Platform
+### Vistara: Property Tenant Assessment Platform
 **Founder** | 2025 - Present
 
 - Multi-app platform helping renters evaluate housing conditions (water, electricity, safety, noise) before signing leases
@@ -124,28 +114,27 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 ### AI Agents for Infrastructure Operations
 **Personal R&D** | 2024 - Present
 
-- Building specialized AI agents for QA automation, code review, and sysadmin operations on production Linux servers - fully operational against real systems
+- Building specialized AI agents for QA automation, code review, and sysadmin operations on production Linux servers, fully operational against real systems
 - Developing agent-driven SaaS products leveraging RAG, tool-use, and multi-agent orchestration patterns
 - Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development
 
-### Education Research and Innovation Foundry — erifoundry.org
+### Education Research and Innovation Foundry (erifoundry.org)
 **Founder & Research Lead** | Oct 2025 - Present
 
 - Leading design of AI-driven research initiatives in adaptive learning, cognitive modeling, and educational analytics
 - Coordinating cross-disciplinary research to develop experimental frameworks for scalable ML and software solutions in education
 - Prototyping applications of LLMs in human-centered learning systems
 
---
+---
 
 ## Education
 
 **Ashesi University** | BSc Computer Engineering | Sep 2016 - May 2020 | Berekuso, Ghana
 
---
+---
 
 ## Writing & Community
 
-- **risingEngineers** (Substack) - Technical blog on software engineering and infrastructure
-- **Root-ID** - Planned open-core release for AI agent identity infrastructure
-- **GTBank DevOps** - Trained and mentored 3 junior engineers in Kubernetes, CI/CD, and GitOps practices
-- **MyHealthCop** - Built and led a 12-person cross-functional engineering organization from zero
+- **risingEngineers** (Substack): technical blog on software engineering and infrastructure
+- **GTBank DevOps**: trained and mentored 3 junior engineers in Kubernetes, CI/CD, and GitOps practices
+- **MyHealthCop**: built and led a 12-person cross-functional engineering organization from zero
