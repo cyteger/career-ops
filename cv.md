@@ -1,6 +1,6 @@
 # Oswald Gyabaah
 
-**Full-Stack Software Engineer & DevOps Lead**
+**Full-Stack Software and Infrastructure Engineer**
 
 oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | [github.com/cyteger](https://github.com/cyteger) | Accra, Ghana
 
@@ -29,7 +29,7 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 
 ## Professional Certifications
 
-- AI Engineering Specialization (ByteByteGo), Mar 2026: Agents, RAG, LLM applications
+- AI Engineering Specialization (ByteByteAI), Mar 2026: Agents, RAG, LLM applications
 - Oracle Kubernetes Engine Specialist (Oracle), Aug 2025
 - Certified Oracle Cloud Infrastructure DevOps Professional (Oracle), Aug 2025
 - Oracle Certified Cloud Infrastructure Architect Associate (Oracle), Aug 2025
@@ -42,16 +42,15 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 
 ## Professional Experience
 
-### Manager, Finacle Services Team
+### Team Lead, Core Banking Services
 **Guaranty Trust Bank Ghana LTD** | May 2025 - Present
-
-- Manage the Finacle Services team running the on-prem core banking system on Tanzu Kubernetes Grid (TKG), overseeing 800+ production pods and the full cluster lifecycle: deployments, patching, and incident response, sustaining 1.5M+ daily banking transactions
-- Led end-to-end QA for the bank's migration from Basis to Finacle: planned and executed 10,000+ test cases across 13 core banking modules and 33 internal applications, coordinating integration, UAT, and peripheral device validation
-- Built the observability stack with dashboards tracking CPU/memory trends, transaction volumes, response times, and categorized exceptions, which enable threshold-based alerting and proactive scaling
-- Lead L2 support operations, correlating transactional and application logs across interfaces and core banking microservices via the Elastic Stack, driving root-cause analysis and cross-functional remediation
-- Architected multi-system integration between Finacle core banking and third-party applications: transaction portals, internal tools, and peripheral services
-- Designed and deployed a bank-wide second factor verification service (OTP): Next.js frontend + Django API backend with SMS/email gateway integrations, logging to Elasticsearch via Filebeat, securing core banking logins for 600+ internal users
-- Built a Ghana Card verification tool (Next.js + Python/Celery + Redis): processes national ID verification for bank customers, stores documents in self-hosted MinIO, and updates customer records with verified ID card image links
+- Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid (TKG), managing deployments, patching, and incident response across 800+ production pods to sustain 1.5M+ daily transactions.
+- Lead L2 support operations, leveraging the Elastic Stack to correlate logs across internal apps and core banking microservices for root-cause analysis and remediation.
+- Led end-to-end QA for the bank's Basis-to-Finacle migration, designing and executing 10,000+ test cases across 13 core banking modules and 33 internal applications, covering integration, UAT, and peripheral device validation.
+- Built the observability stack, delivering dashboards tracking CPU/memory trends, transaction volumes, response times, and exceptions, with threshold-based alerting to drive proactive scaling.
+- Architected integrations between Finacle core banking and third-party systems including transaction portals, internal tools, and auxiliary services.
+- Built a bank-wide OTP service using Next.js and Django, integrating SMS and email gateways, to secure core banking access for 600+ internal users with structured logging to Elasticsearch via Filebeat.
+- Built an identity verification service using Next.js, Python/Celery, and Redis, with self-hosted MinIO document storage and automated customer record updates.
 
 ### DevOps Engineering Lead
 **Guaranty Trust Bank Ghana LTD** | Apr 2024 - May 2025 | Accra, Ghana
