@@ -53,27 +53,26 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 - Built an identity verification service using Next.js, Python/Celery, and Redis, with self-hosted MinIO document storage and automated customer record updates.
 
 ### DevOps Engineering Lead
-**Guaranty Trust Bank Ghana LTD** | Apr 2024 - May 2025 | Accra, Ghana
+**Guaranty Trust Bank Ghana LTD** | Apr 2024 - Present | Accra, Ghana
 
-- Founded the bank's DevOps team of 4 engineers and led junior engineers to establish modern delivery practices, introducing Kubernetes, containerized deployments, disciplined version control, and automated release workflows
+- Founded the bank's DevOps team of 4 engineers and established modern delivery practices, introducing Kubernetes, containerized deployments, disciplined version control, and automated release workflows
 - Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for consistent repeatable deployments; integrated Veracode and Trivy scanning for automated security analysis
 - Architected high-availability Kubernetes clusters across multiple on-prem environments running internal applications handling 3M+ daily requests with 99.97% uptime SLA; implemented auto-scaling and self-healing mechanisms
 - Automated 95% of infrastructure configuration management using Ansible, Python, and Bash scripts, turning multi-day manual processes into reproducible, version-controlled deployments in minutes
 - Implemented stateless, version-controlled cluster deployments with FluxCD, Helm, and Azure DevOps for consistency, idempotency, and rapid disaster recovery cluster rebuilds
 - Introduced unified observability stack (Prometheus, Grafana, Elastic Stack, Sentry) for centralized logging, tracing, and real-time alerting to accelerate RCA and improve mean time to resolution
-- Managed multi-cloud infrastructure across Azure and AWS: resource provisioning, private VPC links to on-prem systems, deployments, access control, cost optimization, and reliable operation of GTExpress and GTWorld
+- Managed multi-cloud infrastructure across Azure and AWS: resource provisioning, private VPC links to on-prem systems, deployments, access control and cost optimization
 
 ### Chief Technical Officer (Founding)
 **MYHEALTHCOP LTD** | Jan 2021 - Mar 2024
 
-- Founded the technical organization and recruited/managed a 12-person cross-functional team: 2 frontend (React), 3 backend (including self), 2 mobile (Flutter), 2 product managers, 2 designers, 1 QA engineer
-- Architected the full myhealthcop.com platform end-to-end, covering requirements gathering, system design, database modeling, and API architecture. Delivered three distinct applications: a patient-facing web portal (React), a Flutter mobile app (iOS + Android, published to App Store and Play Store), and an admin management dashboard (React)
-- Designed secure, cost-efficient AWS infrastructure orchestrating containerized microservices using EKS and ECS with autoscaling, load balancing, and seamless inter-service communication
-- Built a high-throughput background processing system handling 1M+ daily jobs (payments, messaging, notifications) using SQS/SNS with SMS, email, and payment provider integrations including failover and provider fallback
-- Reduced peak latency by 90% through database query tuning, caching layers (Redis), and indexing across PostgreSQL
-- Automated infrastructure provisioning with Terraform, reducing setup time by 90% while building CI/CD pipelines to streamline deployments and minimize human errors
-- Designed and implemented disaster recovery: parallel GCP production environment mirroring AWS using GKE, Cloud SQL, and Cloud Storage with secure VPCs, IAM policies, and dual-environment CI/CD for rapid failover
-- Managed full project lifecycle: requirements gathering, sprint planning, stakeholder management, risk assessment, budgeting, and delivery across Agile/Scrum methodology
+- Architected the myhealthcop.com platform end-to-end across requirements gathering, system design, database modeling, and API development, delivering three applications: a patient-facing mobile app, a health professional mobile app, and an admin web dashboard.
+- Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.
+- Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including failover and provider fallback.
+- Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
+- Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible while reducing manual error.
+- Designed a disaster recovery strategy mirroring the AWS production environment on GCP using GKE, Cloud SQL, and Cloud Storage, with secure VPCs, IAM policies, and dual-environment CI/CD for rapid failover.
+- Led a 12-person cross-functional team (frontend, backend, mobile, product, design, and QA) through full project lifecycle: requirements gathering, sprint planning, stakeholder management, risk assessment, and budgeting under Agile/Scrum
 
 ---
 
@@ -82,26 +81,21 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 ### Digital-Recon: Transaction Reconciliation Engine
 **Founder** | 2025 - Present
 
-- Built a real-time transaction reconciliation engine for financial institutions that detects discrepancies across multiple data sources (PostgreSQL, REST APIs, Elasticsearch, Kafka topics) and flags mismatches for operator review
-- **Frontend:** React + TypeScript triage dashboard where operators view flagged transactions, drill into source records across banking systems, and resolve mismatches with a full audit trail
-- **Backend:** Python service layer exposing ingestion, reconciliation-rule, and resolution APIs with role-based access control
-- **Real-time processing:** Celery workers run scheduled and on-demand reconciliation jobs, including windowed scans, per-source reprocessing, and alert generation
-- **Event streaming:** Kafka consumers ingest transaction events from upstream banking systems; producers emit reconciliation outcomes to downstream topics for alerting and analytics
-- **Data layer:** PostgreSQL stores reconciliation state and resolution history; Elasticsearch indexes high-volume transaction records and logs for fast lookups and aggregations
-- Fully containerized with Docker for reproducible local development and deployments
+- Built a real-time transaction reconciliation engine for financial institutions, detecting discrepancies across heterogeneous data sources including relational DBs, REST APIs, Elasticsearch, and Kafka topics, with configurable rules for automatic reconciliation or operator-reviewed flagging.
+- Designed a Next.js/TypeScript triage dashboard enabling operators to define reconciliation rules, inspect flagged transactions, drill into source records across banking systems, and resolve mismatches with a full audit trail.
+- Architected an event-driven processing layer using Kafka for upstream transaction ingestion and Celery for scheduled and on-demand reconciliation jobs, including windowed scans, per-source reprocessing, and downstream alerting.
 - **Stack:** React, TypeScript, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker
 
 ### Virk Cloud (virk.cloud)
 **Founder & CTO** | Aug 2025
 
-- Architected a production-grade Kubernetes PaaS (comparable to Vercel) that enables startups to deploy clusters instantly without operational overhead, with fixed billing, built-in observability, real-time log streaming, and alerts
-- Built the full management console in Next.js with authentication, cluster management, real-time monitoring dashboards, billing, and state management, deployed on the platform itself
+- Architected a production-grade Platform-as-a-service with inbuilt CI/CD that enables startups to deploy instantly with fixed billing, built-in observability, real-time log streaming, and alerts
+- Built the full management console in Next.js with authentication, user management, real-time monitoring dashboards, and billing
 - Manage full infrastructure on virtual private servers: cluster deployment (RKE2), hardware/storage provisioning, network/traffic management, DNS maintenance
-- Automated all deployments using FluxCD and Terraform for reproducible, version-controlled operations
-- **Stack:** Next.js, TypeScript, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana
+- **Stack:** Next.js, JavaScript/TypeScript, Convex, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana, python
 
 ### Vistara: Property Tenant Assessment Platform
-**Founder** | 2025 - Present
+**Founder** | 2026 - Present
 
 - Multi-app platform helping renters evaluate housing conditions (water, electricity, safety, noise) before signing leases
 - Built landing page, tenant web app (assessment form), admin web dashboard, and admin mobile app (Flutter) for field data collection
@@ -128,10 +122,3 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 
 **Ashesi University** | BSc Computer Engineering | Sep 2016 - May 2020 | Berekuso, Ghana
 
----
-
-## Writing & Community
-
-- **risingEngineers** (Substack): technical blog on software engineering and infrastructure
-- **GTBank DevOps**: trained and mentored 3 junior engineers in Kubernetes, CI/CD, and GitOps practices
-- **MyHealthCop**: built and led a 12-person cross-functional engineering organization from zero
