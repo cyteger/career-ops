@@ -16,25 +16,21 @@ Fullstack engineer with 6 years delivering production JavaScript applications en
 ## Core Competencies
 
 - Fullstack JavaScript / TypeScript
-- React and Next.js metaframeworks
+- React and Next.js
 - AI-Assisted Development (Claude Code, LLM tooling)
-- Component Architecture and State Management
-- Python and Node.js backends
-- CI/CD and Deployment Infrastructure
-- Client-facing delivery and stakeholder communication
-- Open Source and developer community engagement
+- Python and Node.js
+- CI/CD and Deployment Automation
 
 ---
 
 ## Technical Skills
 
-- **Frontend & Mobile:** JavaScript, TypeScript, React, Next.js (SSR/SSG/App Router), Tailwind CSS, component architecture, state management (Context, Redux, SWR, Convex), Flutter (iOS + Android)
-- **Backend:** Python (Django, FastAPI, Celery), Node.js (Express), REST APIs, GraphQL, WebSockets, real-time subscriptions (Convex)
+- **Frontend (Web & Mobile):** JavaScript, TypeScript, React, Next.js, Tailwind CSS, component architecture, state management, Flutter
+- **Backend and DBs:** Python (Django, FastAPI), Node.js (Express), REST APIs, GraphQL, WebSockets, PostgreSQL, MySQL, Redis, MongoDB
 - **AI Development:** Claude / OpenAI API integration, RAG systems, AI agent development, multi-agent orchestration, tool-use patterns, AI-assisted development workflows, LLM evaluation
-- **Databases:** PostgreSQL, MySQL, MongoDB, Firebase/Firestore, Convex, SQLite, Redis
-- **Testing:** Jest, React Testing Library, Cypress, Playwright E2E, pytest, UAT coordination
+- **Testing:** Jest, React Testing Library, Cypress, Playwright E2E, pytest
 - **Cloud & Infrastructure:** AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI, Kubernetes (EKS, GKE, TKG/Tanzu, RKE2), Docker, Helm
-- **CI/CD & Deployment:** Terraform, Ansible, GitHub Actions, ArgoCD, FluxCD, Azure DevOps, Vercel, Codemagic
+- **CI/CD & Deployment:** Terraform, Ansible, GitHub Actions, FluxCD, Azure DevOps, Jenkins
 - **Observability:** Prometheus, Grafana, ELK Stack, Sentry
 
 ---
@@ -43,9 +39,10 @@ Fullstack engineer with 6 years delivering production JavaScript applications en
 
 - AI Engineering Specialization (ByteByteGo), Mar 2026: Agents, RAG, LLM applications
 - Oracle Kubernetes Engine Specialist (Oracle), Aug 2025
-- Certified Oracle Cloud Infrastructure DevOps Professional (Oracle), Aug 2025
 - AWS Certified Cloud Practitioner (AWS), May 2024
 - Django Web Framework (Coursera), Dec 2022
+- Database Structures and Management with MySQL (Coursera), Dec 2022
+
 
 ---
 
@@ -54,8 +51,8 @@ Fullstack engineer with 6 years delivering production JavaScript applications en
 ### Team Lead, Core Banking Services
 **Guaranty Trust Bank Ghana LTD** | May 2025 - Present
 
-- Built a bank-wide OTP service using Next.js and Django, integrating SMS and email gateways; secured core banking access for 600+ internal users with structured logging to Elasticsearch.
-- Built an identity verification tool using Next.js, Python/Celery, and Redis, with self-hosted MinIO document storage and automated customer record updates.
+- Built a bank-wide OTP service integrating SMS and email gateways to secure core banking access for 600+ internal users with structured logging to Elasticsearch.
+- Built an ID verification service using Next.js and Python to process and store customer ID documents in MinIO with automated verification and record updates.
 - Led end-to-end QA for the bank's Basis-to-Finacle migration, designing and executing 10,000+ test cases across 13 core banking modules and 33 internal applications; used AI-assisted tooling to accelerate test case generation and log triage.
 - Own the on-prem Finacle deployment on Tanzu Kubernetes Grid, managing 800+ production pods sustaining 1.5M+ daily transactions.
 - Architected integrations between Finacle core banking and third-party systems including transaction portals and internal tools.
@@ -63,8 +60,8 @@ Fullstack engineer with 6 years delivering production JavaScript applications en
 ### DevOps Engineering Lead
 **Guaranty Trust Bank Ghana LTD** | Apr 2024 - Present
 
-- Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for repeatable deployments; integrated Veracode and Trivy scanning into pipelines.
 - Founded the bank's DevOps team of 4 engineers and established modern delivery practices, introducing Kubernetes, containerized deployments, and automated release workflows.
+- Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for repeatable deployments; integrated Veracode and Trivy scanning into pipelines.
 - Architected high-availability Kubernetes clusters running internal applications handling 3M+ daily requests at 99.97% uptime; implemented auto-scaling and self-healing.
 - Managed multi-cloud infrastructure across Azure and AWS: provisioning, private VPC links to on-prem, deployments, access control, cost optimization.
 

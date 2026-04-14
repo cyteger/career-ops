@@ -50,7 +50,7 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 - Built the observability stack, delivering dashboards tracking CPU/memory trends, transaction volumes, response times, and exceptions, with threshold-based alerting to drive proactive scaling.
 - Architected integrations between Finacle core banking and third-party systems including transaction portals, internal tools, and auxiliary services.
 - Built a bank-wide OTP service using Next.js and Django, integrating SMS and email gateways, to secure core banking access for 600+ internal users with structured logging to Elasticsearch via Filebeat.
-- Built an identity verification service using Next.js, Python/Celery, and Redis, with self-hosted MinIO document storage and automated customer record updates.
+- Built a national ID verification service using Next.js and Python, to process and store ID documents in self-hosted MinIO bucket with automated verification and customer record updates.
 
 ### DevOps Engineering Lead
 **Guaranty Trust Bank Ghana LTD** | Apr 2024 - Present | Accra, Ghana
