@@ -29,9 +29,14 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 
 ## Professional Certifications
 
-- AI Engineering Specialization (ByteByteAI): Agents, RAG, LLM applications
-- Certified Oracle DevOps Professional
-- Certified Oracle Cloud Solutions Architect Associate
+- AI Engineering Specialization (ByteByteGo), Mar 2026: Agents, RAG, LLM applications
+- Oracle Kubernetes Engine Specialist (Oracle), Aug 2025
+- Certified Oracle Cloud Infrastructure DevOps Professional (Oracle), Aug 2025
+- Oracle Certified Cloud Infrastructure Architect Associate (Oracle), Aug 2025
+- Oracle Certified Foundations Associate (Oracle), Jul 2025
+- AWS Certified Cloud Practitioner (AWS), May 2024
+- Database Structures and Management with MySQL (Coursera), Dec 2022
+- Django Web Framework (Coursera), Dec 2022
 
 ---
 
