@@ -14,24 +14,17 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 
 ## Technical Skills
 
-- **Frontend:** React, Next.js (SSR/SSG), TypeScript, JavaScript, Tailwind CSS, HOC/Render Props/Hooks patterns, component architecture, responsive design
-- **Mobile:** Flutter (iOS + Android, published to App Store + Play Store), React Native fundamentals
+- **Frontend/Mobile:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Flutter
 - **Backend:** Python (Django, FastAPI, Celery), Node.js (Express), REST APIs, GraphQL, WebSockets
 - **Databases:** PostgreSQL, MySQL, MongoDB, Firebase/Firestore, Convex, SQLite, Redis
-- **Real-time:** Convex real-time subscriptions, WebSockets, Firebase Realtime, Server-Sent Events
-- **Messaging & Queues:** AWS SQS/SNS, RabbitMQ, Redis queues, Kafka, Convex cron jobs
+- **Messaging & Queues:** AWS SQS/SNS, RabbitMQ, Redis queues, Kafka
 - **Testing:** Jest, React Testing Library, Cypress, Playwright E2E, pytest, UAT coordination
 - **Cloud & Infrastructure:** AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI, VMware, on-prem bare metal (Tier III data centers)
-- **Container Orchestration:** Kubernetes (EKS, GKE, TKG/Tanzu, RKE2), Docker, Helm, Istio Service Mesh
-- **CI/CD & GitOps:** Terraform, Ansible, GitHub Actions, ArgoCD, FluxCD, Azure DevOps, Codemagic
+- **Container Orchestration:** Docker, Docker Compose, Kubernetes (EKS, GKE, TKG/Tanzu, RKE2), Helm, Istio Service Mesh
+- **CI/CD & GitOps:** Terraform, Ansible, GitHub Actions, ArgoCD, FluxCD, Azure DevOps, Codemagic, Jenkins
 - **Observability:** Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat), Sentry
-- **Security & Auth:** OAuth2 (Keycloak), OIDC, JWT, LDAP, 2FA/OTP systems, Veracode, Trivy, IPSec/OpenVPN, TLS/SSL, WAF
-- **AI & Agents:** LLM API integration (Claude, OpenAI), RAG systems, AI agent development, multi-agent orchestration, tool-use patterns, AI-assisted development workflows
-- **Architecture:** Microservices design, API design, database modeling, enterprise system integration, disaster recovery planning, multi-cloud architecture
+- **AI & Agents:** LLM API integration (Claude, OpenAI, Grok), RAG systems, AI agent development, multi-agent orchestration, tool-use patterns, AI-assisted development workflows
 - **Project Management:** Full project lifecycle (requirements through delivery), Agile/Scrum, Kanban, stakeholder management, risk assessment
-- **Tools:** Git, GitHub, Azure DevOps, Notion, Jira, Linear, Plane, MinIO (self-hosted object storage)
-- **Deployment Platforms:** Vercel, Virk Cloud (self-built PaaS), Firebase Hosting, self-hosted K8s on-prem
-
 ---
 
 ## Professional Certifications
