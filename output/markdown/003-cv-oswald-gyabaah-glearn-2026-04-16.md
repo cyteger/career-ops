@@ -9,7 +9,7 @@ oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https:/
 
 ## Professional Summary
 
-Full-stack engineer with 6 years shipping production applications across web, mobile, backend, and infrastructure. Founding CTO of MyHealthCop, where I took the platform from zero to launch on AWS with GCP disaster recovery, led a 12-person cross-functional team, and shipped three applications including two Flutter iOS + Android apps and a React admin dashboard. Daily-driver stack is Next.js, React, TypeScript, and Python, with hands-on AI-agent orchestration: I'm currently running specialized Claude-based agents for QA, code review, and sysadmin against live Linux production servers, using RAG, tool-use, and multi-agent patterns. Ashesi graduate based in Accra with native context on the Ghanaian/WAEC education landscape.
+Full-stack engineer with 6 years shipping production applications across web, mobile, backend, and infrastructure. Founding CTO of MyHealthCop, where I took the platform from zero to launch on AWS with GCP disaster recovery, led a 12-person cross-functional team, and shipped three applications including two Flutter iOS + Android apps and a React admin dashboard. Daily-driver stack is Next.js, React, TypeScript, and Python, with hands-on AI-agent orchestration: I'm currently running specialized Claude-based agents for QA, code review, and sysadmin against live Linux production servers, using RAG, tool-use, and multi-agent patterns.
 
 ---
 
@@ -25,8 +25,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 - **Cloud:** AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI
 - **CI/CD:** GitHub Actions, Azure DevOps, Codemagic, Terraform, Ansible, FluxCD, ArgoCD
 - **Observability:** Prometheus, Grafana, ELK Stack, Sentry
-- **Project Management:** Agile/Scrum, stakeholder management, full project lifecycle
-
 ---
 
 ## Professional Certifications
@@ -74,14 +72,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 
 ## Projects
 
-### AI Agents for Infrastructure Operations
-**Personal R&D** | 2024 - Present
-
-- Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads.
-- Orchestrating multi-agent workflows using Claude Code, RAG over runbooks, tool-use patterns, structured output parsing, and HITL approval gates.
-- Actively using AI-assisted development workflows (Claude Code + agents) to parallelize feature work across my own projects while preserving code-review rigor.
-- Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development.
-
 ### Virk Cloud (virk.cloud)
 **Founder & CTO** | Aug 2025 - Present
 
@@ -98,12 +88,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 - Architected an event-driven processing layer using Kafka for ingestion and Celery for scheduled and on-demand reconciliation jobs.
 - **Stack:** Next.js, TypeScript, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker
 
-### Vistara: Property Tenant Assessment Platform
-**Founder** | 2026 - Present
-
-- Multi-app platform helping renters evaluate housing conditions before signing leases.
-- Built landing page, tenant web app, admin web dashboard, and admin Flutter mobile app (iOS in TestFlight, Android in beta) for field data collection.
-- **Stack:** Next.js, React, TypeScript, Flutter, Codemagic CI/CD
 
 ---
 
