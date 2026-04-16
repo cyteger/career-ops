@@ -88,7 +88,7 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 
 - Architected a Platform-as-a-Service for startups with built-in CI/CD, fixed billing, observability, real-time log streaming, and alerting.
 - Built the full management console in Next.js with authentication, user management, real-time monitoring dashboards, and billing.
-- Manage the underlying infrastructure on virtual private servers: RKE2 cluster deployment, hardware/storage provisioning, network and traffic management, and DNS.
+- Self-manage the infrastructure on virtual private servers handling all operations including cluster deployment, hardware provisioning, networking and DNS.
 - **Stack:** Next.js, JavaScript/TypeScript, Convex, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana, Python
 ---
 
