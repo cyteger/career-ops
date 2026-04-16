@@ -8,7 +8,7 @@ oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https:/
 
 ## Professional Summary
 
-Full-stack engineer with 6 years building, shipping, and scaling production systems end-to-end across React/Next.js frontends, Python/Node backends, and Kubernetes infrastructure. Led a 12-person cross-functional team as founding CTO (MyHealthCop), founded GTBank Ghana's DevOps practice from scratch, and now builds AI agents for infrastructure automation and QA. Equally strong in Python and JavaScript/TypeScript. Ships across web (React, Next.js), mobile (Flutter, iOS + Android), backend (Django, FastAPI, Node.js), and infrastructure (Kubernetes, Terraform, multi-cloud). Currently building AI-powered SaaS products using RAG, tool-use, and multi-agent orchestration patterns.
+Full-stack engineer with 6 years shipping production systems across web, mobile, backend, and infrastructure. Founded GTBank Ghana's DevOps practice from scratch and previously led a 12-person cross-functional team as founding CTO of MyHealthCop. Works fluently across React/Next.js, Python (Django, FastAPI), Node.js, and Flutter, with deep Kubernetes and multi-cloud operations experience. Currently building AI agents for infrastructure automation and QA, and AI-powered SaaS products using RAG, tool-use, and multi-agent orchestration.
 
 ---
 
@@ -70,7 +70,7 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 - Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.
 - Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including failover and provider fallback.
 - Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
-- Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible while reducing manual error.
+- Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible.
 - Designed a disaster recovery strategy mirroring the AWS production environment on GCP using GKE, Cloud SQL, and Cloud Storage, with secure VPCs, IAM policies, and dual-environment CI/CD for rapid failover.
 - Led a 12-person cross-functional team (frontend, backend, mobile, product, design, and QA) through full project lifecycle: requirements gathering, sprint planning, stakeholder management, risk assessment, and budgeting under Agile/Scrum
 
@@ -105,7 +105,7 @@ Full-stack engineer with 6 years building, shipping, and scaling production syst
 ### AI Agents for Infrastructure Operations
 **Personal R&D** | 2024 - Present
 
-- Building specialized AI agents for QA automation, code review, and sysadmin operations on production Linux servers, fully operational against real systems
+- Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads
 - Developing agent-driven SaaS products leveraging RAG, tool-use, and multi-agent orchestration patterns
 - Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development
 
