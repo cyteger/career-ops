@@ -8,7 +8,7 @@ oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https:/
 
 ## Professional Summary
 
-Full-stack engineer with 6 years shipping production systems across web, mobile, backend, and infrastructure. Founded GTBank Ghana's DevOps practice from scratch and previously led a 12-person cross-functional team as founding CTO of MyHealthCop. Works fluently across React/Next.js, Python (Django, FastAPI), Node.js, and Flutter, with deep Kubernetes and multi-cloud operations experience. Currently building AI agents for infrastructure automation and QA, and AI-powered SaaS products using RAG, tool-use, and multi-agent orchestration.
+Full-stack engineer with 6 years shipping production systems across web, mobile, backend, and infrastructure. Founded GTBank Ghana's DevOps practice from scratch and previously led a 12-person cross-functional team as founding CTO of MyHealthCop. Works fluently across React/Next.js, Python (Django, FastAPI), Node.js, and Flutter, with deep Kubernetes and multi-cloud operations experience. Currently building AI agents for infrastructure automation and QA, and prototyping AI-powered SaaS tools using RAG, tool-use, and multi-agent orchestration.
 
 ---
 
@@ -25,6 +25,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 - **Observability:** Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat), Sentry
 - **AI & Agents:** LLM API integration (Claude, OpenAI, Grok), RAG systems, AI agent development, multi-agent orchestration, tool-use patterns, AI-assisted development workflows
 - **Project Management:** Full project lifecycle (requirements through delivery), Agile/Scrum, Kanban, stakeholder management, risk assessment
+
 ---
 
 ## Professional Certifications
@@ -61,8 +62,8 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 - Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for consistent repeatable deployments; integrated Veracode and Trivy scanning for automated security analysis
 - Architected high-availability Kubernetes clusters across multiple on-prem environments running internal applications handling 3M+ daily requests with 99.97% uptime SLA; implemented auto-scaling and self-healing mechanisms
 - Automated 95% of infrastructure configuration management using Ansible, Python, and Bash scripts, turning multi-day manual processes into reproducible, version-controlled deployments in minutes
-- Implemented stateless, version-controlled cluster deployments with FluxCD, Helm, and Azure DevOps for consistency, idempotency, and rapid disaster recovery cluster rebuilds
-- Introduced a unified observability stack (Prometheus, Grafana, Elastic Stack, Sentry) for centralized logging, tracing, and real-time alerting to accelerate RCA and improve mean time to resolution
+- Implemented declarative, version-controlled cluster deployments with FluxCD, Helm, and Azure DevOps for consistency, idempotency, and rapid disaster recovery rebuilds
+- Introduced a unified observability stack (Prometheus, Grafana, Elastic Stack, Sentry) for centralized logging, tracing, and real-time alerting, reducing mean time to resolution on production incidents
 - Managed multi-cloud infrastructure across Azure and AWS: resource provisioning, private VPC links to on-prem systems, deployments, access control and cost optimization
 
 ### Chief Technical Officer (Founding)
@@ -70,7 +71,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 
 - Architected the myhealthcop.com platform end-to-end across requirements gathering, system design, database modeling, and API development, delivering three applications: a patient-facing Flutter mobile app (iOS + Android), a Flutter mobile app for health professionals, and a React admin web dashboard.
 - Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.
-- Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including failover and provider fallback.
+- Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including multi-provider failover.
 - Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
 - Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible.
 - Designed a disaster recovery strategy mirroring the AWS production environment on GCP using GKE, Cloud SQL, and Cloud Storage, with secure VPCs, IAM policies, and dual-environment CI/CD for rapid failover.
@@ -89,19 +90,19 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 - **Stack:** React, TypeScript, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker
 
 ### Virk Cloud (virk.cloud)
-**Founder & CTO** | Aug 2025
+**Founder & CTO** | Aug 2025 - Present
 
-- Architected a production-grade Platform-as-a-service with inbuilt CI/CD that enables startups to deploy instantly with fixed billing, built-in observability, real-time log streaming, and alerts
+- Architected a Platform-as-a-Service for startups with built-in CI/CD, fixed billing, observability, real-time log streaming, and alerting
 - Built the full management console in Next.js with authentication, user management, real-time monitoring dashboards, and billing
-- Manage full infrastructure on virtual private servers: cluster deployment (RKE2), hardware/storage provisioning, network/traffic management, DNS maintenance
-- **Stack:** Next.js, JavaScript/TypeScript, Convex, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana, python
+- Manage the underlying infrastructure on virtual private servers: RKE2 cluster deployment, hardware/storage provisioning, network and traffic management, and DNS
+- **Stack:** Next.js, JavaScript/TypeScript, Convex, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana, Python
 
 ### Vistara: Property Tenant Assessment Platform
 **Founder** | 2026 - Present
 
 - Multi-app platform helping renters evaluate housing conditions (water, electricity, safety, noise) before signing leases
 - Built landing page, tenant web app (assessment form), admin web dashboard, and admin mobile app (Flutter) for field data collection
-- Currently in TestFlight (iOS) with web version hosted
+- iOS mobile app in TestFlight; web apps deployed to beta
 - **Stack:** Next.js, React, TypeScript, Flutter, Codemagic CI/CD
 
 ### AI Agents for Infrastructure Operations
@@ -115,7 +116,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 **Founder & Research Lead** | Oct 2025 - Present
 
 - Leading design of AI-driven research initiatives in adaptive learning, cognitive modeling, and educational analytics
-- Coordinating cross-disciplinary research to develop experimental frameworks for scalable ML and software solutions in education
+- Coordinating cross-disciplinary research on ML and software tooling for education
 - Prototyping applications of LLMs in human-centered learning systems
 
 ---
