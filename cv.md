@@ -66,7 +66,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 ### Chief Technical Officer (Founding)
 **MYHEALTHCOP LTD** | Jan 2021 - Mar 2024
 
-- Architected the myhealthcop.com platform end-to-end across requirements gathering, system design, database modeling, and API development, delivering three applications: a patient-facing mobile app, a health professional mobile app, and an admin web dashboard.
+- Architected the myhealthcop.com platform end-to-end across requirements gathering, system design, database modeling, and API development, delivering three applications: a patient-facing Flutter mobile app (iOS + Android), a Flutter mobile app for health professionals, and a React admin web dashboard.
 - Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.
 - Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including failover and provider fallback.
 - Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
