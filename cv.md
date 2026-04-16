@@ -31,9 +31,8 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 ## Professional Certifications
 
 - AI Engineering Specialization (ByteByteAI), Mar 2026: Agents, RAG, LLM applications
-- Oracle Kubernetes Engine Specialist (Oracle), Aug 2025
-- Certified Oracle Cloud Infrastructure DevOps Professional (Oracle), Aug 2025
-- Oracle Certified Cloud Infrastructure Architect Associate (Oracle), Aug 2025
+- Oracle Certified DevOps Professional (Oracle), Aug 2025
+- Oracle Certified Architect Associate (Oracle), Aug 2025
 - Oracle Certified Foundations Associate (Oracle), Jul 2025
 - AWS Certified Cloud Practitioner (AWS), May 2024
 - Database Structures and Management with MySQL (Coursera), Dec 2022
@@ -50,17 +49,17 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 
 - Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid (TKG), managing deployments, patching, and incident response across 800+ production pods to sustain 1.5M+ daily transactions.
 - Lead L2 support operations, leveraging the Elastic Stack to correlate logs across internal apps and core banking microservices for root-cause analysis and remediation.
-- Led end-to-end QA for the bank's Basis-to-Finacle migration, designing and executing 10,000+ test cases across 13 core banking modules and 33 internal applications, covering integration, UAT, and peripheral device validation.
+- Led a 5-person QA team through the bank's Basis-to-Finacle migration cutover, designing and executing 10,000+ test cases across 13 core banking modules and 33 internal applications over a two-week window, covering integration, UAT, and peripheral device validation.
 - Extended the bank's observability stack into core banking with Finacle-specific dashboards for CPU/memory trends, transaction volumes, response times, and exceptions, plus threshold-based alerting for proactive scaling.
 - Architected integrations between Finacle core banking and third-party systems including transaction portals, internal tools, and auxiliary services.
 - Built a bank-wide OTP service using Next.js and Django, integrating SMS and email gateways, to secure core banking access for 600+ internal users with structured logging to Elasticsearch via Filebeat.
-- Built a national ID verification service using Next.js and Python, to process and store ID documents in self-hosted MinIO bucket with automated verification and customer record updates.
+- Built a national ID verification service using Next.js and Django, processing and storing ID documents in self-hosted MinIO with automated verification and customer record updates.
 
 **DevOps Engineering Lead** | Apr 2024 - Present
 
 - Founded the bank's DevOps team of 4 engineers and established modern delivery practices, introducing Kubernetes, containerized deployments, disciplined version control, and automated release workflows
 - Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for consistent repeatable deployments; integrated Veracode and Trivy scanning for automated security analysis
-- Architected high-availability Kubernetes clusters across multiple on-prem environments running internal applications handling 3M+ daily requests with 99.97% uptime SLA; implemented auto-scaling and self-healing mechanisms
+- Architected high-availability Kubernetes clusters across multiple on-prem environments running internal applications handling 3M+ daily requests, with 99.97% measured uptime inclusive of monthly scheduled maintenance; implemented auto-scaling and self-healing mechanisms
 - Automated 95% of infrastructure configuration management using Ansible, Python, and Bash scripts, turning multi-day manual processes into reproducible, version-controlled deployments in minutes
 - Implemented declarative, version-controlled cluster deployments with FluxCD, Helm, and Azure DevOps for consistency, idempotency, and rapid disaster recovery rebuilds
 - Introduced a unified observability stack (Prometheus, Grafana, Elastic Stack, Sentry) for centralized logging, tracing, and real-time alerting, reducing mean time to resolution on production incidents
