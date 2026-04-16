@@ -20,8 +20,7 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 - **AI & Agents:** LLM API integration (Claude, OpenAI, Grok), RAG systems, AI agent development, multi-agent orchestration, tool-use patterns, AI-assisted development workflows
 - **Databases:** PostgreSQL, MySQL, MongoDB, Firebase/Firestore, Convex, SQLite, Redis
 - **Messaging & Queues:** AWS SQS/SNS, RabbitMQ, Redis queues, Kafka
-- **Testing:** Jest, React Testing Library, Cypress, Playwright E2E, pytest, UAT coordination
-- **Cloud & Infrastructure:** AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI, VMware, on-prem bare metal
+- **Cloud & Infrastructure:** AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI
 - **Container Orchestration:** Docker, Docker Compose, Kubernetes (EKS, GKE, TKG, RKE2), Helm, Istio
 - **CI/CD & GitOps:** Terraform, Ansible, GitHub Actions, ArgoCD, FluxCD, Azure DevOps, Codemagic, Jenkins
 - **Observability:** Prometheus, Grafana, ELK Stack, Sentry
@@ -33,8 +32,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 
 - AI Engineering Specialization (ByteByteAI), Mar 2026: Agents, RAG, LLM applications
 - Oracle Certified DevOps Professional (Oracle), Aug 2025
-- Oracle Certified Architect Associate (Oracle), Aug 2025
-- Oracle Certified Foundations Associate (Oracle), Jul 2025
 - AWS Certified Cloud Practitioner (AWS), May 2024
 - Database Structures and Management with MySQL (Coursera), Dec 2022
 - Django Web Framework (Coursera), Dec 2022
@@ -94,14 +91,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 - Built the full management console in Next.js with authentication, user management, real-time monitoring dashboards, and billing.
 - Manage the underlying infrastructure on virtual private servers: RKE2 cluster deployment, hardware/storage provisioning, network and traffic management, and DNS.
 - **Stack:** Next.js, JavaScript/TypeScript, Convex, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana, Python
-
-### AI Agents for Infrastructure Operations
-**Personal R&D** | 2024 - Present
-
-- Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads.
-- Prototyping agent-driven SaaS tools using RAG, tool-use, and multi-agent orchestration patterns.
-- Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development.
-
 ---
 
 ## Education
