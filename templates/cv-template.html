@@ -239,36 +239,16 @@
     margin-top: 10px;
   }
 
-  /* Stacked: a thin vertical line runs from just below the org header
-     down through all subroles, with a small node marker at each role's
-     start (LinkedIn-style). The line's left edge is flush with the first
-     character of the org name so the hierarchy reads as one timeline.
-     Dot sits fully to the right of the line (touching it, not straddling)
-     so it never gets clipped, and the role title sits just past the dot. */
+  /* Stacked: subroles sit slightly indented under the org header to
+     signal "these roles are children of this employer". No vertical
+     line, no node markers — the indent alone carries the hierarchy. */
   .job-stack-roles {
-    border-left: 1px solid #e2e2e2;
-    padding-left: 8px;
-    margin-top: 6px;
-  }
-
-  .job-stacked .job-subrole {
-    position: relative;
-    margin-top: 12px;
+    padding-left: 14px;
+    margin-top: 4px;
   }
 
   .job-stacked .job-subrole:first-child {
     margin-top: 0;
-  }
-
-  .job-stacked .job-subrole::before {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 4px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #b8b8b8;
   }
 
   .job-subrole-header {
