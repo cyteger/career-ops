@@ -13,19 +13,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 
 ---
 
-## Core Competencies
-
-- Fullstack Development (JavaScript, TypeScript, Python)
-- Next.js, React, Tailwind CSS
-- AI-Assisted Development & LLM Integration
-- Component Architecture & State Management
-- CI/CD Pipelines & GitOps
-- Service Layers & Database Architecture
-- Cloud Infrastructure (AWS, GCP, Kubernetes)
-- Client Consulting & Cross-Functional Delivery
-
----
-
 ## Technical Skills
 
 - **Frontend/Mobile:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Flutter, Web Components
