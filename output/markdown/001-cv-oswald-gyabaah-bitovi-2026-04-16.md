@@ -17,15 +17,13 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 
 - **Frontend/Mobile:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Flutter, Web Components
 - **Backend:** Python (Django, FastAPI, Celery), Node.js (Express), REST APIs, GraphQL, WebSockets
-- **AI & Agents:** LLM API integration (Claude, OpenAI, Grok), RAG systems, AI agent development, multi-agent orchestration, tool-use patterns, AI-assisted development workflows
+- **Agentic AI:** LLM integrations, RAG systems, Agent development, AI-assisted development workflows
 - **Databases:** PostgreSQL, MySQL, MongoDB, Firebase/Firestore, Convex, SQLite, Redis
 - **Messaging & Queues:** AWS SQS/SNS, RabbitMQ, Redis queues, Kafka
 - **Cloud & Infrastructure:** AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI
 - **Container Orchestration:** Docker, Docker Compose, Kubernetes (EKS, GKE, TKG, RKE2), Helm, Istio
 - **CI/CD & GitOps:** Terraform, Ansible, GitHub Actions, ArgoCD, FluxCD, Azure DevOps, Codemagic, Jenkins
 - **Observability:** Prometheus, Grafana, ELK Stack, Sentry
-- **Project Management:** Agile/Scrum, Kanban, stakeholder management, full project lifecycle
-
 ---
 
 ## Professional Certifications
