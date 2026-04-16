@@ -102,14 +102,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 - Prototyping agent-driven SaaS tools using RAG, tool-use, and multi-agent orchestration patterns.
 - Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development.
 
-### Vistara: Property Tenant Assessment Platform
-**Founder** | 2026 - Present
-
-- Multi-app platform helping renters evaluate housing conditions (water, electricity, safety, noise) before signing leases.
-- Built landing page, tenant web app (assessment form), admin web dashboard, and admin mobile app (Flutter) for field data collection.
-- iOS mobile app in TestFlight; web apps deployed to beta.
-- **Stack:** Next.js, React, TypeScript, Flutter, Codemagic CI/CD
-
 ---
 
 ## Education
