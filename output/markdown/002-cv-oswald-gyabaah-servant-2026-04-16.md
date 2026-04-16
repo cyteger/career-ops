@@ -69,8 +69,6 @@ Senior DevOps and Cloud Engineer with 6 years building and running production pl
 - Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including multi-provider failover.
 - Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
 - Architected the myhealthcop.com platform end-to-end, delivering three applications: a patient-facing Flutter mobile app, a Flutter app for health professionals, and a React admin dashboard.
-- Led a 12-person cross-functional team through full project lifecycle under Agile/Scrum.
-
 ---
 
 ## Projects
@@ -82,13 +80,6 @@ Senior DevOps and Cloud Engineer with 6 years building and running production pl
 - Built the full management console in Next.js with authentication, user management, real-time monitoring dashboards, and billing.
 - Manage the underlying infrastructure on virtual private servers: RKE2 cluster deployment, hardware/storage provisioning, network and traffic management, and DNS.
 - **Stack:** Kubernetes (RKE2), Terraform, FluxCD, Prometheus, Grafana, Next.js, Convex, Python
-
-### AI Agents for Infrastructure Operations
-**Personal R&D** | 2024 - Present
-
-- Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads.
-- Prototyping agent-driven SaaS tools using RAG, tool-use, and multi-agent orchestration patterns.
-- Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development.
 
 ### Digital-Recon: Transaction Reconciliation Engine
 **Founder** | 2025 - Present
