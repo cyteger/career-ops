@@ -48,16 +48,16 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 **Team Lead, Core Banking Services** | May 2025 - Present
 
 - Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid (TKG), managing deployments, patching, and incident response across 800+ production pods to sustain 1.5M+ daily transactions.
-- Lead L2 support operations, leveraging the Elastic Stack to correlate logs across internal apps and core banking microservices for root-cause analysis and remediation.
+- Lead L2 support operations, correlating logs across internal apps and core banking microservices via the Elastic Stack for root-cause analysis and remediation.
 - Led a 5-person QA team through the bank's Basis-to-Finacle migration cutover, designing and executing 10,000+ test cases across 13 core banking modules and 33 internal applications over a two-week window, covering integration, UAT, and peripheral device validation.
 - Extended the bank's observability stack into core banking with Finacle-specific dashboards for CPU/memory trends, transaction volumes, response times, and exceptions, plus threshold-based alerting for proactive scaling.
-- Architected integrations between Finacle core banking and third-party systems including transaction portals, internal tools, and auxiliary services.
+- Architected integrations between Finacle core banking and third-party systems including transaction portals and internal tools.
 - Built a bank-wide OTP service using Next.js and Django, integrating SMS and email gateways, to secure core banking access for 600+ internal users with structured logging to Elasticsearch via Filebeat.
 - Built a national ID verification service using Next.js and Django, processing and storing ID documents in self-hosted MinIO with automated verification and customer record updates.
 
 **DevOps Engineering Lead** | Apr 2024 - Present
 
-- Founded the bank's DevOps team of 4 engineers and established modern delivery practices, introducing Kubernetes, containerized deployments, disciplined version control, and automated release workflows
+- Founded the bank's DevOps team of 4 engineers, replacing manual code handoffs with enforced Git workflows, containerized Kubernetes deployments, and automated release pipelines
 - Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for consistent repeatable deployments; integrated Veracode and Trivy scanning for automated security analysis
 - Architected high-availability Kubernetes clusters across multiple on-prem environments running internal applications handling 3M+ daily requests, with 99.97% measured uptime inclusive of monthly scheduled maintenance; implemented auto-scaling and self-healing mechanisms
 - Automated 95% of infrastructure configuration management using Ansible, Python, and Bash scripts, turning multi-day manual processes into reproducible, version-controlled deployments in minutes
@@ -74,7 +74,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 - Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
 - Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible.
 - Designed a disaster recovery strategy mirroring the AWS production environment on GCP using GKE, Cloud SQL, and Cloud Storage, with secure VPCs, IAM policies, and dual-environment CI/CD for rapid failover.
-- Led a 12-person cross-functional team (frontend, backend, mobile, product, design, and QA) through full project lifecycle: requirements gathering, sprint planning, stakeholder management, risk assessment, and budgeting under Agile/Scrum
+- Led a 12-person cross-functional team (frontend, backend, mobile, product, design, and QA) through full project lifecycle: requirements gathering, sprint planning, stakeholder management, and budgeting under Agile/Scrum
 
 ---
 
@@ -83,7 +83,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 ### Digital-Recon: Transaction Reconciliation Engine
 **Founder** | 2025 - Present
 
-- Built a real-time transaction reconciliation engine for financial institutions, detecting discrepancies across heterogeneous data sources including relational DBs, REST APIs, Elasticsearch, and Kafka topics, with configurable rules for automatic reconciliation or operator-reviewed flagging.
+- Building a real-time transaction reconciliation engine for financial institutions, detecting discrepancies across heterogeneous data sources including relational DBs, REST APIs, Elasticsearch, and Kafka topics, with configurable rules for automatic reconciliation or operator-reviewed flagging.
 - Designed a Next.js/TypeScript triage dashboard enabling operators to define reconciliation rules, inspect flagged transactions, drill into source records across banking systems, and resolve mismatches with a full audit trail.
 - Architected an event-driven processing layer using Kafka for upstream transaction ingestion and Celery for scheduled and on-demand reconciliation jobs, including windowed scans, per-source reprocessing, and downstream alerting.
 - **Stack:** React, TypeScript, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker
@@ -108,7 +108,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 **Personal R&D** | 2024 - Present
 
 - Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads
-- Developing agent-driven SaaS products leveraging RAG, tool-use, and multi-agent orchestration patterns
+- Prototyping agent-driven SaaS tools using RAG, tool-use, and multi-agent orchestration patterns
 - Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development
 
 ### Education Research and Innovation Foundry (erifoundry.org)
