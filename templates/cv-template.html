@@ -244,6 +244,21 @@
     border-top: 1px solid #eee;
   }
 
+  /* Stacked: vertical border runs alongside the org header and all its
+     subroles, signalling that every role belongs to the same employer. */
+  .job-stacked {
+    border-left: 2px solid hsl(270, 70%, 85%);
+    padding-left: 12px;
+  }
+
+  .job-stacked .job-subrole {
+    padding-left: 14px;
+  }
+
+  .job-stacked .job-subrole + .job-subrole {
+    padding-left: 14px;
+  }
+
   .job-subrole-header {
     display: flex;
     justify-content: space-between;
