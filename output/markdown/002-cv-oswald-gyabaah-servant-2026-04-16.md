@@ -20,11 +20,9 @@ Senior DevOps and Cloud Engineer with 6 years building and running production pl
 - **CI/CD & GitOps:** Azure DevOps, GitHub Actions, Terraform, Ansible, ArgoCD, FluxCD, Codemagic, Jenkins
 - **Backend:** Python (FastAPI, Django, Celery), Node.js (Express), REST APIs, GraphQL, WebSockets
 - **Observability:** Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat), Sentry
-- **Security & Networking:** VPC/Subnets, Private Peering, IAM, WAF, OAuth2/Keycloak, OIDC, LDAP, JWT
 - **Databases:** PostgreSQL, MySQL, MongoDB, Redis, Firebase/Firestore, Convex, SQLite
 - **Messaging & Queues:** AWS SQS/SNS, RabbitMQ, Redis queues, Kafka
-- **Testing:** Jest, React Testing Library, Cypress, Playwright E2E, pytest, UAT coordination
-- **AI & Agents:** LLM API integration (Claude, OpenAI, Grok), RAG systems, AI agent development, multi-agent orchestration, tool-use patterns
+- **Agentic AI:** LLM integrations, RAG systems, Agent development, AI-assisted development workflows
 - **Frontend/Mobile:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Flutter
 
 ---
@@ -33,8 +31,6 @@ Senior DevOps and Cloud Engineer with 6 years building and running production pl
 
 - AI Engineering Specialization (ByteByteAI), Mar 2026: Agents, RAG, LLM applications
 - Oracle Certified DevOps Professional (Oracle), Aug 2025
-- Oracle Certified Architect Associate (Oracle), Aug 2025
-- Oracle Certified Foundations Associate (Oracle), Jul 2025
 - AWS Certified Cloud Practitioner (AWS), May 2024
 - Database Structures and Management with MySQL (Coursera), Dec 2022
 - Django Web Framework (Coursera), Dec 2022
