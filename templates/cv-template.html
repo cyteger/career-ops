@@ -215,6 +215,40 @@
     font-weight: 600;
   }
 
+  /* === STACKED ROLES (same company, multiple roles) === */
+  /* Use when one employer shows a promotion or concurrent roles.
+     Structure inside .job:
+       <div class="job-header">    company + overall period
+       <div class="job-location">  (optional)
+       <div class="job-subrole">   role 1 block
+         <div class="job-subrole-header"> role title + role period
+         <ul>...</ul>
+       <div class="job-subrole">   role 2 block
+         ...
+  */
+  .job-subrole {
+    margin-top: 10px;
+  }
+
+  .job-subrole:not(:first-of-type) {
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+  }
+
+  .job-subrole-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .job-subrole-period {
+    font-size: 10.5px;
+    color: #777;
+    white-space: nowrap;
+  }
+
   /* === PROJECTS === */
   .project {
     margin-bottom: 14px;
@@ -374,8 +408,11 @@
   }
 
   /* === PAGE BREAK CONTROL === */
+  /* .job-subrole is a preferred atomic unit. On a tall stacked-role .job
+     block, the browser may still break between subroles if needed. */
   .avoid-break,
   .job,
+  .job-subrole,
   .project,
   .edu-item,
   .cert-item {

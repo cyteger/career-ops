@@ -74,7 +74,7 @@ Aplicar el mismo fill-del-template que `modes/pdf.md` Pasos 12-13, pero con las 
 | Línea de contacto | `{{EMAIL}}`, `{{LINKEDIN_URL}}`, `{{LINKEDIN_DISPLAY}}`, `{{PORTFOLIO_URL}}`, `{{PORTFOLIO_DISPLAY}}`, `{{LOCATION}}` |
 | `## Professional Summary` | `{{SUMMARY_TEXT}}` (primer párrafo, HTML-escaped) |
 | `## Core Competencies` bullets | `{{COMPETENCIES}}` (cada bullet → `<span class="competency-tag">bullet</span>`) |
-| `## Professional Experience` bloques | `{{EXPERIENCE}}` (cada H3 → `<div class="job">` con header + role + ul/li) |
+| `## Professional Experience` bloques | `{{EXPERIENCE}}` — ver **Parseo de experiencia (stacked vs. estándar)** abajo |
 | `## Projects` bloques | `{{PROJECTS}}` (cada H3 → `<div class="project">` con título + badge + descripción + stack) |
 | `## Education` | `{{EDUCATION}}` |
 | `## Professional Certifications` | `{{CERTIFICATIONS}}` |
@@ -82,6 +82,71 @@ Aplicar el mismo fill-del-template que `modes/pdf.md` Pasos 12-13, pero con las 
 | Section headers | `{{SECTION_*}}` (traducir según `language`) |
 | `{{LANG}}` | valor del campo `language` |
 | `{{PAGE_WIDTH}}` | `8.5in` si `format=letter`, `210mm` si `format=a4` |
+
+### Parseo de experiencia (stacked vs. estándar)
+
+El modo `render` debe reconocer dos formas válidas de bloque de experiencia. La detección se hace por la línea en bold inmediatamente después del H3.
+
+**Estándar — un rol por H3:**
+```markdown
+### {Rol}
+**{Empresa}** | {Período}
+
+- bullet
+```
+→ HTML:
+```html
+<div class="job">
+  <div class="job-header">
+    <span class="job-company">{Empresa}</span>
+    <span class="job-period">{Período}</span>
+  </div>
+  <div class="job-role">{Rol}</div>
+  <ul><li>...</li></ul>
+</div>
+```
+
+**Stacked — una empresa, múltiples roles:**
+```markdown
+### {Empresa}
+**{Período total}** | {Ubicación}
+
+**{Rol 1}** | {Período 1}
+
+- bullets del rol 1
+
+**{Rol 2}** | {Período 2}
+
+- bullets del rol 2
+```
+→ HTML:
+```html
+<div class="job">
+  <div class="job-header">
+    <span class="job-company">{Empresa}</span>
+    <span class="job-period">{Período total}</span>
+  </div>
+  <div class="job-location">{Ubicación}</div>
+  <div class="job-subrole">
+    <div class="job-subrole-header">
+      <span class="job-role">{Rol 1}</span>
+      <span class="job-subrole-period">{Período 1}</span>
+    </div>
+    <ul><li>...</li></ul>
+  </div>
+  <div class="job-subrole">
+    <div class="job-subrole-header">
+      <span class="job-role">{Rol 2}</span>
+      <span class="job-subrole-period">{Período 2}</span>
+    </div>
+    <ul><li>...</li></ul>
+  </div>
+</div>
+```
+
+**Regla de detección:** si la primera línea en bold bajo el H3 empieza con un rango de fechas (e.g. `**Apr 2024 - Present**`), es stacked. Si empieza con texto distinto a una fecha (nombre de empresa), es estándar. En modo stacked, cada sub-bold con patrón `**{Texto}** | {Período}` que le sigue introduce un nuevo subrol.
+
+**Bullets que siguen a la línea `**{Empresa}**` (variante estándar) pertenecen al único rol.** Bullets que siguen a una línea `**{Rol N}** | {Período N}` (variante stacked) pertenecen a ese subrol específico.
 
 ## Paso 4 — Asegurar directorios
 
