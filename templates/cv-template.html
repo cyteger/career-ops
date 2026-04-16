@@ -242,10 +242,12 @@
   /* Stacked: a thin vertical line runs from just below the org header
      down through all subroles, with a small node marker at each role's
      start (LinkedIn-style). The line's left edge is flush with the first
-     character of the org name so the hierarchy reads as one timeline. */
+     character of the org name so the hierarchy reads as one timeline.
+     Dot sits fully to the right of the line (touching it, not straddling)
+     so it never gets clipped, and the role title sits just past the dot. */
   .job-stack-roles {
     border-left: 1px solid #e2e2e2;
-    padding-left: 16px;
+    padding-left: 8px;
     margin-top: 6px;
   }
 
@@ -261,7 +263,7 @@
   .job-stacked .job-subrole::before {
     content: '';
     position: absolute;
-    left: -19px;
+    left: -8px;
     top: 4px;
     width: 6px;
     height: 6px;
