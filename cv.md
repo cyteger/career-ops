@@ -66,7 +66,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 - Managed multi-cloud infrastructure across Azure and AWS: resource provisioning, private VPC links to on-prem systems, deployments, access control and cost optimization
 
 ### Chief Technical Officer (Founding)
-**MYHEALTHCOP LTD** | Jan 2021 - Mar 2024
+**MYHEALTHCOP LTD** | Jan 2021 - Mar 2024 | Accra, Ghana
 
 - Architected the myhealthcop.com platform end-to-end across requirements gathering, system design, database modeling, and API development, delivering three applications: a patient-facing Flutter mobile app (iOS + Android), a Flutter mobile app for health professionals, and a React admin web dashboard.
 - Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.

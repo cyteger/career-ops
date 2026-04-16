@@ -13,19 +13,6 @@ Senior DevOps and Cloud Engineer with 6 years building and running production pl
 
 ---
 
-## Core Competencies
-
-- Azure DevOps & Multi-Cloud Infrastructure
-- Terraform & Infrastructure-as-Code
-- Kubernetes (AKS, TKG, RKE2, EKS, GKE)
-- CI/CD Pipelines (Azure DevOps, GitHub Actions)
-- FastAPI & Python Backend Enablement
-- Multi-Tenant SaaS Platform Engineering
-- Cloud Security & Networking
-- Observability & Incident Response
-
----
-
 ## Technical Skills
 
 - **Cloud & Infrastructure:** Azure, AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), OCI, VMware, on-prem bare metal
@@ -78,7 +65,7 @@ Senior DevOps and Cloud Engineer with 6 years building and running production pl
 - Architected integrations between Finacle core banking and third-party systems including transaction portals and internal tools.
 
 ### Chief Technical Officer (Founding)
-**MYHEALTHCOP LTD** | Jan 2021 - Mar 2024
+**MYHEALTHCOP LTD** | Jan 2021 - Mar 2024 | Accra, Ghana
 
 - Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.
 - Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible.

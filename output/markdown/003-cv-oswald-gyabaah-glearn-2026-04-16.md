@@ -13,19 +13,6 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 
 ---
 
-## Core Competencies
-
-- Full-Stack Development (TypeScript, Python)
-- Next.js, React, Tailwind CSS
-- AI Agent Orchestration (Claude Code, Multi-Agent)
-- LLM Integration & Prompt Engineering
-- 0-to-1 Startup Product Delivery
-- Flutter Mobile (iOS + Android)
-- Supabase / Convex / Vercel-class Platforms
-- Founder-Partnering Technical Leadership
-
----
-
 ## Technical Skills
 
 - **Frontend/Mobile:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Flutter (iOS + Android), Web Components
@@ -73,7 +60,7 @@ Full-stack engineer with 6 years shipping production applications across web, mo
 - Introduced a unified observability stack (Prometheus, Grafana, Elastic Stack, Sentry) for centralized logging, tracing, and real-time alerting.
 
 ### Chief Technical Officer (Founding)
-**MYHEALTHCOP LTD** | Jan 2021 - Mar 2024
+**MYHEALTHCOP LTD** | Jan 2021 - Mar 2024 | Accra, Ghana
 
 - Took the platform from 0 to 1 as founding CTO: requirements gathering, system design, database modeling, API development, team hiring, and delivery across three applications — a patient-facing Flutter mobile app (iOS + Android), a Flutter mobile app for health professionals (iOS + Android), and a React admin web dashboard.
 - Led a 12-person cross-functional team (frontend, backend, mobile, product, design, and QA) through full project lifecycle: requirements, sprint planning, stakeholder management, and budgeting under Agile/Scrum.
