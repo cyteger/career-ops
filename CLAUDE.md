@@ -288,7 +288,7 @@ Default modes are in `modes/` (English). Additional language-specific modes are 
 - Output in `output/pdf/` and `output/markdown/` (both gitignored), Reports in `reports/`
 - Output files share a 3-digit numeric prefix (`{NNN}`) with the corresponding report. Example: report `reports/003-acme-2026-04-12.md` pairs with `output/pdf/003-cv-candidate-acme-2026-04-12.pdf` and `output/markdown/003-cv-candidate-acme-2026-04-12.md`.
 - The tailored MD in `output/markdown/` follows the same shape as `cv.md` (H1 name, H2 sections, H3 roles/projects, bullets). The user can hand-edit it and regenerate the PDF with `/career-ops render {NNN}` — see `modes/render.md`.
-- JDs in `jds/` (referenced as `local:jds/{file}` in pipeline.md)
+- JDs in `jds/`. Every evaluated JD is archived as `{NNN}-{company-slug}-{YYYY-MM-DD}.md`, sharing `{NNN}` with its report/PDF/MD. Also the input slot for manual entries via `local:jds/{file}` in pipeline.md.
 - Batch in `batch/` (gitignored except scripts and prompt)
 - Report numbering: sequential 3-digit zero-padded, max existing + 1
 - **RULE: After each batch of evaluations, run `node merge-tracker.mjs`** to merge tracker additions and avoid duplications.

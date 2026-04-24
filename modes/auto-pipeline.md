@@ -16,6 +16,20 @@ Si el input es una **URL** (no texto de JD pegado), seguir esta estrategia para 
 
 **Si el input es texto de JD** (no URL): usar directamente, sin necesidad de fetch.
 
+## Paso 0.5 — Archivar JD
+
+Antes de evaluar, calcular el `{NNN}` (mismo número que tendrá el report: máximo existente en `reports/` + 1, 3 dígitos, zero-padded) y guardar el JD íntegro en:
+
+```
+jds/{NNN}-{company-slug}-{YYYY-MM-DD}.md
+```
+
+Reglas:
+- Guardar el texto **sin editar**. Es snapshot en el momento de evaluación (los postings se retiran; queremos poder re-scorear más adelante si cambia la lógica).
+- `{company-slug}` y `{YYYY-MM-DD}` usan la misma convención que `reports/` y `output/`. Los cuatro artefactos (JD, report, PDF, MD) comparten prefijo `{NNN}`.
+- Si el input ya era `local:jds/...`, el archivo existe. Saltar este paso.
+- Si la extracción falló y sólo tenemos un fragmento del JD, guardar lo que haya y anotar `<!-- parcial: extracción incompleta -->` al inicio.
+
 ## Paso 1 — Evaluación A-G
 Ejecutar exactamente igual que el modo `oferta` (leer `modes/oferta.md` para todos los bloques A-F + Block G Posting Legitimacy).
 
