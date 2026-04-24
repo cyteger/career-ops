@@ -1,5 +1,16 @@
 # Modo: pdf — Generación de PDF ATS-Optimizado
 
+## Invariante: MD es fuente de verdad
+
+El MD en `output/markdown/{NNN}-*.md` es la serialización canónica del tailoring. El PDF se produce **parseando ese MD** (misma lógica que `modes/render.md`), nunca desde una serialización paralela en memoria.
+
+Esta regla existe porque en versiones anteriores el agente serializaba MD y HTML en paralelo desde el contenido in-memory, y los dos se desincronizaban: distinto número de certificaciones, bullets más cortos en el PDF, proyectos omitidos, role subtitle perdido. La única forma de garantizar que PDF y MD sean copias exactas del mismo tailoring es que el HTML se construya leyendo el MD.
+
+Si modificas este modo, no rompas la regla:
+1. Escribe el MD primero (Paso 14)
+2. Construye el HTML parseando ese MD (Paso 15)
+3. Nunca al revés, nunca en paralelo
+
 ## Pipeline completo
 
 1. Lee `cv.md` como fuentes de verdad
@@ -15,13 +26,13 @@
 9. Reordena bullets de experiencia por relevancia al JD
 10. Construye competency grid desde requisitos del JD (6-8 keyword phrases)
 11. Inyecta keywords naturalmente en logros existentes (NUNCA inventa)
-12. Genera HTML completo desde template + contenido personalizado
-13. Lee `name` de `config/profile.yml` → normaliza a kebab-case lowercase (e.g. "John Doe" → "john-doe") → `{candidate}`
-14. Resuelve `{NNN}` (numeración compartida — ver sección "Numeración y Rutas" abajo)
-15. Escribe también el contenido personalizado como **Markdown tailored** (misma estructura que `cv.md`) a `output/markdown/{NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.md`. Ver sección "Output Markdown" abajo.
-16. Escribe HTML a `/tmp/cv-{candidate}-{company}.html`
+12. Lee `name` de `config/profile.yml` → normaliza a kebab-case lowercase (e.g. "John Doe" → "john-doe") → `{candidate}`
+13. Resuelve `{NNN}` (numeración compartida — ver sección "Numeración y Rutas" abajo)
+14. **Serializa el contenido tailored como Markdown** (misma estructura que `cv.md`) a `output/markdown/{NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.md`. Este archivo es la **fuente de verdad** del tailoring. Ver sección "Output Markdown" abajo.
+15. **Parsea ese MD recién escrito** aplicando la misma lógica que el modo `render` (ver `modes/render.md` Paso 2 y Paso 3) y rellena `templates/cv-template.html` con las secciones parseadas. No regeneres el contenido desde memoria: el MD manda. Si el MD lista 6 certificaciones, el HTML lleva 6; si el MD incluye un proyecto extra, el HTML lo incluye.
+16. Escribe el HTML resultante a `/tmp/cv-{candidate}-{company}.html`
 17. Ejecuta: `node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html output/pdf/{NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.pdf --format={letter|a4}`
-18. Reporta: rutas del PDF y MD, nº páginas, % cobertura de keywords
+18. Reporta: rutas del PDF y MD, nº páginas, % cobertura de keywords. Verifica que el texto del PDF coincide con el MD; si difiere, es un bug — volver al Paso 15 y parsear el MD de nuevo.
 
 ## Numeración y Rutas
 
