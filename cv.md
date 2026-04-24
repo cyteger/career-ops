@@ -16,10 +16,10 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 
 - **Frontend/Mobile:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Flutter
 - **Backend:** Python (Django, FastAPI, Celery), Node.js (Express), REST APIs, GraphQL, WebSockets
-- **Databases:** PostgreSQL, MySQL, MongoDB, Firebase/Firestore, Convex, SQLite, Redis
-- **Messaging & Queues:** AWS SQS/SNS, RabbitMQ, Redis queues, Kafka
+- **Databases:** PostgreSQL, MySQL, MongoDB, Firebase/Firestore, DynamoDB (single-table and multi-table designs), Convex, SQLite, Redis
+- **Messaging & Queues:** AWS SQS/SNS, AWS EventBridge, RabbitMQ, Redis queues, Kafka
 - **Testing:** Jest, React Testing Library, Cypress, Playwright E2E, pytest, UAT coordination
-- **Cloud & Infrastructure:** AWS (EKS, ECS, S3, SQS/SNS, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI, VMware, on-prem bare metal (Tier III data centers)
+- **Cloud & Infrastructure:** AWS (EKS, ECS, Lambda, S3, SQS/SNS, EventBridge, DynamoDB, VPC), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI, VMware, on-prem bare metal (Tier III data centers)
 - **Container Orchestration:** Docker, Docker Compose, Kubernetes (EKS, GKE, TKG/Tanzu, RKE2), Helm, Istio Service Mesh
 - **CI/CD & GitOps:** Terraform, Ansible, GitHub Actions, ArgoCD, FluxCD, Azure DevOps, Codemagic, Jenkins
 - **Observability:** Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat), Sentry
@@ -69,7 +69,7 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 **MYHEALTHCOP LTD** | Jan 2021 - Mar 2024 | Accra, Ghana
 
 - Architected the myhealthcop.com platform end-to-end across requirements gathering, system design, database modeling, and API development, delivering three applications: a patient-facing Flutter mobile app (iOS + Android), a Flutter mobile app for health professionals, and a React admin web dashboard.
-- Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.
+- Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS alongside Lambda functions for event-driven workloads, with autoscaling, load balancing, and inter-service communication.
 - Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including multi-provider failover.
 - Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
 - Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible.
@@ -109,6 +109,8 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 
 - Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads
 - Prototyping agent-driven SaaS tools using RAG, tool-use, and multi-agent orchestration patterns
+- Built AWS Lambda functions triggered by EventBridge to deliver notifications on codebase events
+- Used DynamoDB for NoSQL data modeling across personal projects, with both single-table and multi-table design patterns
 - Completed AI Engineering Specialization (ByteByteAI) covering agents, RAG, and LLM application development
 
 ### Education Research and Innovation Foundry (erifoundry.org)

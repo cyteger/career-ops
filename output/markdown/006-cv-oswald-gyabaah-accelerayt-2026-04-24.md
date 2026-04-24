@@ -9,20 +9,18 @@ oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https:/
 
 ## Professional Summary
 
-Full-stack engineer with 6 years shipping production JavaScript and TypeScript across React/Next.js, Node.js, and Python. Founded and scaled two platforms from zero — MyHealthCop (healthcare, 3 applications on AWS EKS/ECS) and Virk Cloud (a multi-tenant Kubernetes Platform-as-a-Service) — and currently own a national bank's core banking cluster sustaining 1.5M+ daily transactions with 99.97% uptime. Comfortable inheriting unfamiliar production systems: led the GTBank Basis-to-Finacle core banking migration cutover across 33 applications in two weeks. Strong in AWS (EKS, ECS, S3, SQS/SNS, VPC, IAM), Terraform IaC, NoSQL (MongoDB, Firestore, Convex), and async remote collaboration across international teams.
+Full-stack engineer with 6 years shipping production JavaScript and TypeScript across React/Next.js, Node.js, and Python. Founded and scaled two platforms from zero — MyHealthCop (healthcare, 3 applications on AWS EKS/ECS with Lambda for event-driven workloads) and Virk Cloud (a multi-tenant Kubernetes Platform-as-a-Service) — and currently own a national bank's core banking cluster sustaining 1.5M+ daily transactions with 99.97% uptime. Comfortable inheriting unfamiliar production systems: led the GTBank Basis-to-Finacle core banking migration cutover across 33 applications in two weeks. Strong in AWS serverless and container stacks (Lambda, EventBridge, DynamoDB, EKS, ECS, S3, SQS/SNS, VPC, IAM), Terraform IaC, and NoSQL data modeling across DynamoDB, MongoDB, Firestore, and Convex with both single-table and multi-table design patterns.
 
 ---
-
-## Core Competencies
 
 - Full-stack JavaScript and TypeScript
 - React and Next.js production applications
 - Node.js (Express) and Python (FastAPI, Django) backends
-- AWS infrastructure and Terraform IaC
-- NoSQL data modelling (MongoDB, Firestore, Convex)
+- AWS Lambda, EventBridge, and DynamoDB
+- NoSQL data modelling: DynamoDB (single-table and multi-table), MongoDB, Firestore
+- AWS infrastructure and Terraform IaC (CloudFormation-adjacent)
 - Inheriting and evolving live production codebases
 - Mission-driven product delivery
-- Async remote collaboration in small, high-ownership teams
 
 ---
 
@@ -31,9 +29,10 @@ Full-stack engineer with 6 years shipping production JavaScript and TypeScript a
 - **Frontend:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS
 - **Mobile:** Flutter (iOS + Android), Codemagic CI/CD
 - **Backend:** Node.js (Express), Python (FastAPI, Django, Celery), REST APIs, GraphQL, WebSockets
-- **Databases (NoSQL):** MongoDB, Firebase/Firestore, Convex, Redis
+- **Databases (NoSQL):** DynamoDB (single-table and multi-table designs), MongoDB, Firebase/Firestore, Convex, Redis
 - **Databases (SQL):** PostgreSQL, MySQL, SQLite
-- **Cloud & Infrastructure:** AWS (EKS, ECS, S3, SQS/SNS, VPC, IAM), Azure, GCP (GKE, Cloud SQL, Cloud Storage), OCI
+- **AWS:** Lambda, EventBridge, DynamoDB, EKS, ECS, S3, SQS/SNS, VPC, IAM
+- **Other cloud:** Azure, GCP (GKE, Cloud SQL, Cloud Storage), OCI
 - **IaC & CI/CD:** Terraform, Ansible, GitHub Actions, FluxCD, ArgoCD, Azure DevOps, Codemagic, Jenkins
 - **Containers & Orchestration:** Docker, Docker Compose, Kubernetes (EKS, GKE, TKG, RKE2), Helm
 - **Messaging & Queues:** AWS SQS/SNS, Kafka, RabbitMQ, Redis queues
@@ -77,7 +76,7 @@ Full-stack engineer with 6 years shipping production JavaScript and TypeScript a
 **MYHEALTHCOP LTD** | Jan 2021 - Mar 2024 | Accra, Ghana
 
 - Architected the myhealthcop.com platform end-to-end across requirements, system design, database modeling, and API development, delivering three applications: a patient-facing Flutter mobile app (iOS + Android), a Flutter app for health professionals, and a React admin web dashboard.
-- Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS with autoscaling, load balancing, and inter-service communication.
+- Designed secure, cost-efficient AWS infrastructure running containerized microservices on EKS and ECS alongside Lambda functions for event-driven workloads, with autoscaling, load balancing, and inter-service communication.
 - Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS, with SMS, email, and payment provider integrations including multi-provider failover.
 - Led performance optimizations that reduced peak request latency by 90% through Redis caching, query tuning, and indexing in PostgreSQL.
 - Automated application delivery and infrastructure provisioning via CI/CD pipelines on GitHub Actions and Terraform, making deployments repeatable, auditable, and reversible.
@@ -109,6 +108,13 @@ Full-stack engineer with 6 years shipping production JavaScript and TypeScript a
 - Leading design of AI-driven research initiatives in adaptive learning, cognitive modeling, and educational analytics.
 - Coordinating cross-disciplinary research on ML and software tooling for education.
 - Prototyping applications of LLMs in human-centered learning systems.
+
+### AI Agents for Infrastructure Operations
+**Personal R&D** | 2024 - Present
+
+- Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads.
+- Built AWS Lambda functions triggered by EventBridge to deliver notifications on codebase events.
+- Used DynamoDB for NoSQL data modeling across personal projects, with both single-table and multi-table design patterns.
 
 ---
 
