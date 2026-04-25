@@ -1,6 +1,7 @@
 # Interview Prep — GLearn, AI Software Engineer
 
 **Source report:** [003-glearn-2026-04-16.md](../reports/003-glearn-2026-04-16.md)
+**AI deep-dive companion:** [glearn-ai-deep-dive.md](glearn-ai-deep-dive.md)
 **Application date:** 2026-04-16
 **Score:** 4.6/5 (cleanest fit of the 2026-04-16 batch)
 **Posture:** Excited but probing. Real company signals + early-stage signals. Verify before committing.
