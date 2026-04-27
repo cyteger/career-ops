@@ -9,7 +9,7 @@ oswald.gyabaah@gmail.com | [linkedin.com/in/ogyabaah](https://linkedin.com/in/og
 
 ## Professional Summary
 
-Senior Full-Stack Engineer with 6 years shipping production JavaScript/TypeScript across React/Next.js, Node.js, and AWS serverless (Lambda, EventBridge, DynamoDB). Founded MyHealthCop on AWS EKS + Lambda and led the GTBank Basis-to-Finacle migration cutover across 33 applications in two weeks. Strong in DynamoDB single-table modeling, NoSQL data design across MongoDB and Firestore, and Terraform IaC. Former CTO; comfortable inheriting unfamiliar production codebases as the senior technical owner from day one.
+Former CTO and Senior Full-Stack Engineer with 6 years shipping production JavaScript/TypeScript across React/Next.js, Node.js, and AWS serverless (Lambda, EventBridge, DynamoDB). Founded and shipped MyHealthCop's web, mobile, and admin platforms; led the GTBank Basis-to-Finacle migration cutover across 33 applications in two weeks.
 
 ---
 
