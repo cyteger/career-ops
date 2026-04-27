@@ -87,66 +87,82 @@ Aplicar el mismo fill-del-template que `modes/pdf.md` Pasos 12-13, pero con las 
 
 El modo `render` debe reconocer dos formas válidas de bloque de experiencia. La detección se hace por la línea en bold inmediatamente después del H3.
 
-**Estándar — un rol por H3:**
+**Editorial template (templates/cv-template.html) is single-role-only.** Every H3 = one job entry. NO stacked-roles structure — if the same company appears twice in cv.md (a promotion), each role is its own H3 with the company repeated on the second line.
+
+**Standard pattern — one role per H3, 2 or 3 pipe-separated fields after the company:**
+
 ```markdown
-### {Rol}
-**{Empresa}** | {Período}
+### {Role}
+**{Company}** | {Period} | {Location}    ← location optional; period is always the date-range field
 
 - bullet
 ```
-→ HTML:
+
+**Field-to-class mapping (in pipe order):**
+
+| Pipe field | Identifier rule | HTML class |
+|------------|-----------------|------------|
+| Bold text immediately after H3 | First bold token | `.job-company` |
+| Field matching a date-range pattern (e.g. `Jan 2021 - Mar 2024`, `2024 - Present`, `2024`) | Anywhere after company | `.job-period` |
+| Remaining text (typically `City, Country`) | After the date range | `.job-location` |
+
+The H3 text itself is always `.job-role`.
+
+**Required HTML shape — emit in this exact order so CSS `order` rules in the editorial template work consistently:**
+
 ```html
 <div class="job">
   <div class="job-header">
-    <span class="job-company">{Empresa}</span>
-    <span class="job-period">{Período}</span>
+    <span class="job-heading">
+      <span class="job-role">{Role}</span>
+      <span class="job-company">{Company}</span>
+      <span class="job-location">{Location}</span>      <!-- omit if no location -->
+    </span>
+    <span class="job-period">{Period}</span>
   </div>
-  <div class="job-role">{Rol}</div>
   <ul><li>...</li></ul>
 </div>
 ```
 
-**Stacked — una empresa, múltiples roles:**
+**Concrete example — MYHEALTHCOP from cv.md:**
+
 ```markdown
-### {Empresa}
-**{Período total}** | {Ubicación}
-
-**{Rol 1}** | {Período 1}
-
-- bullets del rol 1
-
-**{Rol 2}** | {Período 2}
-
-- bullets del rol 2
+### Chief Technical Officer (Founding)
+**MYHEALTHCOP LTD** | Jan 2021 - Mar 2024 | Accra, Ghana
 ```
-→ HTML:
+
+→ MUST emit:
+
 ```html
 <div class="job">
   <div class="job-header">
-    <span class="job-company">{Empresa}</span>
-    <span class="job-period">{Período total}</span>
+    <span class="job-heading">
+      <span class="job-role">Chief Technical Officer (Founding)</span>
+      <span class="job-company">MYHEALTHCOP LTD</span>
+      <span class="job-location">Accra, Ghana</span>
+    </span>
+    <span class="job-period">Jan 2021 - Mar 2024</span>
   </div>
-  <div class="job-location">{Ubicación}</div>
-  <div class="job-subrole">
-    <div class="job-subrole-header">
-      <span class="job-role">{Rol 1}</span>
-      <span class="job-subrole-period">{Período 1}</span>
-    </div>
-    <ul><li>...</li></ul>
-  </div>
-  <div class="job-subrole">
-    <div class="job-subrole-header">
-      <span class="job-role">{Rol 2}</span>
-      <span class="job-subrole-period">{Período 2}</span>
-    </div>
-    <ul><li>...</li></ul>
-  </div>
+  <ul>...</ul>
 </div>
 ```
 
-**Regla de detección:** si la primera línea en bold bajo el H3 empieza con un rango de fechas (e.g. `**Apr 2024 - Present**`), es stacked. Si empieza con texto distinto a una fecha (nombre de empresa), es estándar. En modo stacked, cada sub-bold con patrón `**{Texto}** | {Período}` que le sigue introduce un nuevo subrol.
+**Common misclassification to avoid:** when there are three pipe-separated fields, do NOT swap company and location. The bold token (after `**...**`) is ALWAYS the company. The date-range field is ALWAYS the period. Whatever's left is the location — never the other way around.
 
-**Bullets que siguen a la línea `**{Empresa}**` (variante estándar) pertenecen al único rol.** Bullets que siguen a una línea `**{Rol N}** | {Período N}` (variante stacked) pertenecen a ese subrol específico.
+**Stacked pattern is no longer supported.** If the input markdown still has the old stacked shape:
+
+```markdown
+### {Company}
+**{Total period}** | {Location}
+
+**{Role 1}** | {Period 1}
+- bullets
+
+**{Role 2}** | {Period 2}
+- bullets
+```
+
+…flatten it on the fly into N standard entries (one per role), repeating `{Company}` and `{Location}` in each. Do NOT emit `.job-subrole` or any nested role structure. The editorial template's CSS does not style those classes.
 
 ## Paso 4 — Asegurar directorios
 

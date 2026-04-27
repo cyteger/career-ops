@@ -42,10 +42,8 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 
 ## Professional Experience
 
-### Guaranty Trust Bank Ghana LTD
-**Apr 2024 - Present** | Accra, Ghana
-
-**Team Lead, Core Banking Services** | May 2025 - Present
+### Team Lead, Core Banking Services
+**Guaranty Trust Bank Ghana LTD** | May 2025 - Present | Accra, Ghana
 
 - Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid (TKG), managing deployments, patching, and incident response across 800+ production pods to sustain 1.5M+ daily transactions.
 - Lead L2 support operations, correlating logs across internal apps and core banking microservices via the Elastic Stack for root-cause analysis and remediation.
@@ -55,7 +53,8 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 - Built a bank-wide OTP service using Next.js and Django, integrating SMS and email gateways, to secure core banking access for 600+ internal users with structured logging to Elasticsearch via Filebeat.
 - Built a national ID verification service using Next.js and Django, processing and storing ID documents in self-hosted MinIO with automated verification and customer record updates.
 
-**DevOps Engineering Lead** | Apr 2024 - Present
+### DevOps Engineering Lead
+**Guaranty Trust Bank Ghana LTD** | Apr 2024 - Present | Accra, Ghana
 
 - Founded the bank's DevOps team of 4 engineers, replacing manual code handoffs with enforced Git workflows, containerized Kubernetes deployments, and automated release pipelines
 - Implemented CI/CD automation that cut deployment time by ~90% and increased release velocity ~5x; introduced GitOps with FluxCD for consistent repeatable deployments; integrated Veracode and Trivy scanning for automated security analysis
@@ -83,17 +82,16 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 ### Digital-Recon: Transaction Reconciliation Engine
 **Founder** | 2025 - Present
 
-- Building a real-time transaction reconciliation engine for financial institutions, detecting discrepancies across heterogeneous data sources including relational DBs, REST APIs, Elasticsearch, and Kafka topics, with configurable rules for automatic reconciliation or operator-reviewed flagging.
-- Designed a Next.js/TypeScript triage dashboard enabling operators to define reconciliation rules, inspect flagged transactions, drill into source records across banking systems, and resolve mismatches with a full audit trail.
-- Architected an event-driven processing layer using Kafka for upstream transaction ingestion and Celery for scheduled and on-demand reconciliation jobs, including windowed scans, per-source reprocessing, and downstream alerting.
+- Building a real-time transaction reconciliation engine for financial institutions to detect discrepancies across heterogeneous data sources including relational DBs, APIs, Elasticsearch, etc in realtime.
+- Architected an event-driven processing layer using Kafka for upstream transaction ingestion and Celery for scheduled and on-demand reconciliation jobs.
 - **Stack:** React, TypeScript, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker
 
 ### Virk Cloud (virk.cloud)
 **Founder & CTO** | Aug 2025 - Present
 
-- Architected a Platform-as-a-Service for startups with built-in CI/CD, fixed billing, observability, real-time log streaming, and alerting
-- Built the full management console in Next.js with authentication, user management, real-time monitoring dashboards, and billing
-- Manage the underlying infrastructure on virtual private servers: RKE2 cluster deployment, hardware/storage provisioning, network and traffic management, and DNS
+- Architected a Platform-as-a-Service for startups with built-in CI/CD, observability and log streaming
+- Built a management console for workload management, custom domains and monitoring dashboards
+- Manage underlying infra on private VPS including cluster deployment, hardware and network provisioning
 - **Stack:** Next.js, JavaScript/TypeScript, Convex, Tailwind CSS, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana, Python
 
 ### Vistara: Property Tenant Assessment Platform

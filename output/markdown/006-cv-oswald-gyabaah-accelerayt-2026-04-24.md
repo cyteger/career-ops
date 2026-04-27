@@ -3,13 +3,13 @@
 
 **Senior Full-Stack Engineer — React, Next.js, Node.js, AWS**
 
-oswald.gyabaah@gmail.com | +233 55 413 4307 | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | [github.com/cyteger](https://github.com/cyteger) | Accra, Ghana
+oswald.gyabaah@gmail.com | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | [github.com/cyteger](https://github.com/cyteger) | Accra, Ghana
 
 ---
 
 ## Professional Summary
 
-Full-stack engineer with 6 years shipping production JavaScript and TypeScript across React/Next.js, Node.js, and Python. Founded and scaled two platforms from zero — MyHealthCop (healthcare, 3 applications on AWS EKS/ECS with Lambda for event-driven workloads) and Virk Cloud (a multi-tenant Kubernetes Platform-as-a-Service) — and currently own a national bank's core banking cluster sustaining 1.5M+ daily transactions with 99.97% uptime. Comfortable inheriting unfamiliar production systems: led the GTBank Basis-to-Finacle core banking migration cutover across 33 applications in two weeks. Strong in AWS serverless and container stacks (Lambda, EventBridge, DynamoDB, EKS, ECS, S3, SQS/SNS, VPC, IAM), Terraform IaC, and NoSQL data modeling across DynamoDB, MongoDB, Firestore, and Convex with both single-table and multi-table design patterns.
+Senior Full-Stack Engineer with 6 years shipping production JavaScript/TypeScript across React/Next.js, Node.js, and AWS serverless (Lambda, EventBridge, DynamoDB). Founded MyHealthCop on AWS EKS + Lambda and led the GTBank Basis-to-Finacle migration cutover across 33 applications in two weeks. Strong in DynamoDB single-table modeling, NoSQL data design across MongoDB and Firestore, and Terraform IaC. Former CTO; comfortable inheriting unfamiliar production codebases as the senior technical owner from day one.
 
 ---
 

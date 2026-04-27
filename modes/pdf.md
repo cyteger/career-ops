@@ -69,32 +69,26 @@ Tras producir el contenido personalizado en memoria, emitirlo **también como Ma
 - `## Professional Summary` → párrafo del summary tailored
 - `## Core Competencies` → bullets (uno por competencia, como lista markdown)
 - `## Technical Skills` → bullets con formato `**Categoría:** items, separados, por, coma`
-- `## Professional Experience` → bloques por trabajo. Dos variantes soportadas:
+- `## Professional Experience` → bloques por trabajo. **Editorial template: single-role only.** Cada H3 = una entrada de trabajo. NO se soporta variante stacked — si la misma empresa aparece dos veces (promoción), cada rol es su propio H3 con la empresa repetida en la segunda línea.
 
-  **Variante estándar (un solo rol por empresa):**
+  **Forma estándar (única forma soportada):**
   ```
   ### {Rol}
-  **{Empresa}** | {Período}
+  **{Empresa}** | {Período} | {Ubicación}    ← Ubicación opcional; Período es siempre el rango de fechas
 
   - Bullet 1
   - Bullet 2
   ```
 
-  **Variante stacked (misma empresa, múltiples roles — promoción o roles concurrentes):**
-  ```
-  ### {Empresa}
-  **{Período total}** | {Ubicación}
+  **Mapeo campo → clase CSS (en orden de pipes):**
+  - Bold token después del H3 → `.job-company`
+  - Campo con patrón de rango de fechas (`Jan 2021 - Mar 2024`, `2024 - Present`, `2024`) → `.job-period`
+  - Texto restante (típicamente `Ciudad, País`) → `.job-location`
+  - El H3 mismo siempre es `.job-role`
 
-  **{Rol 1}** | {Período 1}
+  **NO confundir empresa y ubicación cuando hay tres pipes.** El bold token siempre es la empresa. El campo con patrón de fechas siempre es el período. Lo que queda es la ubicación, jamás al revés.
 
-  - Bullets del rol 1
-
-  **{Rol 2}** | {Período 2}
-
-  - Bullets del rol 2
-  ```
-
-  **Detección al parsear:** si la línea en bold después del H3 empieza con un rango de fechas (`**Apr 2024 - Present**`) en lugar de un nombre de empresa, es una entrada stacked. Si además dentro del bloque hay múltiples bold-lines con patrón `**{Texto}** | {Período}`, cada una introduce un subrol.
+  **Si el cv.md aún tiene la forma stacked vieja** (H3 con nombre de empresa, varios bold sub-roles debajo), aplánalo on-the-fly emitiendo N entradas estándar (una por rol), repitiendo `{Empresa}` y `{Ubicación}` en cada una. NO emitir `.job-subrole` ni ninguna estructura anidada — el CSS del template editorial no estiliza esas clases.
 
 - `## Projects` → bloques por proyecto:
   - `### {Proyecto} — {Descripción corta}`
@@ -174,7 +168,7 @@ Usar el template en `cv-template.html`. Reemplazar los placeholders `{{...}}` co
 | `{{SECTION_COMPETENCIES}}` | Core Competencies / Competencias Core |
 | `{{COMPETENCIES}}` | `<span class="competency-tag">keyword</span>` × 6-8 |
 | `{{SECTION_EXPERIENCE}}` | Work Experience / Experiencia Laboral |
-| `{{EXPERIENCE}}` | HTML de cada trabajo con bullets reordenados. Para roles stacked, emitir `<div class="job">` con `.job-header` (empresa + período total), opcional `.job-location`, y uno o más `<div class="job-subrole">` (cada uno con `.job-subrole-header` + `<ul>`). Ver `templates/cv-template.html` para las clases CSS |
+| `{{EXPERIENCE}}` | HTML de cada trabajo (single-role, sin stacking). Emitir `<div class="job">` con `.job-header` > `.job-heading` (que contiene `.job-role`, `.job-company`, `.job-location` opcional) + `.job-period`, seguido de `<ul>` con bullets. NO usar `.job-subrole` — el template editorial no lo soporta. Ver `templates/cv-template.html` para el ejemplo canónico |
 | `{{SECTION_PROJECTS}}` | Projects / Proyectos |
 | `{{PROJECTS}}` | HTML de top 3-4 proyectos |
 | `{{SECTION_EDUCATION}}` | Education / Formación |
