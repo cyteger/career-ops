@@ -43,7 +43,7 @@ Former CTO and Senior Full-Stack Engineer with 6 years shipping production JavaS
 
 ## Professional Certifications
 
-- AI Engineering Specialization (ByteByteAI), Mar 2026: Agents, RAG, LLM applications
+- AI Engineering Specialization (ByteByteAI), Mar 2026
 - Oracle Certified DevOps Professional (Oracle), Aug 2025
 - AWS Certified Cloud Practitioner (AWS), May 2024
 - Database Structures and Management with MySQL (Coursera), Dec 2022
@@ -89,32 +89,15 @@ Former CTO and Senior Full-Stack Engineer with 6 years shipping production JavaS
 ### Virk Cloud (virk.cloud)
 **Founder & CTO** | Aug 2025 - Present
 
-- Architected a multi-tenant Platform-as-a-Service for startups with built-in CI/CD, fixed billing, observability, real-time log streaming, and alerting.
-- Built the full management console in Next.js (React, TypeScript) with authentication, user management, real-time monitoring dashboards, and billing — inherited-and-evolved an early prototype into production.
-- Manage the underlying infrastructure on virtual private servers: RKE2 cluster deployment, hardware/storage provisioning, network and traffic management, and DNS.
-- **Stack:** Next.js, React, TypeScript, Convex, Tailwind CSS, Kubernetes (RKE2), Terraform, FluxCD, Prometheus, Grafana, Python
+- Architected a Platform-as-a-Service for startups with built-in CI/CD, observability and log streaming
+- Built a management console for workload management, custom domains and monitoring dashboards
+- Manage underlying infra on private VPS including cluster deployment, hardware and network provisioning
 
 ### Digital-Recon: Transaction Reconciliation Engine
 **Founder** | 2025 - Present
 
-- Building a real-time transaction reconciliation engine for financial institutions, detecting discrepancies across heterogeneous data sources including relational DBs, REST APIs, Elasticsearch, and Kafka topics.
-- Designed a Next.js/TypeScript triage dashboard enabling operators to define reconciliation rules and resolve mismatches with a full audit trail.
-- Architected an event-driven processing layer using Kafka for upstream ingestion and Celery for scheduled and on-demand reconciliation jobs.
-- **Stack:** React, TypeScript, Next.js, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker
-
-### Education Research and Innovation Foundry (erifoundry.org)
-**Founder & Research Lead** | Oct 2025 - Present
-
-- Leading design of AI-driven research initiatives in adaptive learning, cognitive modeling, and educational analytics.
-- Coordinating cross-disciplinary research on ML and software tooling for education.
-- Prototyping applications of LLMs in human-centered learning systems.
-
-### AI Agents for Infrastructure Operations
-**Personal R&D** | 2024 - Present
-
-- Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads.
-- Built AWS Lambda functions triggered by EventBridge to deliver notifications on codebase events.
-- Used DynamoDB for NoSQL data modeling across personal projects, with both single-table and multi-table design patterns.
+- Building a real-time transaction reconciliation engine for financial institutions to detect discrepancies across heterogeneous data sources including relational DBs, APIs, Elasticsearch, etc in realtime.
+- Architected an event-driven processing layer using Kafka for upstream transaction ingestion and Celery for scheduled and on-demand reconciliation jobs.
 
 ---
 
