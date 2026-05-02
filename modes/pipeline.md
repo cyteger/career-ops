@@ -9,9 +9,8 @@ Procesa URLs de ofertas acumuladas en `data/pipeline.md`. El usuario agrega URLs
    a. Calcular siguiente `REPORT_NUM` secuencial (leer `reports/`, tomar el número más alto + 1)
    b. **Extraer JD** usando Playwright (browser_navigate + browser_snapshot) → WebFetch → WebSearch
    c. Si la URL no es accesible → marcar como `- [!]` con nota y continuar
-   d. **Archivar JD**: guardar el texto íntegro en `jds/{REPORT_NUM}-{company-slug}-{YYYY-MM-DD}.md` (mismo `{NNN}` que tendrán el report, PDF y MD). Snapshot sin editar. Si el item ya era `local:jds/...`, saltar.
-   e. **Ejecutar auto-pipeline completo**: Evaluación A-F → Report .md → PDF (si score >= 3.0) → Tracker
-   f. **Mover de "Pendientes" a "Procesadas"**: `- [x] #NNN | URL | Empresa | Rol | Score/5 | PDF ✅/❌`
+   d. **Ejecutar auto-pipeline completo**: Evaluación A-F → Report .md → PDF (si score >= 3.0) → Tracker
+   e. **Mover de "Pendientes" a "Procesadas"**: `- [x] #NNN | URL | Empresa | Rol | Score/5 | PDF ✅/❌`
 3. **Si hay 3+ URLs pendientes**, lanzar agentes en paralelo (Agent tool con `run_in_background`) para maximizar velocidad.
 4. **Al terminar**, mostrar tabla resumen:
 

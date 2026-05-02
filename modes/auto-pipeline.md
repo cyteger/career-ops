@@ -16,20 +16,6 @@ Si el input es una **URL** (no texto de JD pegado), seguir esta estrategia para 
 
 **Si el input es texto de JD** (no URL): usar directamente, sin necesidad de fetch.
 
-## Paso 0.5 — Archivar JD
-
-Antes de evaluar, calcular el `{NNN}` (mismo número que tendrá el report: máximo existente en `reports/` + 1, 3 dígitos, zero-padded) y guardar el JD íntegro en:
-
-```
-jds/{NNN}-{company-slug}-{YYYY-MM-DD}.md
-```
-
-Reglas:
-- Guardar el texto **sin editar**. Es snapshot en el momento de evaluación (los postings se retiran; queremos poder re-scorear más adelante si cambia la lógica).
-- `{company-slug}` y `{YYYY-MM-DD}` usan la misma convención que `reports/` y `output/`. Los cuatro artefactos (JD, report, PDF, MD) comparten prefijo `{NNN}`.
-- Si el input ya era `local:jds/...`, el archivo existe. Saltar este paso.
-- Si la extracción falló y sólo tenemos un fragmento del JD, guardar lo que haya y anotar `<!-- parcial: extracción incompleta -->` al inicio.
-
 ## Paso 1 — Evaluación A-G
 Ejecutar exactamente igual que el modo `oferta` (leer `modes/oferta.md` para todos los bloques A-F + Block G Posting Legitimacy).
 
@@ -37,14 +23,11 @@ Ejecutar exactamente igual que el modo `oferta` (leer `modes/oferta.md` para tod
 Guardar la evaluación completa en `reports/{###}-{company-slug}-{YYYY-MM-DD}.md` (ver formato en `modes/oferta.md`).
 Include Block G in the saved report. Add `**Legitimacy:** {tier}` to the report header.
 
-## Paso 3 — Generar PDF + MD tailored
-Ejecutar el pipeline completo de `pdf` (leer `modes/pdf.md`).
+## Paso 3 — Generar PDF
+Read `config/profile.yml`. Check `cv.output_format`:
 
-El pipeline produce **dos artefactos** (comparten el mismo `{NNN}` que el report):
-- `output/pdf/{NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.pdf` — PDF listo para aplicar
-- `output/markdown/{NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.md` — MD tailored (misma estructura que `cv.md`) para que el usuario pueda editar a mano
-
-Si el usuario después edita el MD y quiere regenerar el PDF, usa `/career-ops render {NNN}` (ver `modes/render.md`) para pasarlo de nuevo por el template fill sin tailoring.
+- If `"latex"`, execute the full pipeline from `modes/latex.md`
+- Otherwise (default), execute the full pipeline from `modes/pdf.md`
 
 ## Paso 4 — Draft Application Answers (solo si score >= 4.5)
 

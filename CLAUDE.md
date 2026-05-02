@@ -14,7 +14,7 @@ There are two layers. Read `DATA_CONTRACT.md` for the full list.
 
 **User Layer (NEVER auto-updated, personalization goes HERE):**
 - `cv.md`, `config/profile.yml`, `modes/_profile.md`, `article-digest.md`, `portals.yml`
-- `data/*`, `reports/*`, `output/pdf/*`, `output/markdown/*`, `interview-prep/*`
+- `data/*`, `reports/*`, `output/*`, `interview-prep/*`
 
 **System Layer (auto-updatable, DON'T put user data here):**
 - `modes/_shared.md`, `modes/oferta.md`, all other modes
@@ -37,6 +37,7 @@ Parse the JSON output:
 - `{"status": "up-to-date"}` → say nothing
 - `{"status": "dismissed"}` → say nothing
 - `{"status": "offline"}` → say nothing
+- `{"status": "no-remote-version"}` → say nothing (checker reached GitHub but neither VERSION nor the latest release tag parsed as semver — treat as a silent non-failure, same as offline)
 
 The user can also say "check for updates" or "update career-ops" at any time to force a check.
 To rollback: `node update-system.mjs rollback`
@@ -54,7 +55,9 @@ AI-powered job search automation built on Claude Code: pipeline tracking, offer 
 | `data/scan-history.tsv` | Scanner dedup history |
 | `portals.yml` | Query and company config |
 | `templates/cv-template.html` | HTML template for CVs |
+| `templates/cv-template.tex` | LaTeX/Overleaf template for CVs |
 | `generate-pdf.mjs` | Playwright: HTML to PDF |
+| `generate-latex.mjs` | LaTeX CV validator + pdflatex compiler |
 | `article-digest.md` | Compact proof points from portfolio (optional) |
 | `interview-prep/story-bank.md` | Accumulated STAR+R stories across evaluations |
 | `interview-prep/{company}-{role}.md` | Company-specific interview intel reports |
@@ -65,8 +68,6 @@ AI-powered job search automation built on Claude Code: pipeline tracking, offer 
 | `check-liveness.mjs` | Job posting liveness checker |
 | `liveness-core.mjs` | Shared liveness logic (expired signals win over generic Apply text) |
 | `reports/` | Evaluation reports (format: `{###}-{company-slug}-{YYYY-MM-DD}.md`). Blocks A-F + G (Posting Legitimacy). Header includes `**Legitimacy:** {tier}`. |
-| `output/pdf/` | Generated tailored CVs as PDF (format: `{NNN}-cv-{candidate}-{company-slug}-{YYYY-MM-DD}.pdf`). Gitignored. Shares `{NNN}` with the matching report. |
-| `output/markdown/` | Tailored CVs as Markdown (same `{NNN}` and base name as the PDF). Follows `cv.md` shape. Editable by hand; re-render via `/career-ops render {NNN}`. Gitignored. |
 
 ### OpenCode Commands
 
@@ -81,7 +82,7 @@ When using [OpenCode](https://opencode.ai), the following slash commands are ava
 | `/career-ops-contact` | `/career-ops contacto` | LinkedIn outreach (find contacts + draft) |
 | `/career-ops-deep` | `/career-ops deep` | Deep company research |
 | `/career-ops-pdf` | `/career-ops pdf` | Generate ATS-optimized CV |
-| `/career-ops-render` | `/career-ops render` | Re-render a hand-edited tailored CV MD to PDF (no tailoring) |
+| `/career-ops-latex` | `/career-ops latex` | Export CV as LaTeX/Overleaf .tex |
 | `/career-ops-training` | `/career-ops training` | Evaluate course/cert against goals |
 | `/career-ops-project` | `/career-ops project` | Evaluate portfolio project idea |
 | `/career-ops-tracker` | `/career-ops tracker` | Application status overview |
@@ -92,6 +93,30 @@ When using [OpenCode](https://opencode.ai), the following slash commands are ava
 | `/career-ops-followup` | `/career-ops followup` | Follow-up cadence tracker |
 
 **Note:** OpenCode commands invoke the same `.claude/skills/career-ops/SKILL.md` skill used by Claude Code. The `modes/*` files are shared between both platforms.
+
+### Gemini CLI Commands
+
+When using the [Gemini CLI](https://github.com/google-gemini/gemini-cli), the following slash commands are available (defined in `.gemini/commands/`):
+
+| Command | Claude Code Equivalent | Description |
+|---------|------------------------|-------------|
+| `/career-ops` | `/career-ops` | Show menu or evaluate JD with args |
+| `/career-ops-pipeline` | `/career-ops pipeline` | Process pending URLs from inbox |
+| `/career-ops-evaluate` | `/career-ops oferta` | Evaluate job offer (A-G scoring) |
+| `/career-ops-compare` | `/career-ops ofertas` | Compare and rank multiple offers |
+| `/career-ops-contact` | `/career-ops contacto` | LinkedIn outreach (find contacts + draft) |
+| `/career-ops-deep` | `/career-ops deep` | Deep company research |
+| `/career-ops-pdf` | `/career-ops pdf` | Generate ATS-optimized CV |
+| `/career-ops-training` | `/career-ops training` | Evaluate course/cert against goals |
+| `/career-ops-project` | `/career-ops project` | Evaluate portfolio project idea |
+| `/career-ops-tracker` | `/career-ops tracker` | Application status overview |
+| `/career-ops-apply` | `/career-ops apply` | Live application assistant |
+| `/career-ops-scan` | `/career-ops scan` | Scan portals for new offers |
+| `/career-ops-batch` | `/career-ops batch` | Batch processing with parallel workers |
+| `/career-ops-patterns` | `/career-ops patterns` | Analyze rejection patterns and improve targeting |
+| `/career-ops-followup` | `/career-ops followup` | Follow-up cadence tracker |
+
+**Note:** Gemini CLI commands are defined in `.gemini/commands/*.toml`. The project context is auto-loaded from `GEMINI.md`. All `modes/*` files are shared across Claude Code, OpenCode, and Gemini CLI.
 
 ### First Run — Onboarding (IMPORTANT)
 
@@ -225,7 +250,6 @@ Default modes are in `modes/` (English). Additional language-specific modes are 
 | Asks for company research | `deep` |
 | Preps for interview at specific company | `interview-prep` |
 | Wants to generate CV/PDF | `pdf` |
-| Wants to re-render a hand-edited tailored CV MD to PDF (no tailoring) | `render` |
 | Evaluates a course/cert | `training` |
 | Evaluates portfolio project | `project` |
 | Asks about application status | `tracker` |
@@ -285,10 +309,8 @@ Default modes are in `modes/` (English). Additional language-specific modes are 
 
 - Node.js (mjs modules), Playwright (PDF + scraping), YAML (config), HTML/CSS (template), Markdown (data), Canva MCP (optional visual CV)
 - Scripts in `.mjs`, configuration in YAML
-- Output in `output/pdf/` and `output/markdown/` (both gitignored), Reports in `reports/`
-- Output files share a 3-digit numeric prefix (`{NNN}`) with the corresponding report. Example: report `reports/003-acme-2026-04-12.md` pairs with `output/pdf/003-cv-candidate-acme-2026-04-12.pdf` and `output/markdown/003-cv-candidate-acme-2026-04-12.md`.
-- The tailored MD in `output/markdown/` follows the same shape as `cv.md` (H1 name, H2 sections, H3 roles/projects, bullets). The user can hand-edit it and regenerate the PDF with `/career-ops render {NNN}` — see `modes/render.md`.
-- JDs in `jds/`. Every evaluated JD is archived as `{NNN}-{company-slug}-{YYYY-MM-DD}.md`, sharing `{NNN}` with its report/PDF/MD. Also the input slot for manual entries via `local:jds/{file}` in pipeline.md.
+- Output in `output/` (gitignored), Reports in `reports/`
+- JDs in `jds/` (referenced as `local:jds/{file}` in pipeline.md)
 - Batch in `batch/` (gitignored except scripts and prompt)
 - Report numbering: sequential 3-digit zero-padded, max existing + 1
 - **RULE: After each batch of evaluations, run `node merge-tracker.mjs`** to merge tracker additions and avoid duplications.

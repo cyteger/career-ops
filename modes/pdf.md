@@ -1,16 +1,5 @@
 # Modo: pdf — Generación de PDF ATS-Optimizado
 
-## Invariante: MD es fuente de verdad
-
-El MD en `output/markdown/{NNN}-*.md` es la serialización canónica del tailoring. El PDF se produce **parseando ese MD** (misma lógica que `modes/render.md`), nunca desde una serialización paralela en memoria.
-
-Esta regla existe porque en versiones anteriores el agente serializaba MD y HTML en paralelo desde el contenido in-memory, y los dos se desincronizaban: distinto número de certificaciones, bullets más cortos en el PDF, proyectos omitidos, role subtitle perdido. La única forma de garantizar que PDF y MD sean copias exactas del mismo tailoring es que el HTML se construya leyendo el MD.
-
-Si modificas este modo, no rompas la regla:
-1. Escribe el MD primero (Paso 14)
-2. Construye el HTML parseando ese MD (Paso 15)
-3. Nunca al revés, nunca en paralelo
-
 ## Pipeline completo
 
 1. Lee `cv.md` como fuentes de verdad
@@ -26,87 +15,11 @@ Si modificas este modo, no rompas la regla:
 9. Reordena bullets de experiencia por relevancia al JD
 10. Construye competency grid desde requisitos del JD (6-8 keyword phrases)
 11. Inyecta keywords naturalmente en logros existentes (NUNCA inventa)
-12. Lee `name` de `config/profile.yml` → normaliza a kebab-case lowercase (e.g. "John Doe" → "john-doe") → `{candidate}`
-13. Resuelve `{NNN}` (numeración compartida — ver sección "Numeración y Rutas" abajo)
-14. **Serializa el contenido tailored como Markdown** (misma estructura que `cv.md`) a `output/markdown/{NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.md`. Este archivo es la **fuente de verdad** del tailoring. Ver sección "Output Markdown" abajo.
-15. **Parsea ese MD recién escrito** aplicando la misma lógica que el modo `render` (ver `modes/render.md` Paso 2 y Paso 3) y rellena `templates/cv-template.html` con las secciones parseadas. No regeneres el contenido desde memoria: el MD manda. Si el MD lista 6 certificaciones, el HTML lleva 6; si el MD incluye un proyecto extra, el HTML lo incluye.
-16. Escribe el HTML resultante a `/tmp/cv-{candidate}-{company}.html`
-17. Ejecuta: `node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html output/pdf/{NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.pdf --format={letter|a4}`
-18. Reporta: rutas del PDF y MD, nº páginas, % cobertura de keywords. Verifica que el texto del PDF coincide con el MD; si difiere, es un bug — volver al Paso 15 y parsear el MD de nuevo.
-
-## Numeración y Rutas
-
-El PDF y el MD comparten el **mismo número de 3 dígitos** (`{NNN}`) que el report de la evaluación en `reports/`. Esto asegura una correlación 1-a-1 entre report ↔ PDF ↔ MD.
-
-**Cómo resolver `{NNN}`:**
-
-1. **Si fue invocado desde `auto-pipeline`**: usar el número del report que acaba de ser creado en Paso 2.
-2. **Si fue invocado standalone (`/career-ops pdf`)**:
-   - Primero intentar encontrar el report existente para esta empresa+fecha en `reports/`. Si existe, usar su número.
-   - Si no existe report: computar `max(números existentes en output/markdown/ + reports/) + 1`, zero-padded a 3 dígitos.
-
-**Layout de salida:**
-
-```
-output/
-├── pdf/
-│   └── {NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.pdf
-└── markdown/
-    └── {NNN}-cv-{candidate}-{company}-{YYYY-MM-DD}.md
-```
-
-**Importante:** Antes de escribir, asegurar que `output/pdf/` y `output/markdown/` existen (crear si no). El comando `node generate-pdf.mjs` no crea directorios automáticamente.
-
-## Output Markdown (Paso 15)
-
-Tras producir el contenido personalizado en memoria, emitirlo **también como Markdown en el mismo shape que `cv.md`** (mismo nivel de headings, mismo estilo de bullets, misma estructura de líneas de empresa/rol). El objetivo: que el MD resultante pueda volver a ser alimentado al pipeline vía el modo `render` sin ninguna transformación de estructura.
-
-**Reglas:**
-- H1 = Nombre del candidato
-- Línea siguiente en **bold** = título profesional (del JD tailoring)
-- Línea de contacto: `email | phone | [linkedin](url) | [portfolio](url) | location`
-- `---` separador entre secciones
-- `## Professional Summary` → párrafo del summary tailored
-- `## Core Competencies` → bullets (uno por competencia, como lista markdown)
-- `## Technical Skills` → bullets con formato `**Categoría:** items, separados, por, coma`
-- `## Professional Experience` → bloques por trabajo. **Editorial template: single-role only.** Cada H3 = una entrada de trabajo. NO se soporta variante stacked — si la misma empresa aparece dos veces (promoción), cada rol es su propio H3 con la empresa repetida en la segunda línea.
-
-  **Forma estándar (única forma soportada):**
-  ```
-  ### {Rol}
-  **{Empresa}** | {Período} | {Ubicación}    ← Ubicación opcional; Período es siempre el rango de fechas
-
-  - Bullet 1
-  - Bullet 2
-  ```
-
-  **Mapeo campo → clase CSS (en orden de pipes):**
-  - Bold token después del H3 → `.job-company`
-  - Campo con patrón de rango de fechas (`Jan 2021 - Mar 2024`, `2024 - Present`, `2024`) → `.job-period`
-  - Texto restante (típicamente `Ciudad, País`) → `.job-location`
-  - El H3 mismo siempre es `.job-role`
-
-  **NO confundir empresa y ubicación cuando hay tres pipes.** El bold token siempre es la empresa. El campo con patrón de fechas siempre es el período. Lo que queda es la ubicación, jamás al revés.
-
-  **Si el cv.md aún tiene la forma stacked vieja** (H3 con nombre de empresa, varios bold sub-roles debajo), aplánalo on-the-fly emitiendo N entradas estándar (una por rol), repitiendo `{Empresa}` y `{Ubicación}` en cada una. NO emitir `.job-subrole` ni ninguna estructura anidada — el CSS del template editorial no estiliza esas clases.
-
-- `## Projects` → bloques por proyecto:
-  - `### {Proyecto} — {Descripción corta}`
-  - `**{Rol}** | {Período}`
-  - Bullets + línea `**Stack:** ...`
-- `## Education`, `## Professional Certifications`, `## Writing & Community` según cv.md original
-
-**Metadata para re-render:** Al comienzo del archivo, incluir un comentario HTML con el contexto de render (permite al modo `render` reproducir formato/idioma sin flags):
-
-```markdown
-<!-- career-ops:render format=letter language=en company="Bitovi" date=2026-04-12 number=001 -->
-# {Candidate Name}
-...
-```
-
-Este comentario es invisible en renderers markdown. El modo `render` lo parsea; si está ausente, usa flags CLI o defaults.
-
-**NUNCA incluir HTML/CSS classes en el MD.** El MD es para edición humana y para pasar al modo `render`, no para render directo. El mapeo MD → HTML lo hace el template fill.
+12. Genera HTML completo desde template + contenido personalizado
+13. Lee `name` de `config/profile.yml` → normaliza a kebab-case lowercase (e.g. "John Doe" → "john-doe") → `{candidate}`
+14. Escribe HTML a `/tmp/cv-{candidate}-{company}.html`
+15. Ejecuta: `node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html output/cv-{candidate}-{company}-{YYYY-MM-DD}.pdf --format={letter|a4}`
+15. Reporta: ruta del PDF, nº páginas, % cobertura de keywords
 
 ## Reglas ATS (parseo limpio)
 
@@ -157,6 +70,7 @@ Usar el template en `cv-template.html`. Reemplazar los placeholders `{{...}}` co
 | `{{LANG}}` | `en` o `es` |
 | `{{PAGE_WIDTH}}` | `8.5in` (letter) o `210mm` (A4) |
 | `{{NAME}}` | (from profile.yml) |
+| `{{PHONE}}` | (from profile.yml — include with its separator only when `profile.yml` has a non-empty `phone` value; omit both `<span>` and `<span class="separator">` otherwise) |
 | `{{EMAIL}}` | (from profile.yml) |
 | `{{LINKEDIN_URL}}` | [from profile.yml] |
 | `{{LINKEDIN_DISPLAY}}` | [from profile.yml] |
@@ -168,7 +82,7 @@ Usar el template en `cv-template.html`. Reemplazar los placeholders `{{...}}` co
 | `{{SECTION_COMPETENCIES}}` | Core Competencies / Competencias Core |
 | `{{COMPETENCIES}}` | `<span class="competency-tag">keyword</span>` × 6-8 |
 | `{{SECTION_EXPERIENCE}}` | Work Experience / Experiencia Laboral |
-| `{{EXPERIENCE}}` | HTML de cada trabajo (single-role, sin stacking). Emitir `<div class="job">` con `.job-header` > `.job-heading` (que contiene `.job-role`, `.job-company`, `.job-location` opcional) + `.job-period`, seguido de `<ul>` con bullets. NO usar `.job-subrole` — el template editorial no lo soporta. Ver `templates/cv-template.html` para el ejemplo canónico |
+| `{{EXPERIENCE}}` | HTML de cada trabajo con bullets reordenados |
 | `{{SECTION_PROJECTS}}` | Projects / Proyectos |
 | `{{PROJECTS}}` | HTML de top 3-4 proyectos |
 | `{{SECTION_EDUCATION}}` | Education / Formación |
@@ -180,17 +94,17 @@ Usar el template en `cv-template.html`. Reemplazar los placeholders `{{...}}` co
 
 ## Canva CV Generation (optional)
 
-If `config/profile.yml` has `canva_resume_design_id` set, offer the user a choice before generating:
+If `config/profile.yml` has `cv.canva_resume_design_id` set, offer the user a choice before generating:
 - **"HTML/PDF (fast, ATS-optimized)"** — existing flow above
 - **"Canva CV (visual, design-preserving)"** — new flow below
 
-If the user has no `canva_resume_design_id`, skip this prompt and use the HTML/PDF flow.
+If the user has no `cv.canva_resume_design_id`, skip this prompt and use the HTML/PDF flow.
 
 ### Canva workflow
 
 #### Step 1 — Duplicate the base design
 
-a. `export-design` the base design (using `canva_resume_design_id`) as PDF → get download URL
+a. `export-design` the base design (using `cv.canva_resume_design_id`) as PDF → get download URL
 b. `import-design-from-url` using that download URL → creates a new editable design (the duplicate)
 c. Note the new `design_id` for the duplicate
 
@@ -243,13 +157,12 @@ e. `commit-editing-transaction` to save (ONLY after user approval)
 a. `export-design` the duplicate as PDF (format: a4 or letter based on JD location)
 b. **IMMEDIATELY** download the PDF using Bash:
    ```bash
-   mkdir -p output/pdf
-   curl -sL -o "output/pdf/{NNN}-cv-{candidate}-{company}-canva-{YYYY-MM-DD}.pdf" "{download_url}"
+   curl -sL -o "output/cv-{candidate}-{company}-canva-{YYYY-MM-DD}.pdf" "{download_url}"
    ```
    The export URL is a pre-signed S3 link that expires in ~2 hours. Download it right away.
 c. Verify the download:
    ```bash
-   file output/pdf/{NNN}-cv-{candidate}-{company}-canva-{YYYY-MM-DD}.pdf
+   file output/cv-{candidate}-{company}-canva-{YYYY-MM-DD}.pdf
    ```
    Must show "PDF document". If it shows XML or HTML, the URL expired — re-export and retry.
 d. Report: PDF path, file size, Canva design URL (for manual tweaking)
