@@ -8,7 +8,7 @@ oswald.gyabaah@gmail.com | [linkedin.com/in/ogyabaah](https://linkedin.com/in/og
 
 ## Professional Summary
 
-Full-stack engineer with 6 years shipping production systems across web, mobile, backend, and infrastructure. Founded GTBank Ghana's DevOps practice from scratch and previously led a 12-person cross-functional team as founding CTO of MyHealthCop. Works fluently across React/Next.js, Python (Django, FastAPI), Node.js, and Flutter, with deep Kubernetes and multi-cloud operations experience. Currently building AI agents for infrastructure automation and QA, and prototyping AI-powered SaaS tools using RAG, tool-use, and multi-agent orchestration.
+Infrastructure Engineer with 6 years shipping production systems across web, mobile, backend, and infrastructure. Founded GTBank Ghana's DevOps practice from scratch and previously led a 12-person cross-functional team as founding CTO of MyHealthCop. Works fluently across React/Next.js, Python (Django, FastAPI), Node.js, and Flutter, with deep Kubernetes and multi-cloud operations experience. Currently building AI agents for infrastructure automation and QA, and prototyping AI-powered SaaS tools using RAG, tool-use, and multi-agent orchestration.
 
 ---
 
@@ -30,19 +30,18 @@ Full-stack engineer with 6 years shipping production systems across web, mobile,
 
 ## Professional Certifications
 
-- AI Engineering Specialization (ByteByteAI), Mar 2026: Agents, RAG, LLM applications
+- AI Engineering Specialization (ByteByteAI), Mar 2026
 - Oracle Certified DevOps Professional (Oracle), Aug 2025
 - Oracle Certified Architect Associate (Oracle), Aug 2025
 - Oracle Certified Foundations Associate (Oracle), Jul 2025
 - AWS Certified Cloud Practitioner (AWS), May 2024
-- Database Structures and Management with MySQL (Coursera), Dec 2022
 - Django Web Framework (Coursera), Dec 2022
 
 ---
 
 ## Professional Experience
 
-### Team Lead, Core Banking Services
+### Core Banking Services Lead
 **Guaranty Trust Bank Ghana LTD** | May 2025 - Present | Accra, Ghana
 
 - Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid (TKG), managing deployments, patching, and incident response across 800+ production pods to sustain 1.5M+ daily transactions.

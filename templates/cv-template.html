@@ -3,40 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{NAME}} — Resume</title>
-
-<!--
-  Editorial CV template — single-role-only.
-
-  Token contract:
-    {{LANG}}, {{NAME}}, {{PAGE_WIDTH}}
-    {{EMAIL}}, {{LINKEDIN_URL}}, {{LINKEDIN_DISPLAY}},
-    {{PORTFOLIO_URL}}, {{PORTFOLIO_DISPLAY}}, {{LOCATION}}
-    {{SECTION_*}} — section header text
-    {{SUMMARY_TEXT}}, {{EXPERIENCE}}, {{PROJECTS}},
-    {{EDUCATION}}, {{CERTIFICATIONS}}, {{SKILLS}}
-
-  ============================================================
-  CRITICAL RULE: ONE ROLE = ONE ENTRY
-  ============================================================
-  Each position is its own .job entry, EVEN IF the person held
-  multiple roles at the same company. Promotions are listed as
-  separate entries, repeating the company name. There is no
-  "stacked roles" structure. No .job-subrole. No nested headers.
-
-  This keeps the editorial typography clean and unambiguous.
-  ============================================================
-
-  Year-only dates ("2024 — Present") are preferred. If the
-  source data has month + year, leave that intact rather than
-  inventing data — month-year still renders correctly.
-
-  Fonts load from Google Fonts CDN. Swap to local woff2 by
-  replacing the @import line with @font-face blocks.
--->
-
+<title>{{NAME}} — CV</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
 
   * {
     margin: 0;
@@ -50,11 +53,11 @@
   }
 
   body {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 13.5px;
-    line-height: 1.6;
-    color: #0a0a0a;
-    background: #FEFDF9; /* warm cream paper */
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
     padding: 0;
     margin: 0;
   }
@@ -63,347 +66,284 @@
     width: 100%;
     max-width: {{PAGE_WIDTH}};
     margin: 0 auto;
-    padding: 68px 76px 60px;
-    background: #FEFDF9;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    white-space: nowrap;
+    padding: 2px 0;
   }
 
   /* === HEADER === */
-  .header { margin-bottom: 0; }
+  .header {
+    margin-bottom: 20px;
+  }
 
   .header h1 {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 46px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    line-height: 1;
-    color: #0a0a0a;
-    margin: 0 0 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 10px;
   }
 
   .contact-row {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 12.5px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: 0.005em;
-    color: #555;
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 10px;
-    row-gap: 4px;
+    gap: 8px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #555;
   }
 
-  .contact-row a { color: #555; }
-  .contact-row .separator { color: #bbb; }
+  .contact-row a {
+    color: #555;
+    text-decoration: none;
+  }
 
-  .header-gradient {
-    height: 1px;
-    background: #0a0a0a;
-    margin: 28px 0 24px;
+  .contact-row .separator {
+    color: #ccc;
   }
 
   /* === SECTIONS === */
-  .section { margin-bottom: 0; }
+  .section {
+    margin-bottom: 18px;
+  }
 
   .section-title {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 10.5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #0a0a0a;
-    margin: 22px 0 12px;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
     line-height: 1.2;
-    /* Never let a section title sit alone at the bottom of a page */
-    break-after: avoid;
-    page-break-after: avoid;
-    break-inside: avoid;
-    page-break-inside: avoid;
   }
 
-  .header-gradient + .section .section-title {
-    margin-top: 0;
-  }
-
-  /* === SUMMARY === */
+  /* === PROFESSIONAL SUMMARY === */
   .summary-text {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 13.5px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #3a3a3a;
-    margin: 6px 0 4px;
+    font-size: 11px;
+    line-height: 1.7;
+    color: #2f2f2f;
   }
 
-  /* ============================================================
-     ENTRY (jobs, projects, education) — ONE shape for all.
-     Each entry is a wrapping flex row. Children are flattened
-     into the row via `display: contents` and reordered with
-     `order` so visual sequence is always:
+  /* Links must never break across lines */
+  a {
+    white-space: nowrap;
+  }
 
-         TITLE · SUBTITLE · LOCATION                 DATE
-
-     regardless of what order they appear in the source HTML.
-     ============================================================ */
-
-  .job, .project, .edu-item {
+  /* === CORE COMPETENCIES === */
+  .competencies-grid {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .competency-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  /* === WORK EXPERIENCE === */
+  .job {
+    margin-bottom: 14px;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
     align-items: baseline;
-    margin-top: 14px;
-  }
-
-  .section > .job:first-of-type,
-  .section > .project:first-of-type,
-  .section > .edu-item:first-of-type {
-    margin-top: 0;
-    /* Reinforce the title-sticks-with-first-entry rule: even if the engine
-       ignores `break-after: avoid` on .section-title under pressure, it
-       still sees a `break-before: avoid` on the first entry. */
-    break-before: avoid;
-    page-break-before: avoid;
-  }
-
-  /* Dissolve every wrapper so its children become flex items of .job */
-  .job-header, .job-heading,
-  .project-header,
-  .edu-header {
-    display: contents;
-  }
-
-  /* TITLE — bold, position 1 */
-  .job-role,
-  .project-title,
-  .edu-title {
-    order: 1;
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 16px;
-    font-weight: 600;
-    font-style: normal;
-    color: #0a0a0a;
-    margin: 0;
-  }
-
-  /* SUBTITLE (company / project subtitle / school) — italic, position 2 */
-  .job-company,
-  .project-subtitle,
-  .edu-org {
-    order: 2;
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 16px;
-    font-weight: 500;
-    font-style: italic;
-    color: #3a3a3a;
-  }
-
-  /* LOCATION — italic, position 3 */
-  .job-location,
-  .project-location,
-  .edu-location {
-    order: 3;
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: italic;
-    color: #6a6a6a;
-  }
-
-  /* DATE — pushed to the right */
-  .job-period,
-  .project-period,
-  .edu-year {
-    order: 4;
-    margin-left: auto;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 11.5px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: #666;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  /* Middot separators between inline fields */
-  .job-company::before,
-  .project-subtitle::before,
-  .edu-org::before,
-  .job-location::before,
-  .project-location::before,
-  .edu-location::before {
-    content: '·';
-    color: #bbb;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0 8px;
-  }
-
-  /* BULLETS — full-width row beneath the header line */
-  .job > ul,
-  .project > ul {
-    order: 10;
-    flex: 0 0 100%;
-    list-style: none;
-    padding: 0;
-    margin: 8px 0 6px;
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 13.5px;
-    font-weight: 400;
-    line-height: 1.55;
-    color: #3a3a3a;
-  }
-
-  .job li,
-  .project li {
-    padding-left: 18px;
-    position: relative;
+    gap: 12px;
     margin-bottom: 4px;
   }
 
-  .job li::before,
-  .project li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #0a0a0a;
-    display: block;
-  }
-
-  .job li strong,
-  .project li strong {
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
     font-weight: 600;
-    color: #0a0a0a;
+    color: hsl(270, 70%, 45%);
   }
 
-  /* Optional description paragraph (some projects use this) */
-  .project-description,
-  .job-description {
-    order: 9;
-    flex: 0 0 100%;
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 13.5px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #3a3a3a;
-    margin: 6px 0 4px;
-  }
-
-  /* Optional tech-stack footnote (projects) */
-  .project-tech {
-    order: 11;
-    flex: 0 0 100%;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 11px;
-    color: #666;
-    margin-top: 6px;
-    letter-spacing: 0.01em;
-  }
-
-  /* Education extras (GPA, honors) */
-  .edu-desc {
-    order: 9;
-    flex: 0 0 100%;
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 13.5px;
-    color: #3a3a3a;
-    margin-top: 6px;
-    line-height: 1.6;
-  }
-
-  /* ============================================================
-     CERTIFICATIONS — inline run: title · issuer · date
-     One line per cert, no right-aligned date column.
-     ============================================================ */
-
-  .cert-item {
-    display: block;
-    margin-top: 6px;
-    line-height: 1.5;
-  }
-
-  .section > .cert-item:first-of-type { margin-top: 0; }
-
-  .cert-title {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #0a0a0a;
-    display: inline;
-  }
-
-  .cert-org {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: italic;
-    color: #3a3a3a;
-    display: inline;
-  }
-
-  .cert-year {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 11.5px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: #666;
-    display: inline;
+  .job-period {
+    font-size: 10.5px;
+    color: #777;
     white-space: nowrap;
   }
 
-  .cert-title + .cert-org::before,
-  .cert-org + .cert-year::before,
-  .cert-title + .cert-year::before {
-    content: '·';
-    color: #bbb;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0 8px;
+  .job-role {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
   }
 
-  /* === SKILLS — single inline run separated by middots === */
-  .skills-run {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 13.5px;
-    font-weight: 400;
-    line-height: 1.65;
-    color: #3a3a3a;
+  .job-location {
+    font-size: 10px;
+    color: #888;
   }
 
-  /* Legacy categorised emitter still renders cleanly */
+  .job ul {
+    padding-left: 18px;
+    margin-top: 6px;
+  }
+
+  .job li {
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .job li strong {
+    font-weight: 600;
+  }
+
+  /* === PROJECTS === */
+  .project {
+    margin-bottom: 12px;
+  }
+
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .project-badge {
+    font-size: 9px;
+    font-weight: 500;
+    color: hsl(187, 74%, 32%);
+    background: hsl(187, 40%, 95%);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+  }
+
+  .project-desc {
+    font-size: 10.5px;
+    color: #444;
+    margin-top: 3px;
+    line-height: 1.55;
+  }
+
+  .project-tech {
+    font-size: 9.5px;
+    color: #888;
+    margin-top: 3px;
+  }
+
+  /* === EDUCATION === */
+  .edu-item {
+    margin-bottom: 8px;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .edu-title {
+    font-weight: 600;
+    font-size: 11px;
+    color: #333;
+  }
+
+  .edu-org {
+    color: hsl(270, 70%, 45%);
+    font-weight: 500;
+  }
+
+  .edu-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .edu-desc {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  /* === CERTIFICATIONS === */
+  .cert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .cert-title {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .cert-org {
+    color: hsl(270, 70%, 45%);
+  }
+
+  .cert-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  /* === SKILLS === */
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 12px;
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-size: 13.5px;
-    line-height: 1.65;
-    color: #3a3a3a;
+    gap: 6px 14px;
   }
 
-  .skill-item { font-size: 13.5px; color: #3a3a3a; }
-  .skill-category { font-weight: 600; color: #0a0a0a; font-size: 13.5px; }
+  .skill-item {
+    font-size: 10.5px;
+    color: #444;
+  }
+
+  .skill-category {
+    font-weight: 600;
+    color: #333;
+    font-size: 10.5px;
+  }
 
   /* === PRINT === */
   @media print {
     body {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
-      background: #FEFDF9;
     }
-    .page { padding: 0; max-width: none; }
+
+    .page {
+      padding: 0;
+    }
   }
 
+  /* === PAGE BREAK CONTROL === */
   .avoid-break,
-  .job, .project, .edu-item, .cert-item {
+  .job,
+  .project,
+  .edu-item,
+  .cert-item {
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -415,18 +355,19 @@
   <!-- HEADER -->
   <div class="header avoid-break">
     <h1>{{NAME}}</h1>
+    <div class="header-gradient"></div>
     <div class="contact-row">
+      <span>{{PHONE}}</span>
+      <span class="separator">|</span>
       <span>{{EMAIL}}</span>
-      <span class="separator">·</span>
+      <span class="separator">|</span>
       <a href="{{LINKEDIN_URL}}">{{LINKEDIN_DISPLAY}}</a>
-      <span class="separator">·</span>
+      <span class="separator">|</span>
       <a href="{{PORTFOLIO_URL}}">{{PORTFOLIO_DISPLAY}}</a>
-      <span class="separator">·</span>
+      <span class="separator">|</span>
       <span>{{LOCATION}}</span>
     </div>
   </div>
-
-  <div class="header-gradient"></div>
 
   <!-- PROFESSIONAL SUMMARY -->
   <div class="section avoid-break">
@@ -434,140 +375,42 @@
     <div class="summary-text">{{SUMMARY_TEXT}}</div>
   </div>
 
-  <!--
-    CERTIFICATIONS — each cert is one inline line:
-
-      <div class="cert-item">
-        <span class="cert-title">AWS Certified Cloud Practitioner</span>
-        <span class="cert-org">AWS</span>
-        <span class="cert-year">May 2024</span>
-      </div>
-
-    Title and org separated by a middot via CSS; date follows the same way.
-  -->
+  <!-- CORE COMPETENCIES -->
   <div class="section">
-    <div class="section-title">{{SECTION_CERTIFICATIONS}}</div>
-    {{CERTIFICATIONS}}
+    <div class="section-title">{{SECTION_COMPETENCIES}}</div>
+    <div class="competencies-grid">
+      {{COMPETENCIES}}
+    </div>
   </div>
 
-  <!--
-    SKILLS — single inline run, middot-separated:
-
-      <div class="skills-run">TypeScript · React · Node.js · PostgreSQL · AWS</div>
-  -->
-  <div class="section avoid-break">
-    <div class="section-title">{{SECTION_SKILLS}}</div>
-    {{SKILLS}}
-  </div>
-
-  <!--
-    ============================================================
-    WORK EXPERIENCE — ONE ROLE = ONE ENTRY (no stacking)
-    ============================================================
-
-    Even when the same company appears multiple times (a promotion),
-    each role is its own .job entry. The company name repeats. There
-    is NO .job-subrole or nested header structure.
-
-    CANONICAL MARKUP — every job entry uses exactly this shape:
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-heading">
-            <span class="job-role">Senior Software Engineer</span>
-            <span class="job-company">Hooli</span>
-            <span class="job-location">Palo Alto, CA</span>
-          </span>
-          <span class="job-period">2023 — Present</span>
-        </div>
-        <ul>
-          <li>Bullet point one.</li>
-          <li>Bullet point two.</li>
-        </ul>
-      </div>
-
-    Field order in the HTML matters less than class names — CSS uses
-    `display: contents` + `order` to enforce visual layout. But emit
-    them in the order shown above for readability.
-
-    Required classes per role:
-      .job          — outer wrapper
-      .job-header   — first row of the entry
-      .job-heading  — left-side group (role + company + location)
-      .job-role     — bold off-black title
-      .job-company  — italic mid-grey company name
-      .job-location — italic light-grey location (omit if no location)
-      .job-period   — right-aligned date range
-      <ul><li>      — bullet points (no class needed)
-
-    Promotion example — TWO separate .job entries for the SAME company:
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-heading">
-            <span class="job-role">Team Lead, Core Banking Services</span>
-            <span class="job-company">Guaranty Trust Bank Ghana LTD</span>
-            <span class="job-location">Accra, Ghana</span>
-          </span>
-          <span class="job-period">May 2025 — Present</span>
-        </div>
-        <ul>...</ul>
-      </div>
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-heading">
-            <span class="job-role">DevOps Engineering Lead</span>
-            <span class="job-company">Guaranty Trust Bank Ghana LTD</span>
-            <span class="job-location">Accra, Ghana</span>
-          </span>
-          <span class="job-period">Apr 2024 — May 2025</span>
-        </div>
-        <ul>...</ul>
-      </div>
-  -->
+  <!-- WORK EXPERIENCE -->
   <div class="section">
     <div class="section-title">{{SECTION_EXPERIENCE}}</div>
     {{EXPERIENCE}}
   </div>
 
-  <!--
-    PROJECTS — same shape as jobs:
-
-      <div class="project">
-        <div class="project-header">
-          <span class="project-title">Pied Piper Compression</span>
-          <span class="project-subtitle">Lead Engineer</span>
-          <span class="project-location">Open Source</span>
-          <span class="project-period">2024</span>
-        </div>
-        <p class="project-description">
-          Open-source compression library reaching 5.2 Weissman score.
-        </p>
-        <ul>...</ul>
-      </div>
-  -->
-  <div class="section">
+  <!-- PROJECTS -->
+  <div class="section avoid-break">
     <div class="section-title">{{SECTION_PROJECTS}}</div>
     {{PROJECTS}}
   </div>
 
-  <!--
-    EDUCATION — same shape:
-
-      <div class="edu-item">
-        <div class="edu-header">
-          <span class="edu-title">B.S. Computer Science</span>
-          <span class="edu-org">Stanford University</span>
-          <span class="edu-location">Stanford, CA</span>
-          <span class="edu-year">2020</span>
-        </div>
-        <p class="edu-desc">GPA 3.9 / 4.0 — Magna Cum Laude.</p>
-      </div>
-  -->
-  <div class="section">
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
     <div class="section-title">{{SECTION_EDUCATION}}</div>
     {{EDUCATION}}
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section avoid-break">
+    <div class="section-title">{{SECTION_CERTIFICATIONS}}</div>
+    {{CERTIFICATIONS}}
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break">
+    <div class="section-title">{{SECTION_SKILLS}}</div>
+    {{SKILLS}}
   </div>
 
 </div>
