@@ -1,0 +1,199 @@
+%-------------------------
+% Career-Ops LaTeX CV — Oswald Gyabaah, tailored for Ecobank Transnational Incorporated
+% Role: Technology Lead — Enterprise Architect (Job ID 1220)
+% Date: 2026-05-02
+% Based on: Gabriel Sison / sb2nov resume template (MIT)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\begin{document}
+    \begin{center}
+        {\Huge\scshape Oswald Gyabaah}
+        \\ Senior Infrastructure \& Architecture Engineer --- Cloud, Kubernetes, Banking \\
+        \small
+        \href{mailto:oswald.gyabaah@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{oswald.gyabaah@gmail.com}} ~
+        \href{https://linkedin.com/in/ogyabaah}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/ogyabaah}}  ~
+        \href{https://github.com/cyteger}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/cyteger}} ~
+        \raisebox{-0.2\height}\faMapMarker\ Accra, Ghana
+    \end{center}
+
+\section{Professional Summary}
+\small
+Infrastructure and architecture engineer with 6 years designing and operating enterprise systems at bank scale, all inside the Bank of Ghana regulatory perimeter. Founded Guaranty Trust Bank Ghana's DevOps practice from zero and currently own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid sustaining 1.5M+ daily transactions. Lead technical project management and architecture design for cross-functional bank initiatives, integrating Finacle with multiple third-party systems. Architected a multi-cloud healthtech platform on AWS with GCP disaster recovery as founding CTO of MyHealthCop, leading architecture decisions across compute, networking, security, and data layers. Multi-cloud experience spans AWS, GCP, Azure, OCI, VMware, and on-prem bare metal.
+
+\vspace{4pt}
+
+\section{Core Competencies}
+\vspace{-7pt}
+\begin{itemize}[leftmargin=0.15in, label={}]\small{\item{
+\textbf{Architecture:} Enterprise architecture, multi-cloud (AWS, GCP, Azure, OCI), Kubernetes at enterprise scale, API-driven microservices, integration patterns. \\
+\textbf{Security \& Governance:} IAM, OAuth2, OIDC, Keycloak, JWT, WAF, IaC scanning (Veracode, Trivy), structured audit logging, BoG regulatory perimeter, audit-ready delivery. \\
+\textbf{Leadership:} Founded teams from zero (DevOps, QA, full-stack), TPM for cross-functional bank initiatives, architecture-led delivery, mentoring and cross-functional facilitation.
+}}
+\end{itemize}
+
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Core Banking Services Lead}{May 2025 -- Present}
+      {Guaranty Trust Bank Ghana LTD}{Accra, Ghana}
+      \resumeItemListStart
+        \resumeItem{Architected integrations between Finacle core banking and multiple third-party systems including transaction portals and internal tools, operating inside the Bank of Ghana regulatory perimeter.}
+        \resumeItem{Lead technical project management for cross-functional bank initiatives, translating business requirements into architecture decisions and coordinating delivery across business and technology teams.}
+        \resumeItem{Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid, managing deployments, patching, and incident response across 800+ production pods to sustain 1.5M+ daily transactions.}
+        \resumeItem{Built a bank-wide OTP service (Django + Next.js) integrating SMS and email gateways to secure core banking access for 600+ internal users, with structured logging to Elasticsearch via Filebeat for audit.}
+        \resumeItem{Built a national ID verification service (Django + Next.js) processing and storing ID documents in self-hosted MinIO with automated verification workflows.}
+        \resumeItem{Lead L2 support operations correlating logs across internal apps and core banking microservices via the Elastic Stack for root-cause analysis and remediation.}
+        \resumeItem{Led a 5-person QA team through the Basis-to-Finacle migration cutover, designing and executing 10,000+ test cases across 13 core banking modules and 33 internal applications over a two-week window.}
+        \resumeItem{Extended the bank's observability stack into core banking with Finacle-specific dashboards and threshold-based alerting for proactive scaling.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {DevOps Engineering Lead}{Apr 2024 -- Present}
+      {Guaranty Trust Bank Ghana LTD}{Accra, Ghana}
+      \resumeItemListStart
+        \resumeItem{Architected high-availability Kubernetes clusters across multiple on-prem environments running internal applications handling 3M+ daily requests at 99.97\% measured uptime.}
+        \resumeItem{Founded the bank's DevOps team of 4 engineers, replacing manual code handoffs with enforced Git workflows, containerized Kubernetes deployments, and automated release pipelines.}
+        \resumeItem{Embedded Veracode and Trivy scanning into release pipelines as automated security gates; introduced GitOps with FluxCD for declarative, version-controlled cluster deployments and rapid disaster recovery rebuilds.}
+        \resumeItem{Implemented CI/CD automation that cut deployment time by $\sim$90\% and increased release velocity $\sim$5x.}
+        \resumeItem{Managed multi-cloud infrastructure across Azure and AWS: resource provisioning, private VPC peering to on-prem systems, IAM, access control, and cost optimization.}
+        \resumeItem{Automated 95\% of infrastructure configuration management using Terraform, Ansible, Python, and Bash, turning multi-day manual processes into reproducible, version-controlled deployments.}
+        \resumeItem{Introduced a unified observability stack (Prometheus, Grafana, Elastic Stack, Sentry) for centralized logging, tracing, and real-time alerting.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Chief Technical Officer (Founding)}{Jan 2021 -- Mar 2024}
+      {MyHealthCop LTD}{Accra, Ghana}
+      \resumeItemListStart
+        \resumeItem{Architected the myhealthcop.com platform end-to-end across requirements gathering, system design, database modeling, and API development, delivering three applications: a patient-facing Flutter mobile app, a Flutter app for health professionals, and a React admin web dashboard.}
+        \resumeItem{Led architecture decisions across compute, networking, security, and data layers; defined API contracts, data models, and inter-service communication patterns for the three client applications and the backend microservices.}
+        \resumeItem{Designed cost-efficient AWS infrastructure running containerized microservices on EKS and ECS alongside Lambda functions for event-driven workloads, with autoscaling, load balancing, and IAM-controlled inter-service communication.}
+        \resumeItem{Designed a disaster recovery strategy mirroring the AWS production environment on GCP using GKE, Cloud SQL, and Cloud Storage, with secure VPCs, IAM policies, and dual-environment CI/CD for rapid failover.}
+        \resumeItem{Built a high-throughput background processing system handling 1M+ daily jobs across payments, messaging, and notifications using SQS/SNS with multi-provider failover.}
+        \resumeItem{Led performance optimizations that reduced peak request latency by 90\% through Redis caching, query tuning, and indexing in PostgreSQL.}
+        \resumeItem{Led a 12-person cross-functional team (frontend, backend, mobile, product, design, QA) through the full Agile lifecycle from requirements to delivery, including sprint planning, stakeholder management, and budgeting.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Personal Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Virk Cloud (virk.cloud) --- Platform-as-a-Service} $|$ \emph{Next.js, TypeScript, Convex, Kubernetes (RKE2), FluxCD, Terraform, Prometheus, Grafana}}{Aug 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected a Platform-as-a-Service for startups with built-in CI/CD, observability, and log streaming on bare-metal VPS clusters.}
+        \resumeItem{Built a management console for workload management, custom domains, and monitoring dashboards.}
+        \resumeItem{Manage underlying infrastructure including cluster deployment, hardware and network provisioning.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Digital-Recon --- Transaction Reconciliation Engine} $|$ \emph{React, TypeScript, Python, Celery, Kafka, Elasticsearch, PostgreSQL, Docker}}{2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Building a real-time reconciliation engine for financial institutions to detect discrepancies across heterogeneous data sources (relational DBs, APIs, Elasticsearch) in real time.}
+        \resumeItem{Architected an event-driven processing layer using Kafka for upstream transaction ingestion and Celery for scheduled and on-demand reconciliation jobs.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{AI Agents for Infrastructure Operations} $|$ \emph{Claude API, RAG, AWS Lambda, EventBridge, multi-agent orchestration}}{2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Building specialized AI agents for QA automation, code review, and sysadmin operations, running against live Linux production servers with real workloads.}
+        \resumeItem{Prototyping agent-driven SaaS tools using RAG, tool-use, and multi-agent orchestration patterns.}
+        \resumeItem{Built AWS Lambda functions triggered by EventBridge to deliver notifications on codebase events.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ashesi University}{Sep 2016 -- May 2020}
+      {BSc Computer Engineering}{Berekuso, Ghana}
+  \resumeSubHeadingListEnd
+
+\section{Professional Certifications}
+\vspace{-7pt}
+\begin{itemize}[leftmargin=0.15in, label={}]\small{\item{
+Oracle Certified Architect Associate (Oracle, Aug 2025) $\cdot$ Oracle Certified DevOps Professional (Oracle, Aug 2025) $\cdot$ Oracle Certified Foundations Associate (Oracle, Jul 2025) $\cdot$ AWS Certified Cloud Practitioner (AWS, May 2024) $\cdot$ AI Engineering Specialization (ByteByteAI, Mar 2026) $\cdot$ Django Web Framework (Coursera, Dec 2022)
+}}
+\end{itemize}
+
+\section{Technical Skills}
+\vspace{-7pt}
+\begin{itemize}[leftmargin=0.15in, label={}]\small{\item{
+\textbf{Cloud \& Architecture:} AWS (EKS, ECS, Lambda, S3, SQS/SNS, EventBridge, DynamoDB, VPC, IAM), GCP (GKE, Cloud SQL, Cloud Storage), Azure, OCI, VMware vSphere, on-prem bare metal (Tier III data centers) \\
+\textbf{Container Orchestration:} Docker, Kubernetes (EKS, GKE, TKG/Tanzu, RKE2), Helm, Istio Service Mesh, FluxCD, ArgoCD \\
+\textbf{Security \& Identity:} IAM, OAuth2, OIDC, Keycloak, JWT, WAF, Veracode, Trivy, structured audit logging via Filebeat \\
+\textbf{Integration \& APIs:} REST, GraphQL, WebSockets, Kafka, RabbitMQ, AWS SQS/SNS, AWS EventBridge, Redis queues \\
+\textbf{IaC \& CI/CD:} Terraform, Ansible, GitHub Actions, Azure DevOps, Codemagic, Jenkins \\
+\textbf{Observability:} Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat), Sentry \\
+\textbf{Databases:} PostgreSQL, MySQL, MongoDB, Firebase/Firestore, DynamoDB (single-table and multi-table), Convex, Redis \\
+\textbf{Languages:} Python (Django, FastAPI, Celery), Node.js (Express), JavaScript, TypeScript, Bash \\
+\textbf{Frontend:} React.js, Next.js, Tailwind CSS, Flutter \\
+\textbf{AI \& Emerging Tech:} LLM API integration (Claude, OpenAI), RAG systems, AI agents, multi-agent orchestration
+}}
+\end{itemize}
+
+\end{document}
