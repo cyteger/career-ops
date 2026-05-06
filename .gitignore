@@ -20,6 +20,9 @@ batch/batch-run.log
 .update-lock
 .playwright-mcp/
 
+# Secrets (never commit — use .env.example as template)
+.env
+
 # Generated / build artifacts
 .resolved-prompt-*
 node_modules/
