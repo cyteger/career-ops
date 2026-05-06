@@ -2,6 +2,7 @@
 
 | # | Date | Company | Role | Score | Status | PDF | Report | Notes |
 |---|------|---------|------|-------|--------|-----|--------|-------|
+| 11 | 2026-05-06 | UiPath | Forward Deployed Engineer II (Bucharest) | 3.8/5 | Evaluated | ✅ | [011](reports/011-uipath-2026-05-06.md) | Bucharest HQ; agentic automation pivot fits AI agent R&D; UiPath platform ramp 6-8 weeks; needs EU Blue Card; Romanian IT tax exemption upside; rolling-basis applications. |
 | 10 | 2026-05-06 | Google | Software Engineer III, Site Reliability Engineering (Bay Area) | 4.4/5 | Evaluated | ✅ | [010](reports/010-google-2026-05-06.md) | US$147-211K base + bonus + equity; SRE primary archetype; needs H-1B sponsorship; loop is rigorous; apply within 2 weeks. |
 | 9 | 2026-05-06 | Mastercard | Lead DevOps Engineer, Foundry RnD (Singapore) | 3.9/5 | Evaluated | ✅ | [009](reports/009-mastercard-2026-05-06.md) | Stretch (8-12yrs vs 6); strong tech alignment (Azure/AKS/Terraform/GitOps/AI agents); Singapore relocation needs EP sponsorship; Mastercard pays well; posted 2026-05-05. |
 | 8 | 2026-05-06 | DLP Africa | AI Prompt Engineer (Internal Trainer) | 4.1/5 | Evaluated | ✅ | [008](reports/008-dlp-2026-05-06.md) | Ghana telecoms/VAS in Tse-Addo. Strong AI/RAG/multi-agent fit; build prompt portfolio (career-ops modes + non-technical sample); deadline 2026-05-15. |
