@@ -8,7 +8,7 @@ oswald.gyabaah@gmail.com | [linkedin.com/in/ogyabaah](https://linkedin.com/in/og
 
 ## Professional Summary
 
-Infrastructure Engineer with 6 years shipping production systems across web, mobile, backend, and infrastructure. Founded GTBank Ghana's DevOps practice from scratch and previously led a 12-person cross-functional team as founding CTO of MyHealthCop. Works fluently across React/Next.js, Python (Django, FastAPI), Node.js, and Flutter, with deep Kubernetes and multi-cloud operations experience. Currently building AI agents for infrastructure automation and QA, and prototyping AI-powered SaaS tools using RAG, tool-use, and multi-agent orchestration.
+Platform engineer and solutions architect with 6 years building and operating production systems at scale across on-prem and cloud environments. Founded GTBank Ghana's DevOps practice from scratch and runs the core banking platform behind 1.5M+ daily financial transactions. Founding CTO of MyHealthCop, leading a 12-person team and architecting mobile, web, and backend systems end to end. Currently building AI agents for infrastructure operations.
 
 ---
 
