@@ -1,9 +1,9 @@
 <!-- career-ops:render format=a4 language=en company="dlp" date=2026-05-06 number=008 -->
 # Oswald Gyabaah
 
-**AI Prompt Engineer**
+**AI Engineer**
 
-+233 55 413 4307 | oswald.gyabaah@gmail.com | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | [github.com/cyteger](https://github.com/cyteger) | Accra, Ghana
++233 55 413 4307 | oswald.gyabaah@gmail.com | [linkedin.com/in/ogyabaah](https://linkedin.com/in/ogyabaah) | Accra, Ghana
 
 ---
 
@@ -54,6 +54,7 @@ Engineer who has been building production AI agent systems and prompt frameworks
 **Guaranty Trust Bank Ghana LTD** | Apr 2024 - Present | Accra, Ghana
 
 - Founded the bank's DevOps team of 4 engineers from zero. Assessed each engineer's baseline, designed individual ramp-up paths to a shared end state, ran weekly knowledge-share sessions. All 4 productive within 90 days.
+- Build and run AI agents for QA, code review, and sysadmin tasks against live Linux production servers (multi-agent orchestration, tool-use, sandboxed execution).
 - Implemented CI/CD that cut deployment time by ~90% and increased release velocity ~5x.
 - Set up the team's observability stack (Prometheus, Grafana, ELK, Sentry).
 
@@ -80,12 +81,6 @@ Engineer who has been building production AI agent systems and prompt frameworks
 
 - Production AI monitoring with structured outputs at scale: explicit schemas, few-shot examples, retry-on-malformed-output, model-version pinning, prompt caching for cost.
 - **Stack:** Next.js, TypeScript, Convex, Claude API
-
-### AI Agents for Infrastructure Operations
-**Personal R&D** | 2024 - Present
-
-- Specialized AI agents for QA, code review, and sysadmin tasks running against live Linux production servers. Multi-agent orchestration, tool-use, sandboxed execution, structured logging.
-- **Stack:** Claude API, Python, Linux, AWS Lambda
 
 ---
 
