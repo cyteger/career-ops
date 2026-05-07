@@ -14,7 +14,7 @@ There are two layers. Read `DATA_CONTRACT.md` for the full list.
 
 **User Layer (NEVER auto-updated, personalization goes HERE):**
 - `cv.md`, `config/profile.yml`, `modes/_profile.md`, `article-digest.md`, `portals.yml`
-- `data/*`, `reports/*`, `output/*`, `interview-prep/*`
+- `data/*`, `reports/*`, `output/pdf/*`, `output/markdown/*`, `interview-prep/*`
 
 **System Layer (auto-updatable, DON'T put user data here):**
 - `modes/_shared.md`, `modes/oferta.md`, all other modes
@@ -68,6 +68,8 @@ AI-powered, CLI-agnostic job search automation: pipeline tracking, offer evaluat
 | `check-liveness.mjs` | Job posting liveness checker |
 | `liveness-core.mjs` | Shared liveness logic (expired signals win over generic Apply text) |
 | `reports/` | Evaluation reports (format: `{###}-{company-slug}-{YYYY-MM-DD}.md`). Blocks A-F + G (Posting Legitimacy). Header includes `**Legitimacy:** {tier}`. |
+| `output/pdf/` | Generated tailored CVs as PDF (format: `{NNN}-cv-{candidate}-{company-slug}-{YYYY-MM-DD}.pdf`). Shares `{NNN}` with the matching report. |
+| `output/markdown/` | Tailored CVs as Markdown (same `{NNN}` and base name as the PDF). Follows `cv.md` shape. Editable by hand; re-render via `/career-ops render {NNN}`. |
 
 ### First Run — Onboarding (IMPORTANT)
 
@@ -201,6 +203,7 @@ Default modes are in `modes/` (English). Additional language-specific modes are 
 | Asks for company research | `deep` |
 | Preps for interview at specific company | `interview-prep` |
 | Wants to generate CV/PDF | `pdf` |
+| Wants to re-render a hand-edited tailored CV MD to PDF (no tailoring) | `render` |
 | Evaluates a course/cert | `training` |
 | Evaluates portfolio project | `project` |
 | Asks about application status | `tracker` |
