@@ -45,10 +45,13 @@ Engineer who has been building production AI agent systems and prompt frameworks
 ### Core Banking Services Lead
 **Guaranty Trust Bank Ghana LTD** | May 2025 - Present | Accra, Ghana
 
-- Use AI agents and prompt-engineered workflows to speed up L2 incident triage and migration test design across 10,000+ test cases.
-- Built a bank-wide OTP service (Django + Next.js) for 600+ internal users.
-- Built a national ID verification service (Django + Next.js) with self-hosted MinIO.
-- Lead L2 support across internal apps and core banking microservices.
+- Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid: deployments, patching, and incident response across 800+ production pods sustaining 1.5M+ daily transactions.
+- Led a 5-person QA team through the Basis-to-Finacle migration cutover. 10,000+ test cases across 13 core banking modules and 33 internal applications over a two-week window, covering integration, UAT, and peripheral device validation.
+- Architected integrations between Finacle and third-party systems including transaction portals and internal tools.
+- Built a bank-wide OTP service (Django + Next.js) integrating SMS and email gateways for 600+ internal users, with structured logging to Elasticsearch via Filebeat.
+- Built a national ID verification service (Django + Next.js) processing and storing ID documents in self-hosted MinIO with automated verification and customer record updates.
+- Lead L2 support operations, correlating logs across internal apps and core banking microservices via the Elastic Stack for root-cause analysis.
+- Use AI agents and prompt-engineered workflows to speed up L2 incident triage and migration test design.
 
 ### DevOps Engineering Lead
 **Guaranty Trust Bank Ghana LTD** | Apr 2024 - Present | Accra, Ghana
