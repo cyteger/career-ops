@@ -88,13 +88,10 @@ id	url	status	started_at	completed_at	report_num	score	error	retries
 Each worker receives `batch-prompt.md` as a system prompt. It is self-contained. Use your CLI's headless command — see the **Headless / Batch Mode** table in `AGENTS.md`.
 
 The worker produces:
-1. `.md` report in `reports/{NNN}-{company-slug}-{date}.md`
-2. PDF in `output/pdf/{NNN}-cv-{candidate}-{company}-{date}.pdf`
-3. MD tailored in `output/markdown/{NNN}-cv-{candidate}-{company}-{date}.md` (same shape as `cv.md`, hand-editable, re-renderable via `/career-ops render`)
-4. Tracker line in `batch/tracker-additions/{id}.tsv`
-5. Result JSON via stdout
-
-`{NNN}` is the same 3-digit number across report/PDF/MD (1:1 correlation).
+1. `.md` report in `reports/`
+2. PDF in `output/`
+3. Tracker line in `batch/tracker-additions/{id}.tsv`
+4. Result JSON via stdout
 
 ## Error handling
 
