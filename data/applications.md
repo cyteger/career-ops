@@ -2,6 +2,7 @@
 
 | # | Date | Company | Role | Score | Status | PDF | Report | Notes |
 |---|------|---------|------|-------|--------|-----|--------|-------|
+| 14 | 2026-05-13 | Heirs Technologies | VP, Cloud & Infrastructure | 3.5/5 | Evaluated | ✅ | [014](reports/014-heirs-technologies-vp-2026-05-13.md) | Same Heirs Tech, VP-level. 10+ years required (he has 6); skills strong but title precedent gap. Recommend picking ONE Heirs role - likely SA #013 over this. |
 | 13 | 2026-05-13 | Heirs Technologies | Solutions Architect | 4.2/5 | Evaluated | ✅ | [013](reports/013-heirs-technologies-2026-05-13.md) | Lagos-based subsidiary of Heirs Holdings (Tony Elumelu group). Strong skill match. Deadline TODAY May 13. Email application to people@heirstechnologies.com. |
 | 12 | 2026-05-13 | Nsano | Observability Lead | 3.7/5 | Evaluated | ❌ | [012](reports/012-nsano-2026-05-13.md) | Ghana fintech (Accra). Near-perfect tech fit but likely lateral from GTBank; Glassdoor flags low pay/overtime. PDF skipped (score below 4.0 threshold). |
 | 11 | 2026-05-06 | UiPath | Forward Deployed Engineer II (Bucharest) | 3.8/5 | Evaluated | ✅ | [011](reports/011-uipath-2026-05-06.md) | Bucharest HQ; agentic automation pivot fits AI agent R&D; UiPath platform ramp 6-8 weeks; needs EU Blue Card; Romanian IT tax exemption upside; rolling-basis applications. |
