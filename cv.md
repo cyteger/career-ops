@@ -45,6 +45,8 @@ Platform engineer and solutions architect with 6 years building and operating pr
 **Guaranty Trust Bank Ghana LTD** | May 2025 - Present | Accra, Ghana
 
 - Own the on-prem Finacle core banking deployment on Tanzu Kubernetes Grid (TKG), managing deployments, patching, and incident response across 800+ production pods to sustain 1.5M+ daily transactions.
+- Coordinate the bank's core banking disaster recovery: after the database and network teams complete primary-to-DR failover, configure and bring all 268 core banking applications back online at a parallel DR site in a separate physical data center, restoring full banking operations against a 45-minute RTO and near-zero RPO. Authored the DR policies and recovery runbooks single-handedly, and run bank-wide simulation exercises with 600+ staff participating to validate failover readiness.
+- Built Jenkins pipelines with parallel, target-selectable deployments that hold the primary and DR environments in continuous parity, and mirror container images between the two sites' self-hosted Harbor registries so the DR site runs fully independently of the primary.
 - Lead L2 support operations, correlating logs across internal apps and core banking microservices via the Elastic Stack for root-cause analysis and remediation.
 - Led a 5-person QA team through the bank's Basis-to-Finacle migration cutover, designing and executing 10,000+ test cases across 13 core banking modules and 33 internal applications over a two-week window, covering integration, UAT, and peripheral device validation.
 - Extended the bank's observability stack into core banking with Finacle-specific dashboards for CPU/memory trends, transaction volumes, response times, and exceptions, plus threshold-based alerting for proactive scaling.
