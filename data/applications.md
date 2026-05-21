@@ -2,6 +2,7 @@
 
 | # | Date | Company | Role | Score | Status | PDF | Report | Notes |
 |---|------|---------|------|-------|--------|-----|--------|-------|
+| 18 | 2026-05-21 | Telecel Ghana | IT Infrastructure Architect | 4.1/5 | Evaluated | ✅ | [018](reports/018-telecel-ghana-2026-05-21.md) | Accra; primary archetype, meets 5+yr tenure, 4-cloud hero match (AWS/GCP/Azure/OCI); gaps: telecom networking, Cisco/CISSP/TOGAF certs |
 | 17 | 2026-05-21 | Xapo Bank | Solution Architect (Remote - Work from Anywhere) | 3.8/5 | Evaluated | ✅ | [017](reports/017-xapo-bank-2026-05-21.md) | Work-from-anywhere regulated crypto bank; language-agnostic, no hard blocker; tenure + DDD/AAF gaps + layoff history keep it under 4.0 |
 | 16 | 2026-05-21 | Cauridor | Head of Engineering | 3.6/5 | Evaluated | ✅ | [016](reports/016-cauridor-2026-05-21.md) | Accra fintech, perfect location+domain; PHP Laravel core stack gap + 10-15yr ask; below apply threshold |
 | 15 | 2026-05-19 | MySCU | Fullstack Developer (AI-Enabled EdTech) | 4.2/5 | Evaluated | ✅ | [015](reports/015-myscu-2026-05-19.md) | Remote global; Lagos NG startup; EdTech AI; 3-mo contract to FT; NestJS soft gap |
