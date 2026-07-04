@@ -125,3 +125,4 @@ Platform engineer and solutions architect with 6 years building and operating pr
 
 **Ashesi University** | BSc Computer Engineering | Sep 2016 - May 2020 | Berekuso, Ghana
 
+
